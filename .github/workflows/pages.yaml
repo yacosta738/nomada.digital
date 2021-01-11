@@ -3,7 +3,7 @@ name: hugo publish
 on:
   push:
     branches:
-      - main  # Set a branch to deploy
+      - master  # Set a branch to deploy
 
 jobs:
   deploy:
@@ -27,10 +27,11 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         env:
           ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          EXTERNAL_REPOSITORY: yacosta738/nomada.digital
-          PUBLISH_BRANCH: main
-          PUBLISH_DIR: ./public
         with:
+          publish_dir: ./public
           personal_token: ${{ secrets.PORTFOLIO_TOKEN }}
-          emptyCommits: false
-          commitMessage: ${{ github.event.head_commit.message }}
+          commit_message: ${{ github.event.head_commit.message }}
+          external_repository: yacosta738/nomada.digital
+          user_name: <yacosta738>
+          user_email: <yunielacosta738@gmail.com>
+          publish_branch: master
