@@ -14,5 +14,5 @@ printf "$filename"
         echo 'hugo -s $ROOT_REPO'
         echo 'git add $ROOT_REPO'
 } >> $filename
-
+# Set execution permission to file
 chmod +x $filename
