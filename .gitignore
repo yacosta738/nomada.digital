@@ -1,0 +1,39 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Hugo template
+# Generated files by hugo
+/public/
+/resources/_gen/
+
+# Executable may be added to repository
+hugo.exe
+hugo.darwin
+hugo.linux
+
+######################
+# IntelliJ
+######################
+.idea/
+*.iml
+*.iws
+*.ipr
+*.ids
+*.orig
+classes/
+out/
+
+######################
+# Visual Studio Code
+######################
+.vscode/
+
+Thumbs.db
+.DS_Store
+.dist
+.tmp
+.sass-cache
+npm-debug.log
+node_modules
+builds
+package-lock.json
+public
+resources
