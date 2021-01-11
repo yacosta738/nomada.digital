@@ -32,6 +32,6 @@ jobs:
           personal_token: ${{ secrets.PORTFOLIO_TOKEN }}
           commit_message: ${{ github.event.head_commit.message }}
 #          external_repository: yacosta738/nomada.digital
+#          publish_branch: master
           user_name: yacosta738
           user_email: yunielacosta738@gmail.com
-          publish_branch: master
