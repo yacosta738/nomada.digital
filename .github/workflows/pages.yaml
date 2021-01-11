@@ -31,5 +31,6 @@ jobs:
           PUBLISH_BRANCH: main
           PUBLISH_DIR: ./public
         with:
+          personal_token: ${{ secrets.PORTFOLIO_TOKEN }}
           emptyCommits: false
           commitMessage: ${{ github.event.head_commit.message }}
