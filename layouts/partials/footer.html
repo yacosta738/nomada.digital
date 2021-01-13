@@ -41,6 +41,15 @@
 {{ $script := resources.Get "js/script.js" | minify | fingerprint "sha384"}}
 <script src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}"></script>
 
+{{ $contact_me := resources.Get "js/contact_me.js" }}
+<script src="{{ $contact_me.Permalink }}" integrity="{{ $contact_me.Data.Integrity }}"></script>
+{{ $custom := resources.Get "js/custom.js" }}
+<script src="{{ $custom.Permalink }}" integrity="{{ $custom.Data.Integrity }}"></script>
+{{ $headline := resources.Get "js/headline.js" }}
+<script src="{{ $headline.Permalink }}" integrity="{{ $headline.Data.Integrity }}"></script>
+{{ $portfolio := resources.Get "js/portfolio.js" }}
+<script src="{{ $portfolio.Permalink }}" integrity="{{ $portfolio.Data.Integrity }}"></script>
+
 <!-- cookie -->
 {{ if site.Params.cookies.enable }}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>

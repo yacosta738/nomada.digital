@@ -21,6 +21,12 @@ link = "plugins/themify-icons/themify-icons.css"
 [[params.plugins.css]]
 link = "plugins/magnific-popup/magnific-popup.css"
 [[params.plugins.css]]
+link = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+[[params.plugins.css]]
+link = "https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css"
+[[params.plugins.css]]
+link = "plugins/animate/animate.css"
+[[params.plugins.css]]
 link = "plugins/slick/slick.css"
 [[params.plugins.css]]
 link = "https://fonts.googleapis.com/css?family=Anaheim|Quattrocento+Sans:400,700&display=swap"
@@ -29,7 +35,33 @@ link = "https://fonts.googleapis.com/css?family=Anaheim|Quattrocento+Sans:400,70
 [[params.plugins.js]]
 link = "plugins/jquery/jquery.min.js"
 [[params.plugins.js]]
+link = "plugins/jquery/jquery.vide.js"
+[[params.plugins.js]]
+link = "plugins/jquery/jquery.easing.1.3.js"
+[[params.plugins.js]]
+link = "plugins/jquery/jquery.prettyPhoto.js"
+[[params.plugins.js]]
+link = "plugins/parallaxie/parallaxie.js"
+[[params.plugins.js]]
+link = "https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"
+[[params.plugins.js]]
+link = "plugins/animate/animate.js"
+[[params.plugins.js]]
+link = "plugins/hoverdir/hoverdir.js"
+[[params.plugins.js]]
+link = "https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"
+[[params.plugins.js]]
+link = "plugins/isotope/isotope.min.js"
+[[params.plugins.js]]
+link = "https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"
+[[params.plugins.js]]
+link = "https://cdnjs.cloudflare.com/ajax/libs/retina.js/2.1.3/retina.min.js"
+[[params.plugins.js]]
+link = "plugins/scroll/scroll.js"
+[[params.plugins.js]]
 link = "plugins/bootstrap/bootstrap.min.js"
+[[params.plugins.js]]
+link = "plugins/bootstrap/jqBootstrapValidation.js"
 [[params.plugins.js]]
 link = "plugins/slick/slick.min.js"
 [[params.plugins.js]]
