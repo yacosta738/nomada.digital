@@ -176,8 +176,8 @@ weight = 8
 [params]
 logo = "images/logo.png"
 # Meta data
-description = "Responsive Multipurpose Parallax Hugo Template"
-author = "Themefisher"
+description = "Artículos sobre programación e investigaciones."
+author = "Yuniel Acosta Pérez"
 # Google Analytics
 google_analytics_id = "" # Your ID
 # post share
