@@ -617,7 +617,11 @@ xclip
   transform: translate(0, 0);
 }
 
-
+#select-language {
+  background: #353b43;
+  color: #ffffff;
+  border: 0;
+}
 
 
 .right-box-pro{
