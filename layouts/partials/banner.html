@@ -8,20 +8,21 @@
 	<img class="d-none" src="{{ .bg_image_webp | absURL }}" onerror="this.onerror=null;this.parentElement.style.backgroundImage= 'url({{ .bg_image | absURL }})'"/>
 	<div class="heading">
 		<h1>{{ .title | markdownify }}</h1>
-		<p>{{ .content | markdownify }}</p>
+		<p>{{ .content | safeHTML }}</p>
 		<h3 class="cd-headline clip is-full-width">
 			<span>Lorem ipsum dolor sit amet </span>
 			<span class="cd-words-wrapper">
-					<b class="is-visible">Web Developer</b>
-					<b>Web Design</b>
-					<b>Creative Design</b>
-					<b>Graphic Design</b>
+				{{ $role :=  index (.roles) 0 }}
+					<b class="is-visible">{{ $role.label}}</b>
+					{{ range .roles }}
+						<b>{{ .label }}</b>
+					{{end}}
 				</span>
 		</h3>
 		{{ if .button.enable }}
-		{{ with .button }}
-		<a href="{{ .link }}" class="btn btn-transparent page-scroll">{{ .label }}</a>
-		{{ end }}
+			{{ with .button }}
+				<a href="{{ .link }}" class="btn btn-transparent page-scroll">{{ .label }}</a>
+			{{ end }}
 		{{ end }}
 	</div>
 </section>

@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html lang="{{ with site.LanguageCode }}{{ . }}{{ else }}en-us{{ end }}">
 {{ partial "head.html" . }}
-
-<body id="body" data-spy="scroll" data-target=".navbar" data-offset="55">
-  <div id="content">
-    {{ partial "preloader.html" . }}
-    {{- block "main" . }}{{- end }}
-  </div>
+<body id="page-top" data-spy="scroll" class="politics_version">
+<!--  {{ partial "preloader.html" . }}-->
+  {{- block "main" . }}{{- end }}
   {{- partial "footer.html" . -}}
 </body>
 

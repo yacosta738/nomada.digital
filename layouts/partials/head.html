@@ -1,7 +1,6 @@
 <head>
 	<meta charset="utf-8">
 	<title>{{ .Title }}</title>
-
 	{{ "<!-- mobile responsive meta -->" | safeHTML }}
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with site.Params.description }}{{ . }}{{ end }}{{ end }}">
@@ -13,14 +12,34 @@
 	{{ range site.Params.plugins.css }}
 	<link rel="stylesheet" href="{{ .link | absURL }}">
 	{{ end }}
-
 	{{"<!-- Main Stylesheet -->"|safeHTML}}
 	{{ $styles := resources.Get "css/style.css" | minify }}
-	<link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
+	<link rel="stylesheet" href="{{ $styles.Permalink }}" >
 
 	{{"<!-- Custom stylesheet - for your changes -->" |safeHTML}}
 	{{ $custom := resources.Get "css/custom.css" | minify }}
-  <link rel="stylesheet" href="{{ $custom.Permalink }}" media="screen">
+	<link rel="stylesheet" href="{{ $custom.Permalink }}" media="screen">
+
+	<!-- Responsive CSS -->
+	{{ $responsive := resources.Get "css/responsive.css" | minify }}
+	<link rel="stylesheet" href="{{ $responsive.Permalink }}" media="screen">
+	<!-- Camera CSS -->
+	{{ $camera := resources.Get "css/camera.css" | minify }}
+	<link rel="stylesheet" href="{{ $camera.Permalink }}" media="screen">
+	<!-- Flaticon CSS -->
+	{{ $flaticon := resources.Get "css/flaticon.css" | minify }}
+	<link rel="stylesheet" href="{{ $flaticon.Permalink }}" media="screen">
+	<!-- PrettyPhoto CSS -->
+	{{ $prettyPhoto := resources.Get "css/prettyPhoto.css" | minify }}
+	<link rel="stylesheet" href="{{ $prettyPhoto.Permalink }}" media="screen">
+
+	{{"<!-- /Welcome Slider-->" | safeHTML}}
+
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
 
 	{{ "<!--Favicon-->" | safeHTML }}
 	<link rel="shortcut icon" href="{{ `images/favicon.png` | absURL }}" type="image/x-icon">
@@ -30,12 +49,11 @@
 	{{ "<!-- Global Site Tag (gtag.js) - Google Analytics -->" | safeHTML }}
 	<script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
 	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
 
-	  gtag('config', '{{ . }}');
+		gtag('config', '{{ . }}');
 	</script>
 	{{ end }}
-
 </head>

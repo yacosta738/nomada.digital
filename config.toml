@@ -75,102 +75,103 @@ link = "plugins/google-map/map.js"
 
 ################### English Navigation ########################
 [[Languages.en.menu.main]]
-name = "about"
-pre = "#"
-url = "about"
-weight = 1
+    name = "Home"
+    pre = "#"
+    url = "home"
+    weight = 1
+
 
 [[Languages.en.menu.main]]
-name = "services"
-pre = "#"
-url = "services"
-weight = 2
+    name = "about"
+    pre = "#"
+    url = "about"
+    weight = 2
+
 
 [[Languages.en.menu.main]]
-name = "portfolio"
-pre = "#"
-url = "portfolio"
-weight = 3
+    name = "services"
+    pre = "#"
+    url = "services"
+    weight = 3
+
 
 [[Languages.en.menu.main]]
-name = "team"
-pre = "#"
-url = "team"
-weight = 4
+    name = "portfolio"
+    pre = "#"
+    url = "portfolio"
+    weight = 4
+
 
 [[Languages.en.menu.main]]
-name = "pricing"
-pre = "#"
-url = "pricing"
-weight = 5
+    name = "testimonial"
+    pre = "#"
+    url = "team"
+    weight = 5
+
 
 [[Languages.en.menu.main]]
-name = "blog"
-pre = "#"
-url = "blog"
-weight = 6
+    name = "blog"
+    pre = "#"
+    url = "blog"
+    weight = 6
+
 
 [[Languages.en.menu.main]]
-name = "contact"
-pre = "#"
-url = "contact"
-weight = 7
-
-[[Languages.en.menu.main]]
-name = "themefisher"
-pre = ""
-url = "https://themefisher.com/"
-weight = 8
+    name = "contact"
+    pre = "#"
+    url = "contact"
+    weight = 7
 
 
 ################### French Navigation ########################
 [[Languages.fr.menu.main]]
-name = "sur"
-pre = "#"
-url = "about"
-weight = 1
+    name = "Inicio"
+    pre = "#"
+    url = "home"
+    weight = 1
+
 
 [[Languages.fr.menu.main]]
-name = "un service"
-pre = "#"
-url = "services"
-weight = 2
+    name = "sur"
+    pre = "#"
+    url = "about"
+    weight = 2
+
 
 [[Languages.fr.menu.main]]
-name = "portefeuille"
-pre = "#"
-url = "portfolio"
-weight = 3
+    name = "un service"
+    pre = "#"
+    url = "services"
+    weight = 3
+
 
 [[Languages.fr.menu.main]]
-name = "équipe"
-pre = "#"
-url = "team"
-weight = 4
+    name = "portefeuille"
+    pre = "#"
+    url = "portfolio"
+    weight = 4
+
 
 [[Languages.fr.menu.main]]
-name = "tarification"
-pre = "#"
-url = "pricing"
-weight = 5
+    name = "Testimonios"
+    pre = "#"
+    url = "team"
+    weight = 5
+
 
 [[Languages.fr.menu.main]]
-name = "blog"
-pre = "#"
-url = "blog"
-weight = 6
+    name = "blog"
+    pre = "#"
+    url = "blog"
+    weight = 6
+
 
 [[Languages.fr.menu.main]]
-name = "contact"
-pre = "#"
-url = "contact"
-weight = 7
+    name = "contact"
+    pre = "#"
+    url = "contact"
+    weight = 7
 
-[[Languages.fr.menu.main]]
-name = "themefisher"
-pre = ""
-url = "https://themefisher.com/"
-weight = 8
 
 ############################# Default Parameters ##########################
 [params]

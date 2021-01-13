@@ -49,10 +49,10 @@ jQuery(function ($) {
 	/*	Portfolio Filtering Hook
 	/* =========================================================================  */
 
-	var containerEl = document.querySelector('.shuffle-wrapper');
+	const containerEl = document.querySelector('.shuffle-wrapper');
 	if (containerEl) {
-		var Shuffle = window.Shuffle;
-		var myShuffle = new Shuffle(document.querySelector('.shuffle-wrapper'), {
+		const Shuffle = window.Shuffle;
+		const myShuffle = new Shuffle(document.querySelector('.shuffle-wrapper'), {
 			itemSelector: '.shuffle-item',
 			buffer: 1
 		});
@@ -76,23 +76,23 @@ jQuery(function ($) {
 		autoplaySpeed: 4000
 	});
 
-	/* ========================================================================= */
-	/*	animation scroll js
-	/* ========================================================================= */
-
-	var html_body = $('html, body');
-	$('nav a, .page-scroll').on('click', function () { //use page-scroll class in any HTML tag for scrolling
-		if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
-			var target = $(this.hash);
-			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-			if (target.length) {
-				html_body.animate({
-					scrollTop: target.offset().top - 50
-				}, 1500, 'easeInOutExpo');
-				return false;
-			}
-		}
-	});
+	// /* ========================================================================= */
+	// /*	animation scroll js
+	// /* ========================================================================= */
+	//
+	// const html_body = $('html, body');
+	// $('nav a, .page-scroll').on('click', function () { //use page-scroll class in any HTML tag for scrolling
+	// 	if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
+	// 		let target = $(this.hash);
+	// 		target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+	// 		if (target.length) {
+	// 			html_body.animate({
+	// 				scrollTop: target.offset().top - 50
+	// 			}, 1500, 'easeInOutExpo');
+	// 			return false;
+	// 		}
+	// 	}
+	// });
 
 	// easeInOutExpo Declaration
 	jQuery.extend(jQuery.easing, {
@@ -114,13 +114,13 @@ jQuery(function ($) {
 	/*	counter up
 	/* ========================================================================= */
 	function counter() {
-		var oTop;
+		let oTop;
 		if ($('.count').length !== 0) {
 			oTop = $('.count').offset().top - window.innerHeight;
 		}
 		if ($(window).scrollTop() > oTop) {
 			$('.count').each(function () {
-				var $this = $(this),
+				const $this = $(this),
 					countTo = $this.attr('data-count');
 				$({
 					countNum: $this.text()

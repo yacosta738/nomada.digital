@@ -10,3 +10,10 @@ banner:
     enable : true
     label : "Explore Us"
     link : "#services"
+  roles:
+    - label: "Fullstack Developer"
+    - label: "Web Design"
+    - label: "Creative Design"
+    - label: "Graphic Design"
+    - label: "Front-end Developer"
+    - label: "Back-end Developer"

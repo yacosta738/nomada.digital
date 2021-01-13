@@ -1,3 +1,4 @@
+<section class="sticky-top navigation">
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
 	<div class="container">
@@ -16,7 +17,11 @@
 			<ul class="navbar-nav text-uppercase ml-auto">
 				{{ range site.Menus.main }}
 				<li class="nav-item">
-					<a class="nav-link" href="{{if .Pre}}{{site.BaseURL | absLangURL}}{{.Pre}}{{ .URL }}{{else}}{{.URL | absLangURL}}{{end}}">{{ .Name }}</a>
+					{{ if in .Pre "#"}}
+						<a class="nav-link js-scroll-trigger" href="{{if .Pre}}{{.Pre}}{{ .URL }}{{else}}{{.URL | absLangURL}}{{end}}">{{ .Name }}</a>
+					{{else}}
+						<a class="nav-link js-scroll-trigger" href="{{if .Pre}}{{ site.BaseURL | absLangURL }}{{.Pre}}{{ .URL }}{{else}}{{.URL | absLangURL}}{{end}}">{{ .Name }}</a>
+					{{end}}
 				</li>
 				{{ end }}
 			</ul>
@@ -44,3 +49,4 @@
 		</div>
 	</div>
 </nav>
+</section>
