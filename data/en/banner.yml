@@ -4,8 +4,8 @@ banner:
   bg_image_webp : "images/backgrounds/hero-area.webp"
   bg_image : "images/backgrounds/hero-area.jpg"
   icon : "" # themify icon pack : https://themify.me/themify-icons
-  title : "hello i'm Dominic"
-  content : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  title : "hello i'm Yuniel"
+  content : "If I cannot do great things, <br>I can do small things in a great way."
   button:
     enable : true
     label : "Explore Us"
