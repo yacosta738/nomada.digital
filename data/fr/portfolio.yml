@@ -1,7 +1,8 @@
 #################################### portfolio ###############################
 portfolio:
   enable : true
-  title : Our Works
+  title : Portafolio
+  content : Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus.
   portfolio_item :
     # portfolio item loop
     - name : Tag Design

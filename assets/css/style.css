@@ -666,77 +666,124 @@ xclip
   font-weight: 600;
 }
 
-
-/*------------------------------------------------------------------
-    PORTFOLIO
--------------------------------------------------------------------*/
-
-.item-h2,
-.item-h1 {
-  height: 100% !important;
-  height: auto !important;
-}
-
-.isotope-item {
-  z-index: 2;
-  padding: 0;
-}
-
-.isotope-hidden.isotope-item {
-  pointer-events: none;
-  z-index: 1;
-}
-
-.isotope,
-.isotope .isotope-item {
-  /* change duration value to whatever you like */
-  -webkit-transition-duration: 0.8s;
-  -moz-transition-duration: 0.8s;
-  transition-duration: 0.8s;
-}
-
-.isotope {
-  -webkit-transition-property: height, width;
-  -moz-transition-property: height, width;
-  transition-property: height, width;
-}
-
-.isotope .isotope-item {
-  -webkit-transition-property: -webkit-transform, opacity;
-  -moz-transition-property: -moz-transform, opacity;
-  transition-property: transform, opacity;
-}
-
-.portfolio-filter ul {
-  padding: 0;
-  z-index: 2;
-  display: block;
+.border-acosta {
+  border-top: 2px solid rgba(236, 239, 241, 0.07);
+  height: 1px;
+  margin: 15px auto 0;
   position: relative;
-  margin: 0;
+  width: 30%;
 }
 
-.portfolio-filter ul li {
-  border-radius: 0;
+.border-acosta:before {
+  background-color: #fff;
+  content: '';
+  height: 6px;
+  left: 50%;
+  margin-left: -20px;
+  position: absolute;
+  top: -4px;
+  width: 50px;
+  background-color: #57cbcc;
+}
+
+.color {
+  color: #6CB670;
+}
+
+
+/*=================================================================
+  Portfolio section
+==================================================================*/
+.portfolio-filter {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.portfolio-filter .btn {
+  outline: 0;
+  border: 1px solid rgba(236, 239, 241, 0.07);
+  background: transparent;
   display: inline-block;
-  margin: 0 5px 0 0;
-  text-decoration: none;
-  text-transform: uppercase;
-  vertical-align: middle;
+  font-size: 16px;
+  padding: 6px 20px;
+  font-weight: 700;
+  color: #737f8a;
+  transition: .3s all;
 }
 
-.portfolio-filter ul li:last-child:after {
-  content: "";
+.portfolio-filter .btn.active {
+  border-color: #57cbcc;
 }
 
-.portfolio-filter ul li .btn-dark {
-  box-shadow: none;
-  background-color: transparent;
-  border: 1px solid #e6e7e6 !important;
-  color: #1f1f1f;
-  font-weight: 400;
-  font-size: 13px;
-  padding: 10px 30px;
+.portfolio-block {
+  position: relative;
 }
+
+.portfolio-block:before {
+  transition: all 0.3s ease-in-out;
+  background: white;
+  opacity: 0;
+  top: 20px;
+  right: 20px;
+  bottom: 20px;
+  left: 20px;
+  position: absolute;
+  content: '';
+}
+
+.portfolio-block img {
+  width: 100%;
+  height: auto;
+}
+
+.portfolio-block:hover:before {
+  opacity: 1;
+}
+
+.portfolio-block:hover .caption h4 {
+  top: 45%;
+}
+
+.portfolio-block:hover .caption {
+  opacity: 1;
+  top: 55%;
+}
+
+.portfolio-block .caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 9;
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+}
+
+.portfolio-block .caption h4 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.portfolio-block .caption h4 a {
+  color: #555;
+}
+
+.portfolio-block .caption .search-icon {
+  background: #57cbcc;
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  display: inline-block;
+  font-size: 20px;
+  border-radius: 30px;
+}
+
+.portfolio-block .caption .search-icon i {
+  line-height: 50px;
+}
+
 
 .da-thumbs {
   list-style: none;
@@ -798,85 +845,6 @@ xclip
   text-align: center;
 }
 
-
-/*------------------------------------------------------------------
-    TESTIMONIALS
--------------------------------------------------------------------*/
-
-.logos img {
-  margin: auto;
-  display: block;
-  text-align: center;
-  width: 100%;
-  opacity: 0.3;
-}
-
-.logos img:hover {
-  opacity: 0.5;
-}
-
-.desc h3 i {
-  color: #cccccc;
-  font-size: 37px;
-  vertical-align: middle;
-  margin-right: 12px;
-}
-
-.desc {
-  padding: 30px;
-  position: relative;
-  background: #000;
-  border: 1px solid #111111;
-}
-
-.testi-meta {
-  display: block;
-  margin-top: 20px;
-}
-
-.testimonial h4 {
-  font-size: 18px;
-  color: #333333;
-  padding: 13px 0 0;
-}
-
-.testimonial img {
-  max-width: 55px;
-}
-
-.testimonial small {
-  margin-top: 7px;
-  font-size: 16px;
-  display: block;
-}
-
-.testimonial {
-  background-color: transparent;
-}
-
-.testimonial h3 {
-  padding: 0 0 10px;
-  font-size: 20px;
-  font-weight: 600;
-  color: #ffffff;
-}
-
-.testimonial small,
-.testimonial .lead {
-  background-color: transparent;
-  color: #aaa;
-  display: block;
-  font-size: 16px;
-  font-style: normal;
-  line-height: 30px;
-  margin: 0;
-  padding: 0;
-  position: relative;
-}
-
-.testimonial p:after {
-  display: none;
-}
 
 
 /*------------------------------------------------------------------
