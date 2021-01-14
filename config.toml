@@ -176,6 +176,8 @@ link = "plugins/google-map/map.js"
 ############################# Default Parameters ##########################
 [params]
 logo = "images/logo.png"
+bg_image = "images/backgrounds/bg.png"
+bg_image_webp = "images/backgrounds/bg.webp"
 # Meta data
 description = "Artículos sobre programación e investigaciones."
 author = "Yuniel Acosta Pérez"

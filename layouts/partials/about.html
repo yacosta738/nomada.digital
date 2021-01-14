@@ -3,7 +3,7 @@
 {{ if $data.about.about.enable }}
 {{ with $data.about.about }}
 {{"<!-- Start About Section -->" | safeHTML}}
-<section class="bg-one about section wb" id="about">
+<section id="about" class="bg-one-inverse about section" style='background-image: url("{{ site.Params.bg_image_webp | absURL }}")'>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
