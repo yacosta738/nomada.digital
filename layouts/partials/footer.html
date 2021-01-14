@@ -40,7 +40,6 @@
 {{ "<!-- Main Script -->" | safeHTML }}
 {{ $script := resources.Get "js/script.js" | minify | fingerprint "sha384"}}
 <script src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}"></script>
-
 {{ $contact_me := resources.Get "js/contact_me.js" }}
 <script src="{{ $contact_me.Permalink }}" integrity="{{ $contact_me.Data.Integrity }}"></script>
 {{ $custom := resources.Get "js/custom.js" }}
