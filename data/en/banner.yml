@@ -5,12 +5,13 @@ banner:
   bg_image : "images/backgrounds/hero-area.jpg"
   icon : "" # themify icon pack : https://themify.me/themify-icons
   title : "hello i'm Yuniel"
-  content : "If I cannot do great things, <br>I can do small things in a great way."
+  content : "\"If I cannot do great things, <br>I can do small things in a great way.\""
   button:
     enable : true
     label : "Explore Us"
     link : "#services"
-  roles:
+  roles_content : "Some of the roles I play:"
+  roles :
     - label: "Fullstack Developer"
     - label: "Web Design"
     - label: "Creative Design"

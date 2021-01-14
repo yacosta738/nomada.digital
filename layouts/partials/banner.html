@@ -10,7 +10,7 @@
 		<h1>{{ .title | markdownify }}</h1>
 		<p>{{ .content | safeHTML }}</p>
 		<h3 class="cd-headline clip is-full-width">
-			<span>Lorem ipsum dolor sit amet </span>
+			<span>{{ .roles_content | markdownify }}</span>
 			<span class="cd-words-wrapper">
 				{{ $role :=  index (.roles) 0 }}
 					<b class="is-visible">{{ $role.label}}</b>

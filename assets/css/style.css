@@ -25,7 +25,7 @@ html, body{
 }
 
 body.demos .section {
-  background: url("/images/bg.png") repeat top center #f2f3f5;
+  background: #f2f3f5 repeat top center;
 }
 
 body.demos .section-title img {
@@ -635,7 +635,7 @@ xclip
 }
 .right-box-pro::before {
   content: "";
-  background: url("/images/country-quilt-dark.png");
+  background: #1a1a1a;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -1386,7 +1386,7 @@ hr.invis1 {
   width: 100%;
   height: 100%;
   position: relative;
-  background: url("/uploads/code.jpg") no-repeat;
+  background: #5a6268 no-repeat;
 }
 
 .design-wrapper {
@@ -1407,7 +1407,7 @@ hr.invis1 {
   position: relative;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
-  background: url("/uploads/design.jpg") no-repeat;
+  background: #0f6674 no-repeat;
 }
 
 .filter-button-group{
@@ -2078,7 +2078,7 @@ select.mobile-device {
 }
 
 #contact {
-  background: url("/images/bg.png") no-repeat center center #333333;
+  background: #333333 no-repeat center center;
 }
 
 

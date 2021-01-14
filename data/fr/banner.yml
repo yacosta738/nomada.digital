@@ -5,11 +5,12 @@ banner:
   bg_image : "images/backgrounds/hero-area.jpg"
   icon : "" # themify icon pack : https://themify.me/themify-icons
   title : "hola soy Yuniel"
-  content : "Si no puedo hacer grandes cosas, <br>puedo hacer pequeñas cosas de una manera excelente."
+  content : "\"Si no puedo hacer grandes cosas, <br>puedo hacer pequeñas cosas de una manera excelente.\""
   button:
     enable : true
     label : "Explore Us"
     link : "#services"
+  roles_content: "Algunos de los roles que desempeño:"
   roles:
     - label: "Desarrollador Fullstack"
     - label: "Diseñador web"
