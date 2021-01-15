@@ -438,8 +438,7 @@ a:hover {
 }
 
 .logo {
-  margin-top: 10px;
-  display: inline-block;
+  max-height: 42px;
 }
 
 /*=================================================================

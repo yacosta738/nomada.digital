@@ -1,7 +1,8 @@
 ############################# About ###################################
 about:
   enable : true
-  title : About Us
+  title : Sobre mí
+  picture: "uploads/about_04.jpg"
   about_item :
   - icon : ti-ruler-pencil # themify icon pack : https://themify.me/themify-icons
     title : We're Creative

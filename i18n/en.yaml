@@ -13,9 +13,9 @@
 - id: all
   translation: All
 - id: about
-  translation: About Us
+  translation: About me
 - id: services
-  translation: Service
+  translation: Services
 - id: portfolio
   translation: Portfolio
 - id: team
@@ -26,5 +26,3 @@
   translation: Blog
 - id: contact
   translation: Contact
-- id: themefisher
-  translation: Themefisher

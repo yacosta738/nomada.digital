@@ -24,8 +24,8 @@ contact:
   contact_form:
     enable : true
     form_action : "#" #contact form works with https://formspree.io
-    name : "votre nom"
-    email : "Votre email"
-    subject : "Matière"
-    message : "Message"
-    submit : "Soumettre"
+    name : "Tu nombre"
+    email : "Tu correo electrónico"
+    subject : "Asunto"
+    message : "Mensaje"
+    submit : "Enviar"

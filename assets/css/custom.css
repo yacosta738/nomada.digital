@@ -4,6 +4,19 @@
 
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700');
 
+/* marvel-regular - latin */
+@font-face {
+    font-family: 'Masked Hero';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/MaskedHero.eot'); /* IE9 Compat Modes */
+    src: local(''),
+    url('/fonts/MaskedHero.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('/fonts/MaskedHero.woff2') format('woff2'), /* Super Modern Browsers */
+    url('/fonts/MaskedHero.woff') format('woff'), /* Modern Browsers */
+    url('/fonts/MaskedHero.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+
 /*------------------------------------------------------------------
     HEADER
 -------------------------------------------------------------------*/
@@ -51,7 +64,9 @@
 .navbar-dark .navbar-nav .nav-link.active::after {
     width: 50%;
 }
-
+.navbar-brand{
+    font-family: 'Masked Hero', serif;
+}
 .nav-pills {
     border: 1px solid #e1e1e1;
 }
