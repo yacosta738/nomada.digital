@@ -1,5 +1,5 @@
 ################################# Default configuration ###################
-baseURL = "nomada-digital.netlify.app"
+baseURL = "https://yacosta738.github.io/nomada.digital/"
 title = "Nómada Digital"
 # change publishDir = "docs" for github pages
 # publishDir = "docs"
