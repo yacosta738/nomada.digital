@@ -1,0 +1,2 @@
+{{ $aboutStyles := resources.Get "styles/about-bundle.scss" | toCSS | minify | fingerprint "sha512" }}
+<link rel="stylesheet" type="text/css" href="{{ $aboutStyles.RelPermalink }}" integrity="{{ $aboutStyles.Data.Integrity }}" media="screen, tv, projection">

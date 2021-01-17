@@ -1,0 +1,33 @@
+{
+  "name": "nomada.digital",
+  "version": "1.0.0",
+  "description": "Yuniel's blog using static site engine Hugo",
+  "devDependencies": {
+    "prettier": "^2.2.1",
+    "start-server-and-test": "^1.11.7"
+  },
+  "scripts": {
+    "install:prod": "npm install --only=prod",
+    "clean:public": "rm -rf public",
+    "build": "npm run clean:public && hugo version && hugo --gc --minify",
+    "hugo:watch": "hugo server --config config-dev.toml --bind=0.0.0.0",
+    "start": "hugo && npm run hugo:watch",
+    "dev": "hugo serve --disableFastRender --gc --forceSyncStatic --verbose",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yacosta738/nomada.digital.git"
+  },
+  "keywords": [
+    "blog",
+    "portfolio",
+    "hugo"
+  ],
+  "author": "Yuniel Acosta Pérez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yacosta738/nomada.digital/issues"
+  },
+  "homepage": "https://github.com/yacosta738/nomada.digital#readme"
+}

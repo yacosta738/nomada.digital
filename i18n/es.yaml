@@ -1,0 +1,28 @@
+- id: blogTitle
+  translation: Últimos Artículos
+- id: readMore
+  translation: Leer más
+- id: viewAllPost
+  translation: Ver todos los Artículos
+- id: share
+  translation: Compartir
+- id: aboutAuthor
+  translation: Sobre el autor
+- id: authorsPosts
+  translation: Los Artículos del autor
+- id: all
+  translation: Todos
+- id: about
+  translation: Sobre mí
+- id: services
+  translation: Servicios
+- id: portfolio
+  translation: Portafolio
+- id: team
+  translation: Equipo
+- id: pricing
+  translation: Precios
+- id: blog
+  translation: Blog
+- id: contact
+  translation: Contacto

@@ -1,0 +1,76 @@
+{{ define "main" }}
+
+{{ partial "navigation.html" . }}
+
+{{ $data := index site.Data site.Language.Lang }}
+{{ if $data.about.about.enable }}
+{{ with $data.about.about }}
+{{"<!-- ======= About Section ======= -->" | safeHTML }}
+<section id="about-me" class="section section-bg about">
+    <div class="container">
+        {{"<!-- section title --> " | safeHTML }}
+        <div class="title text-center wow fadeIn" data-wow-duration="500ms">
+            <h2>{{ with site.Params.author }} {{ index (split . " ") 0 | safeHTML }} {{ end }}<span class="color">
+						{{ with site.Params.author }} {{ after (len (index (split . " ") 0)) . | safeHTML }} {{ end }}</span>
+            </h2>
+            <div class="border-xline"></div>
+        </div>
+        <div class="section-title">
+            {{ range .about_me}}
+            <p style="margin-bottom: 20px"> {{ .text | markdownify }} </p>
+            {{ end }}
+        </div>
+        <div class="row">
+            <div class="col-lg-4 wow fadeIn">
+                <div class="div-img-bg">
+                    <div class="about-img">
+                        <img src="{{ .picture | absURL }}" class="img-fluid lozad" alt="{{ .title }}">
+                    </div>
+                </div>
+                <div class="social-links mt-3 text-center">
+                    {{ range site.Params.social }}
+                    <a href="{{ .link | safeURL }}"><i class="{{ .icon }}"></i></a>
+                    {{ end }}
+                </div>
+            </div>
+            <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+                <h3>{{ .contact_info }}</h3>
+                <p class="font-italic">
+                    {{ replace .description "[-YEAR-]" (sub (int (now.Format "2006" ) ) 2017) }}
+                </p>
+                <div class="row">
+                    {{$elementsLen := len .contacts}}
+                    <div class="col-lg-6">
+                        <ul>
+                            {{ range first (sub $elementsLen (div $elementsLen 2) ) .contacts }}
+                            <li><a href="{{ .link | safeURL}}" target="{{ .target }}"><i class="{{ .icon }}"></i>
+                                <strong>{{ .name }}:</strong> {{ .text }} </a></li>
+                            {{ end }}
+                        </ul>
+                    </div>
+                    <div class="col-lg-6">
+                        <ul>
+                            {{ range last (div $elementsLen 2) .contacts }}
+                            <li><a href="{{ .link | safeURL}}" target="{{ .target }}"><i class="{{ .icon }}"></i>
+                                <strong>{{ .name }}:</strong> {{ .text }} </a></li>
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
+                <p>
+                    Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci
+                    omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
+                    Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque
+                    neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni
+                    laudantium dolores.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+{{"<!-- End About Section -->" | safeHTML}}
+{{ partial "resume.html" . }}
+{{ end }}
+{{ end }}
+{{ end }}

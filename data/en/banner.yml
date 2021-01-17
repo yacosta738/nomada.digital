@@ -4,9 +4,17 @@ banner:
   bg_image_webp : "images/backgrounds/hero-area.webp"
   bg_image : "images/backgrounds/hero-area.jpg"
   icon : "" # themify icon pack : https://themify.me/themify-icons
-  title : "Experience the new reality"
-  content : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, excepturi. At recusandae sit perferendis autem,iste tempora nostrum numquam sapiente!"
+  title : "hello i'm Yuniel"
+  content : "\"If I cannot do great things, <br>I can do small things in a great way.\""
   button:
     enable : true
     label : "Explore Us"
     link : "#services"
+  roles_content : "Some of the roles I play:"
+  roles :
+    - label: "Fullstack Developer"
+    - label: "Web Design"
+    - label: "Creative Design"
+    - label: "Graphic Design"
+    - label: "Front-end Developer"
+    - label: "Back-end Developer"
