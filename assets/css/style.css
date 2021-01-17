@@ -15,33 +15,9 @@ html {
 
 body {
   background-color: #353b43;
-  font-size: 14px;
   font-family: 'Roboto Mono', monospace;
   color: #737f8a;
   -webkit-font-smoothing: antialiased;
-}
-
-body.demos .section-title img {
-  max-width: 280px;
-  display: block;
-  margin: 10px auto;
-}
-
-body.demos .service-widget h3 {
-  border-bottom: 1px solid #ededed;
-  font-size: 18px;
-  padding: 20px 0;
-  background-color: #ffffff;
-}
-
-body.demos .service-widget {
-  margin: 0 0 30px;
-  padding: 30px;
-  background-color: #fff
-}
-
-body.demos .container-fluid {
-  max-width: 1080px
 }
 
 h1,
@@ -193,16 +169,15 @@ a:hover {
   color: #fff;
 }
 
-.border-meghna {
-  border-top: 2px solid rgba(236, 239, 241, 0.07);
+.border-xline {
+  border-top: 2px solid rgba(236, 239, 241, 0.2);
   height: 1px;
   margin: 15px auto 0;
   position: relative;
   width: 30%;
 }
 
-.border-meghna:before {
-  background-color: #fff;
+.border-xline:before {
   content: '';
   height: 6px;
   left: 50%;
@@ -313,7 +288,33 @@ a:hover {
 .section {
   padding: 100px 0;
 }
+.section-title {
+  padding-bottom: 30px;
+}
 
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #57cbcc;
+}
+
+.section-title h2::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #105a5a;
+  bottom: 0;
+  left: 0;
+}
+
+.section-title p {
+  margin-bottom: 0;
+}
 @media (max-width: 480px) {
   .section {
     padding: 50px 0;
@@ -442,72 +443,138 @@ a:hover {
 }
 
 /*=================================================================
-  About us section
+  About section
 ==================================================================*/
-.about .block {
-  background: #242930;
-  padding: 30px;
-  border-bottom: 2px solid transparent;
-  transition: .5s all;
-  margin-bottom: 20px;
+.about .content h3 {
+  font-weight: 700;
+  font-size: 26px;
+  color: #57cbcc;
 }
 
-.about .block:hover {
-  border-bottom: 2px solid #57cbcc;
+.about .content ul {
+  list-style: none;
+  padding: 0;
 }
 
-.about .block:hover .icon-box {
-  -webkit-transform: translateY(-10px);
-  transform: translateY(-10px);
+.about .content ul li {
+  padding-bottom: 10px;
 }
 
-.about .block .icon-box {
-  position: relative;
-  width: 160px;
-  height: 92.38px;
-  background-color: transparent;
-  margin: 46.19px auto 60px;
-  padding: 20px 0;
-  border-left: 2px solid rgba(236, 239, 241, 0.07);
-  border-right: 2px solid rgba(236, 239, 241, 0.07);
-  font-size: 50px;
-  -webkit-transform: translateZ(0px);
-  transform: translateZ(0px);
-  transition-duration: 0.3s;
-  transition-property: -webkit-transform;
-  transition-property: transform;
-  transition-property: transform, -webkit-transform;
+.about .content ul i {
+  font-size: 20px;
+  padding-right: 2px;
+  color: #57cbcc;
 }
 
-.about .block .icon-box:after,
-.about .block .icon-box:before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  width: 113.14px;
-  height: 113.14px;
-  background-color: inherit;
-  left: 20.4315px;
-  -webkit-transform: scaleY(0.5774) rotate(-45deg);
-  transform: scaleY(0.5774) rotate(-45deg);
-}
-
-.about .block .icon-box:before {
-  top: -56.5685px;
-  border-top: 2px solid rgba(236, 239, 241, 0.07);
-  border-right: 2px solid rgba(236, 239, 241, 0.07);
-}
-
-.about .block .icon-box:after {
-  bottom: -56.5685px;
-  border-bottom: 2px solid rgba(236, 239, 241, 0.07);
-  border-left: 2px solid rgba(236, 239, 241, 0.07);
+.about .content p:last-child {
+  margin-bottom: 0;
 }
 
 .about .block .icon-box h3 {
   color: #afbac4;
 }
+.message-box h4 {
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0 0 5px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-size: 15px;
+  color: #999;
+}
 
+.message-box h2 {
+  font-size: 38px;
+  font-weight: 300;
+  padding: 0 0 10px;
+  margin: 0;
+  line-height: 62px;
+  text-transform: none;
+  color: #999;
+}
+
+.message-box p {
+  margin-bottom: 20px;
+}
+.message-box a {
+  font-weight: 900;
+  color: #1f1f1f;
+  text-decoration: none !important;
+  outline: none !important;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+.message-box .lead {
+  padding-top: 10px;
+  font-size: 16px;
+  font-style: italic;
+  color: #999;
+  padding-bottom: 10px;
+  padding-left: 15px;
+}
+/*--------------------------------------------------------------
+# Resume
+--------------------------------------------------------------*/
+.resume .resume-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #050d18;
+}
+
+.resume .resume-item {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid #1f5297;
+  position: relative;
+}
+
+.resume .resume-item h4 {
+  line-height: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: #050d18;
+  margin-bottom: 10px;
+}
+
+.resume .resume-item h5 {
+  font-size: 16px;
+  background: #e4edf9;
+  padding: 5px 15px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.resume .resume-item ul {
+  padding-left: 20px;
+}
+
+.resume .resume-item ul li {
+  padding-bottom: 10px;
+}
+
+.resume .resume-item:last-child {
+  padding-bottom: 0;
+}
+
+.resume .resume-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: #fff;
+  border: 2px solid #1f5297;
+}
 /*=================================================================
   About us 2 section
 ==================================================================*/

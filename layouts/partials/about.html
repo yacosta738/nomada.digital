@@ -3,22 +3,31 @@
 {{ if $data.about.about.enable }}
 {{ with $data.about.about }}
 {{"<!-- Start About Section -->" | safeHTML}}
-<section id="about" class="bg-one-inverse about section" style='background-image: url("{{ site.Params.bg_image_webp | absURL }}")'>
+<section id="about" class="bg-one-inverse section"
+         style='background-image: url("{{ site.Params.bg_image_webp | absURL }}")'>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
 				<div class="message-box">
-					<h2>About Yuniel.</h2>
-					<p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus bibendum. Sed fermentum est vitae rhoncus molestie. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed vitae rutrum neque. Ut id erat sit amet libero bibendum aliquam. Donec ac egestas libero, eu bibendum risus. Phasellus et congue justo. </p>
-					<p>Sed vitae rutrum neque. Ut id erat sit amet libero bibendum aliquam. Donec ac egestas libero, eu bibendum risus. Phasellus et congue justo.</p>
-
-					<a href="#" class="sim-btn btn-hover-new" data-text="Download CV"><span>Download CV</span></a>
+					{{"<!-- section title -->" | safeHTML }}
+					<div class="about-title wow fadeIn" data-wow-duration="500ms">
+						<h2>{{ .title }}</h2>
+					</div>
+					{{ range .about_me}}
+					<p> {{ .text | markdownify }} </p>
+					{{ end }}
+					{{ range .buttons }}
+						<a href="{{ if .target }}{{ .button_link }}{{else}}{{ .button_link | absURL }}{{end}}"  target="{{ .target }}"
+						   class="sim-btn btn-hover-new" data-text="{{ .button_title }}">
+							<span>{{ .button_title }}</span>
+						</a>
+					{{end}}
 				</div><!-- end messagebox -->
 			</div><!-- end col -->
 
 			<div class="col-md-6">
 				<div class="right-box-pro wow fadeIn">
-					<img src="{{ .picture | absURL }}" alt="Yuniel Acosta Pérez" class="img-fluid img-rounded lozad">
+					<img src="{{ .picture | absURL }}" alt="{{ .title }}" class="img-fluid img-rounded lozad">
 				</div><!-- end media -->
 			</div><!-- end col -->
 		</div><!-- end row -->

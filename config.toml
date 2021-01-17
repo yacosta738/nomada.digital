@@ -208,26 +208,27 @@ map_marker = "images/marker.png"
 [[params.social]]
 icon = "ti-facebook" # themify icon pack : https://themify.me/themify-icons
 link = "#"
+name = "Facebook"
 
 [[params.social]]
 icon = "ti-twitter-alt" # themify icon pack : https://themify.me/themify-icons
 link = "#"
+name = "Twitter"
 
 [[params.social]]
 icon = "ti-youtube" # themify icon pack : https://themify.me/themify-icons
 link = "#"
+name = "Youtube"
 
 [[params.social]]
 icon = "ti-linkedin" # themify icon pack : https://themify.me/themify-icons
 link = "#"
-
-[[params.social]]
-icon = "ti-dribbble" # themify icon pack : https://themify.me/themify-icons
-link = "#"
+name = "Linkedin"
 
 [[params.social]]
 icon = "ti-pinterest" # themify icon pack : https://themify.me/themify-icons
 link = "#"
+name = "Pinterest"
 
 
 ################################ English Language ########################

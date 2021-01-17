@@ -240,7 +240,7 @@ xclip
     text-align: center;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 0px;
+    margin-top: 0;
     cursor: pointer;
 }
 
@@ -306,7 +306,43 @@ xclip
     right: -20px;
     z-index: 0;
 }
+#about-me .div-img-bg {
+    padding-bottom: 10px;
+    border: 20px solid #57cbcc;
+}
+#about-me .div-img-bg .about-img img {
+    width: 100%;
+    box-shadow: 0 0 85px 0 rgba(0, 0, 0, 0.14);
+    margin-top: -50px;
+    margin-left: 30px;
+    height: 400px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
 
+.social-links {
+    padding-left: 60px;
+}
+
+.social-links a {
+    font-size: 18px;
+    display: inline-block;
+    background: #26292e;
+    color: #fff;
+    line-height: 1;
+    padding: 8px 0;
+    border-radius: 50%;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+    margin-right: 10px;
+}
+
+.social-links a:hover {
+    background: #57cbcc;
+    color: #fff;
+}
 .parallaxie {
     min-height: 360px;
 }

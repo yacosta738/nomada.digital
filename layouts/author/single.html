@@ -9,7 +9,7 @@
 				<div class="title text-center">
 					<h2>{{ with i18n "aboutAuthor" }} {{ index (split . " ") 0 | safeHTML }} {{ end }}<span class="color">
 							{{ with i18n "aboutAuthor" }} {{ index (split . " ") 1 | safeHTML }} {{ end }} </span></h2>
-					<div class="border-meghna"></div>
+					<div class="border-xline"></div>
 				</div>
 				<div class="content text-center">
 					<figure>
@@ -47,7 +47,7 @@
 				<div class="title text-center">
 					<h2>{{ with i18n "authorsPosts" }} {{ index (split . " ") 0 | safeHTML }} {{ end }}<span class="color">
 							{{ with i18n "authorsPosts" }} {{ index (split . " ") 1 | safeHTML }} {{ end }}</h2>
-					<div class="border-meghna"></div>
+					<div class="border-xline"></div>
 				</div>
 			</div>
 			{{ range where site.RegularPages "Params.author" .Title }}

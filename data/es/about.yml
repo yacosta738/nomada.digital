@@ -1,17 +1,38 @@
 ############################# About ###################################
 about:
-  enable : true
-  title : Sobre mí
-  picture: "uploads/about_04.jpg"
-  about_item :
-  - icon : ti-ruler-pencil # themify icon pack : https://themify.me/themify-icons
-    title : We're Creative
-    content : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nihil, libero, perspiciatis eos provident laborum eum dignissimos.
-
-  - icon : ti-cup # themify icon pack : https://themify.me/themify-icons
-    title : We're Professional
-    content : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nihil, libero, perspiciatis eos provident laborum eum dignissimos.
-
-  - icon : ti-thought # themify icon pack : https://themify.me/themify-icons
-    title : We're Genius
-    content : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nihil, libero, perspiciatis eos provident laborum eum dignissimos.
+  enable: true
+  title: "Sobre Yuniel."
+  picture: "images/about/yuniel-acosta.jpg"
+  contact_info: "Información de contacto"
+  description: "Desarrollador de aplicaciones de escritorio, webs y móviles. Entusiasta de la tecnología y la ciencia. Más de [-YEAR-] años de experiencia en la industria del software."
+  about_me:
+    - text: "I'm a software engineer based in Ciego de Ávila, Cuba specializing in building (and occasionally designing) exceptional websites, applications, and everything in between."
+    - text: "Shortly after graduating from [Central University “Marta Abreu” of Las Villas](https://www.uclv.edu.cu/en/institution/), I joined the development team at [Desoft](https://www.desoft.cu) where I work on a wide variety of interesting and meaningful projects on a daily basis."
+  buttons:
+    - button_title: "Descargar CV"
+      button_link: "https://www.dropbox.com/s/krhxr27h4mev5jv/Yuniel%27s%20Curriculum.pdf?dl=0"
+      target: "_blank"
+    - button_title: "Más sobre mí"
+      button_link: "about"
+  contacts:
+    - icon: "fas fa-globe"
+      name: "Website"
+      link: "https://yacosta738.github.io"
+      text: "yacosta738.github.io"
+      target: "_blank"
+    - icon: "fas fa-at"
+      name: "Email"
+      link: "mailto:yunielacosta738@gmail.com"
+      text: "yunielacosta738@gmail.com"
+    - icon: "fas fa-graduation-cap"
+      name: "Degree"
+      text: "Bachelor's Degree in Computer Science"
+    - icon: "fas fa-phone"
+      name: "Phone"
+      text: "+53 54739922"
+      target: "_blank"
+    - icon: "fas fa-map-marker-alt"
+      name: "City"
+      link: "https://goo.gl/maps/HoNArb98EDX9GbFGA"
+      text: "Ciego de Ávila, Cuba"
+      target: "_blank"
