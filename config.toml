@@ -1,5 +1,5 @@
 ################################# Default configuration ###################
-baseURL = "https://yacosta738.github.io/nomada.digital/"
+baseURL = "nomada-digital.epizy.com"
 title = "Nómada Digital"
 # change publishDir = "docs" for github pages
 # publishDir = "docs"
