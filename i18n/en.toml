@@ -1,0 +1,67 @@
+# More documentation here: https://github.com/nicksnyder/go-i18n
+[home]
+other = "Home"
+
+[posts]
+other = "Posts"
+
+[blogTitle]
+other = "Last Articles"
+
+[readMore]
+other = "Read more"
+
+[viewAllPost]
+other = "View All Posts"
+
+[resume]
+other = "My resume"
+
+[navigation]
+other = "Navigation"
+
+[contact_me]
+other = "Contact me:"
+
+[email]
+other = "Email"
+
+[phone]
+other = "Phone"
+
+
+[submit]
+other = "Submit"
+
+[share]
+other = "Share"
+
+[aboutAuthor]
+other = "About Author"
+
+[authorsPosts]
+other = "Author's posts"
+
+[all]
+other = "All"
+
+[about]
+other = "About me"
+
+[services]
+other = "Services"
+
+[portfolio]
+other = "Portfolio"
+
+[team]
+other = "Team"
+
+[pricing]
+other = "Prices"
+
+[blog]
+other = "Blog"
+
+[contact]
+other = "Contact"

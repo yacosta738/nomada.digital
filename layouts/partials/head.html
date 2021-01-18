@@ -1,59 +1,53 @@
 <head>
-	<meta charset="utf-8">
-	<title>{{ .Title }}</title>
-	{{ "<!-- mobile responsive meta -->" | safeHTML }}
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with site.Params.description }}{{ . }}{{ end }}{{ end }}">
-	{{ with site.Params.author }}
-	<meta name="author" content="{{ . }}">{{ end }}
-	{{ hugo.Generator }}
+    <meta charset="utf-8">
+    <meta name="referrer" content="no-referrer">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    
+    {{ if eq .Title .Site.Title }}
+    <title>{{ .Title }}</title>
+    <meta name="description" content="{{.Site.Params.Description}}">
+    {{ else }}
+    <title>{{ .Title }} | {{ .Site.Title }}</title>    
+    {{ end }}    
 
-	{{ "<!-- plugins -->" | safeHTML }}
-	{{ range site.Params.plugins.css }}
-	<link rel="stylesheet" href="{{ .link | absURL }}">
-	{{ end }}
-	{{"<!-- Main Stylesheet -->"|safeHTML}}
-	{{ $styles := resources.Get "css/style.css" | minify }}
-	<link rel="stylesheet" href="{{ $styles.Permalink }}" >
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{ .Title }}" />
+    <meta property="og:url" content="{{ .Permalink }}" />
+    <meta property="og:locale" content="en_GB" />
 
-	{{"<!-- Custom stylesheet - for your changes -->" |safeHTML}}
-	{{ $custom := resources.Get "css/custom.css" | minify }}
-	<link rel="stylesheet" href="{{ $custom.Permalink }}" media="screen">
+    {{ if .Description }}
+    <meta property="og:description" content="{{ .Description }}" />
+    <meta name="description" content="{{ .Description }}">
+    {{ end }}
+    {{ partial "meta-og-image.html" . }}
 
-	<!-- Responsive CSS -->
-	{{ $responsive := resources.Get "css/responsive.css" | minify }}
-	<link rel="stylesheet" href="{{ $responsive.Permalink }}" media="screen">
-	<!-- Camera CSS -->
-	{{ $camera := resources.Get "css/camera.css" | minify }}
-	<link rel="stylesheet" href="{{ $camera.Permalink }}" media="screen">
-	<!-- Flaticon CSS -->
-	{{ $flaticon := resources.Get "css/flaticon.css" | minify }}
-	<link rel="stylesheet" href="{{ $flaticon.Permalink }}" media="screen">
-	<!-- PrettyPhoto CSS -->
-	{{ $prettyPhoto := resources.Get "css/prettyPhoto.css" | minify }}
-	<link rel="stylesheet" href="{{ $prettyPhoto.Permalink }}" media="screen">
+    <link rel="canonical" href="{{ .Permalink }}" />  
 
-	{{"<!-- /Welcome Slider-->" | safeHTML}}
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@yacosta738" />
 
-	<!--[if lt IE 9]>
-	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-	<![endif]-->
-
-
-	{{ "<!--Favicon-->" | safeHTML }}
-	<link rel="shortcut icon" href="{{ `images/favicon.png` | absURL }}" type="image/x-icon">
-	<link rel="icon" href="{{ `images/favicon.png` | absURL }}" type="image/x-icon">
-
-	{{ with site.Params.google_analytics_id }}
-	{{ "<!-- Global Site Tag (gtag.js) - Google Analytics -->" | safeHTML }}
-	<script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-
-		gtag('config', '{{ . }}');
-	</script>
-	{{ end }}
+    {{ $sassOptions := (dict "outputStyle" "compressed" "enableSourceMap" true ) }}
+    {{ $mainStyles := resources.Get "styles/main-bundle.scss" | toCSS $sassOptions | fingerprint "sha512" }}
+    <link rel="stylesheet" type="text/css" href="{{ $mainStyles.RelPermalink }}" integrity="{{ $mainStyles.Data.Integrity }}" media="screen, tv, projection">
+    {{ $printStyles := resources.Get "styles/print-bundle.scss" | toCSS $sassOptions | fingerprint "sha512" }}
+    <link rel="stylesheet" type="text/css" href="{{ $printStyles.RelPermalink }}" integrity="{{ $printStyles.Data.Integrity }}" media="print">
+    
+    <link rel="preload" as="font" href="/fonts/muli1.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="/fonts/muli2.woff2" type="font/woff2" crossorigin="anonymous">    
+    
+    {{ if .Site.Params.PlausibleDomain }}
+    <link rel="preconnect" href="https://hej.henriksommerfeld.se">
+    <script async defer data-domain="{{ .Site.Params.PlausibleDomain }}" src="https://hej.henriksommerfeld.se/js/index.js"></script>
+    {{ end }}
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#04396c">
+    <meta name="theme-color" content="#ffffff">
+    {{ hugo.Generator }}
+    
+    {{- partial "icon-definitions.html" -}}
 </head>

@@ -1,0 +1,223 @@
+// Import Modules
+
+@import './_variables';
+@import './_colors';
+@import './_screen-reader';
+@import './_modal';
+@import './_headings';
+@import './_font-sizes';
+@import './_fonts';
+@import './_icons';
+@import './_header';
+@import './_footer';
+@import './_article-categories-tags';
+@import './_searchbox';
+@import './_hamburger-icon';
+@import './_animations';
+@import './_sidebar';
+@import './_bitmoji';
+@import './_paging-controls';
+@import './_blockquote';
+@import './_links';
+@import './_theme';
+@import './_theme-switcher';
+@import './_notch-mixin';
+@import './images/images';
+
+body {
+  color: var(--color);
+  background-color: var(--background-color);
+  min-width: 300px;
+  margin: 0;
+  font-size: 18px;
+  font-family: $font-family-sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+body.js-loaded {
+  transition: background-color $theme-switcher-speed ease-in, border-color $theme-switcher-speed ease-in;
+}
+
+// Box sizing partial styles:
+// Apply a natural box layout model to all elements
+*,
+*::before,
+*::after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+::selection {
+  background: var(--selection-bg-color);
+  color: var(--selection-color);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.hide {
+  display: none;
+}
+
+@mixin for-screen-reader {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  font-size: 0;
+}
+
+.sr-only {
+  @include for-screen-reader();
+}
+
+.skip-link {
+  @media (max-width: $medium-size-max-width) {
+    @include for-screen-reader();
+  }
+
+  @media (min-width: $side-column-min-width) {
+    visibility: hidden;
+    body.keyboard-navigation & {
+      visibility: visible;
+    }
+  }
+}
+
+#page-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+.body {
+  z-index: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
+  padding-bottom: $default-spacing;
+  padding-top: $default-spacing;
+  @include notch-padding;
+}
+
+.body-max-width {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  max-width: $page-max-width;
+  justify-content: space-between;
+
+  @media (min-width: $side-column-min-width) {
+    flex-direction: row;
+  }
+}
+
+main {
+  width: 100%;
+  padding: $default-spacing;
+  outline-color: var(--accent-color);
+
+  @media (min-width: $side-column-min-width) {
+    width: 71%;
+    max-width: 50em;
+  }
+}
+
+article {
+  width: 100%;
+
+  footer {
+    display: flex;
+  }
+
+  &.full-article {
+    margin-bottom: 2em;
+
+    figure {
+      margin-top: $default-spacing;
+      padding-bottom: 0;
+    }
+  }
+
+  &.summary {
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+    border-bottom: var(--summary-list-delimiter-color) 2px solid;
+  }
+}
+
+aside {
+  width: 100%;
+  padding: $default-spacing;
+
+  @media (min-width: $side-column-min-width) {
+    width: 29%;
+  }
+}
+
+.summary-with-image {
+  @media (min-width: $medium-size-min-width) {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: $default-spacing;
+
+    figure {
+      display: inline-flex;
+      padding-top: 8px;
+    }
+  }
+}
+
+.entry-meta {
+  margin-bottom: 2em;
+  font-size: 0.8em;
+}
+
+.result-list .entry-meta {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+.published {
+  color: var(--color-published);
+}
+
+.read-more {
+  display: flex;
+  justify-content: flex-end;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  background-color: var(--scrollbar-bg-color);
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: var(--scrollbar-bg-color);
+  border-radius: $border-radius;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-color);
+  border-radius: $border-radius;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+* {
+  scrollbar-color: var(--scrollbar-color) var(--scrollbar-bg-color);
+  scrollbar-width: thin;
+}
