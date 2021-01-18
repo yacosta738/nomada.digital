@@ -1,7 +1,7 @@
 {
-  "name": "blog-hugo",
+  "name": "nomada.digital",
   "version": "1.0.0",
-  "description": "Henrik's blog using static site engine Hugo",
+  "description": "Yuniel Acosta Pérez's blog and portfolio using static site engine Hugo",
   "dependencies": {
     "alpinejs": "2.7.3",
     "lazysizes": "5.3.0",
@@ -41,6 +41,6 @@
     "blog",
     "hugo"
   ],
-  "author": "Henrik Sommerfeld",
+  "author": "Yuniel Acosta Pérez",
   "license": "MIT"
 }
