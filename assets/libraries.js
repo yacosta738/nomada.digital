@@ -3,5 +3,4 @@
 import 'lazysizes'
 import 'alpinejs'
 import lunr from 'lunr'
-
 window.lunr = lunr

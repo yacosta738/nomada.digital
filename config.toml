@@ -1,6 +1,6 @@
 baseURL = "https://www.henriksommerfeld.se/"
 languageCode = "en-gb"
-title = "Henrik Sommerfeld's blog"
+title = "Nomatech"
 canonifyURLs = false
 relativeURLs = false
 buildDrafts = false
@@ -15,6 +15,7 @@ rssLimit = 10
 [params]
 minifyBundles = true
 plausibleDomain = "henriksommerfeld.se"
+logo = "images/logo.png"
 description = "Yuniel Acosta Pérez's blog and portfilio. Mostly about computer related stuff."
 
 [permalinks]

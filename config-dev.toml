@@ -1,6 +1,6 @@
 baseURL = "https://www.henriksommerfeld.se/"
 languageCode = "en-gb"
-title = "Henrik Sommerfeld's blog"
+title = "Nomatech"
 canonifyURLs = false
 relativeURLs = false
 buildDrafts = true
@@ -11,9 +11,92 @@ preserveTaxonomyNames = true
 disqusShortname = "henrik-sommerfeld"
 
 [params]
-    minifyBundles = false
-    plausibleDomain = ""
+minifyBundles = false
+plausibleDomain = ""
+logo = "images/logo.png"
 description = "Yuniel Acosta Pérez's blog and portfilio. Mostly about computer related stuff."
 
 [permalinks]
-    article = "/:title/"
+article = "/:title/"
+
+
+################################ English Language ########################
+[Languages.en]
+languageName = "En"
+languageCode = "en-us"
+contentDir = "content/english"
+weight = 1
+home = "Home"
+
+################################ France Language ########################
+[Languages.es]
+languageName = "Es"
+languageCode = "es"
+contentDir = "content/spanish"
+weight = 2
+home = "Inicio"
+
+################### English Navigation ########################
+[[Languages.en.menu.main]]
+name = "Home"
+pre = "#"
+post = "<svg class='icon icon-home'><use xlink:href='#icon-home'></use></svg>"
+url = "/"
+weight = 1
+[Languages.en.menu.main.params]
+class = "home"
+
+
+[[Languages.en.menu.main]]
+name = "about"
+pre = "#"
+post = "<svg class='icon icon-user'><use xlink:href='#icon-user'></use></svg>"
+url = "about"
+weight = 2
+[Languages.en.menu.main.params]
+class = "about"
+
+[[Languages.en.menu.main]]
+name = "Search"
+pre = ""
+post = "<svg class='icon icon-search'><use xlink:href='#icon-search'></use></svg>"
+url = "search-requires-javascript/"
+weight = 3
+[Languages.en.menu.main.params]
+class = "about"
+rel = "nofollow"
+xref = "searchMenuLink"
+event = "menu.close(); search.open();$nextTick(() => $refs.searchInput.focus())"
+
+################### Spanish Navigation ########################
+[[Languages.es.menu.main]]
+name = "Inicio"
+pre = "#"
+post = "<svg class='icon icon-home'><use xlink:href='#icon-home'></use></svg>"
+url = "/"
+weight = 1
+[Languages.es.menu.main.params]
+class = "home"
+
+
+[[Languages.es.menu.main]]
+name = "Sobre mí"
+pre = "#"
+post = "<svg class='icon icon-user'><use xlink:href='#icon-user'></use></svg>"
+url = "about"
+weight = 2
+[Languages.es.menu.main.params]
+class = "about"
+
+[[Languages.es.menu.main]]
+name = "Buscar"
+pre = ""
+post = "<svg class='icon icon-search'><use xlink:href='#icon-search'></use></svg>"
+url = "search-requires-javascript/"
+weight = 3
+[Languages.es.menu.main.params]
+class = "about"
+rel = "nofollow"
+xref = "searchMenuLink"
+event = "menu.close(); search.open();$nextTick(() => $refs.searchInput.focus())"
+
