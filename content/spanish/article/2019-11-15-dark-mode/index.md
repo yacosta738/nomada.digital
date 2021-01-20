@@ -31,7 +31,7 @@ Of course the web has evolved a bit since the Web's youth. The basic techniques 
 * [Media queries][4]
 
 <figure class="image-border">
-    <img src="content/english/blog/2019-11-15-dark-mode/dark-mode.gif" alt="Animated gif of toggling dark mode on my website from Windows dark/light mode" width="1668" height="908">
+    <img src="content/english/article/2019-11-15-dark-mode/dark-mode.gif" alt="Animated gif of toggling dark mode on my website from Windows dark/light mode" width="1668" height="908">
     <figcaption><em>This shows how toggling between light and dark mode in Windows 10 changes the theme on my website as well. </em></figcaption>
 </figure>
 

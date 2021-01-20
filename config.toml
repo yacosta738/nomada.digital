@@ -41,97 +41,77 @@ home = "Inicio"
 [[Languages.en.menu.main]]
 name = "Home"
 pre = "#"
-url = "home"
+post = "<svg class='icon icon-home'><use xlink:href='#icon-home'></use></svg>"
+url = "/"
 weight = 1
+[Languages.en.menu.main.params]
+class = "home"
 
+[[Languages.en.menu.main]]
+name = "Blog"
+post = "<svg class='icon icon-user'><use xlink:href='#icon-user'></use></svg>"
+url = "/blog"
+weight = 2
+[Languages.en.menu.main.params]
+class = "blog"
 
 [[Languages.en.menu.main]]
 name = "about"
 pre = "#"
-url = "about"
-weight = 2
-
-
-[[Languages.en.menu.main]]
-name = "services"
-pre = "#"
-url = "services"
+post = "<svg class='icon icon-user'><use xlink:href='#icon-user'></use></svg>"
+url = "/about"
 weight = 3
-
+[Languages.en.menu.main.params]
+class = "about"
 
 [[Languages.en.menu.main]]
-name = "portfolio"
-pre = "#"
-url = "portfolio"
+name = "Search"
+pre = ""
+post = "<svg class='icon icon-search'><use xlink:href='#icon-search'></use></svg>"
+url = "/search-requires-javascript/"
 weight = 4
+[Languages.en.menu.main.params]
+class = "search"
+rel = "nofollow"
+xref = "searchMenuLink"
+event = "menu.close(); search.open();$nextTick(() => $refs.searchInput.focus())"
 
-
-[[Languages.en.menu.main]]
-name = "testimonial"
-pre = "#"
-url = "team"
-weight = 5
-
-
-[[Languages.en.menu.main]]
-name = "blog"
-pre = "#"
-url = "blog"
-weight = 6
-
-
-[[Languages.en.menu.main]]
-name = "contact"
-pre = "#"
-url = "contact"
-weight = 7
-
-
-################### French Navigation ########################
+################### Spanish Navigation ########################
 [[Languages.es.menu.main]]
 name = "Inicio"
 pre = "#"
-url = "home"
+post = "<svg class='icon icon-home'><use xlink:href='#icon-home'></use></svg>"
+url = "/"
 weight = 1
+[Languages.es.menu.main.params]
+class = "home"
 
+[[Languages.es.menu.main]]
+name = "Blog"
+post = "<svg class='icon icon-user'><use xlink:href='#icon-user'></use></svg>"
+url = "/blog"
+weight = 2
+[Languages.es.menu.main.params]
+class = "blog"
 
 [[Languages.es.menu.main]]
 name = "Sobre mí"
 pre = "#"
-url = "about"
-weight = 2
-
-
-[[Languages.es.menu.main]]
-name = "Servicios"
-pre = "#"
-url = "services"
+post = "<svg class='icon icon-user'><use xlink:href='#icon-user'></use></svg>"
+url = "/about"
 weight = 3
-
+[Languages.es.menu.main.params]
+class = "about"
 
 [[Languages.es.menu.main]]
-name = "Portafolio"
-pre = "#"
-url = "portfolio"
+name = "Buscar"
+pre = ""
+post = "<svg class='icon icon-search'><use xlink:href='#icon-search'></use></svg>"
+url = "/search-requires-javascript/"
 weight = 4
+[Languages.es.menu.main.params]
+class = "search"
+rel = "nofollow"
+xref = "searchMenuLink"
+event = "menu.close(); search.open();$nextTick(() => $refs.searchInput.focus())"
 
-
-[[Languages.es.menu.main]]
-name = "Testimonios"
-pre = "#"
-url = "team"
-weight = 5
-
-
-[[Languages.es.menu.main]]
-name = "blog"
-pre = "#"
-url = "blog"
-weight = 6
-
-
-[[Languages.es.menu.main]]
-name = "Contáctame"
-pre = "#"
-url = "contact"
-weight = 7
