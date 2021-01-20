@@ -15,6 +15,7 @@ cypress/videos
 .DS_Store
 cypress/fixtures/example.json
 package-lock.json
+resources/_gen
 
 # Executable may be added to repository
 hugo.exe

@@ -19,8 +19,8 @@
     <div class="header-content" @click.away="menu.close()">
         <div class="site-title">
             {{ if site.Params.logo }}
-            <img data-src="{{ site.Params.logo | absURL }}" alt="{{ .Site.Title }}"
-                                      src="{{ site.Params.logo | absURL }}">
+                <img data-src="{{ site.Params.logo | absURL }}" alt="{{ .Site.Title }}"
+                                          src="{{ site.Params.logo | absURL }}">
             {{ end }}
             <a href="{{ .Site.BaseURL | relLangURL }}">
                     {{ site.Title }}

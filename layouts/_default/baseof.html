@@ -1,0 +1,17 @@
+{{ partial "doctype.html" }}
+<html lang="{{ with site.LanguageCode }}{{ . }}{{ else }}en-us{{ end }}">
+    {{ partial "head.html" . }}
+    {{ partial "body-start-tag.html"}}
+        <div id="page-wrapper">
+            {{ partial "header.html" . }}
+            <div class="body">
+                <div class="body-max-width">
+                    {{- block "main" . }}{{- end }}
+                </div>
+            </div>
+            {{ partial "footer.html" . }}
+        </div>
+        {{ partial "searchbox.html" . }}
+        {{- partial "add-js.html" . -}}
+    </body>
+</html>

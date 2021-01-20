@@ -46,13 +46,20 @@ weight = 1
 [Languages.en.menu.main.params]
 class = "home"
 
+[[Languages.en.menu.main]]
+name = "Blog"
+post = "<svg class='icon icon-user'><use xlink:href='#icon-user'></use></svg>"
+url = "/blog"
+weight = 2
+[Languages.en.menu.main.params]
+class = "blog"
 
 [[Languages.en.menu.main]]
 name = "about"
 pre = "#"
 post = "<svg class='icon icon-user'><use xlink:href='#icon-user'></use></svg>"
-url = "about"
-weight = 2
+url = "/about"
+weight = 3
 [Languages.en.menu.main.params]
 class = "about"
 
@@ -60,10 +67,10 @@ class = "about"
 name = "Search"
 pre = ""
 post = "<svg class='icon icon-search'><use xlink:href='#icon-search'></use></svg>"
-url = "search-requires-javascript/"
-weight = 3
+url = "/search-requires-javascript/"
+weight = 4
 [Languages.en.menu.main.params]
-class = "about"
+class = "search"
 rel = "nofollow"
 xref = "searchMenuLink"
 event = "menu.close(); search.open();$nextTick(() => $refs.searchInput.focus())"
@@ -78,13 +85,20 @@ weight = 1
 [Languages.es.menu.main.params]
 class = "home"
 
+[[Languages.es.menu.main]]
+name = "Blog"
+post = "<svg class='icon icon-user'><use xlink:href='#icon-user'></use></svg>"
+url = "/blog"
+weight = 2
+[Languages.es.menu.main.params]
+class = "blog"
 
 [[Languages.es.menu.main]]
 name = "Sobre mí"
 pre = "#"
 post = "<svg class='icon icon-user'><use xlink:href='#icon-user'></use></svg>"
-url = "about"
-weight = 2
+url = "/about"
+weight = 3
 [Languages.es.menu.main.params]
 class = "about"
 
@@ -92,10 +106,10 @@ class = "about"
 name = "Buscar"
 pre = ""
 post = "<svg class='icon icon-search'><use xlink:href='#icon-search'></use></svg>"
-url = "search-requires-javascript/"
-weight = 3
+url = "/search-requires-javascript/"
+weight = 4
 [Languages.es.menu.main.params]
-class = "about"
+class = "search"
 rel = "nofollow"
 xref = "searchMenuLink"
 event = "menu.close(); search.open();$nextTick(() => $refs.searchInput.focus())"
