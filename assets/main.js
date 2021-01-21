@@ -294,3 +294,15 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   } catch (error) {}
 })
+window.onscroll = function() {scrollNavbar()};
+
+const navbar = document.getElementById("navbar");
+const sticky = navbar.offsetTop;
+
+function scrollNavbar() {
+  if (window.pageYOffset >= 5) {
+    navbar.classList.add("navbar-shrink")
+  } else {
+    navbar.classList.remove("navbar-shrink");
+  }
+}

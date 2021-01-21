@@ -23,28 +23,16 @@
 @import './_theme-switcher';
 @import './_notch-mixin';
 @import './images/images';
-@import "./banner";
 
-/* GLOBAL */
 body {
   color: var(--color);
   background-color: var(--background-color);
+  min-width: 300px;
   margin: 0;
+  font-size: 18px;
   font-family: $font-family-sans-serif;
   font-weight: 400;
   line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
-
-section {
-  margin: 0 auto;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-}
-
-#home {
-  position: relative;
 }
 
 body.js-loaded {
@@ -103,23 +91,119 @@ html {
   }
 }
 
-
 #page-wrapper {
-
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100vh;
+  position: relative;
 }
 
-.body {
+#navbar {
+  background: var(--header-bg-color);
+  box-shadow: 0 0 10px var(--header-bg-color);
+}
 
+
+.body {
+  z-index: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
+  padding-bottom: $default-spacing;
+  padding-top: $default-spacing;
+  @include notch-padding;
 }
 
 .body-max-width {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  max-width: $page-max-width;
+  justify-content: space-between;
 
+  @media (min-width: $side-column-min-width) {
+    flex-direction: row;
+  }
 }
 
 main {
+  width: 100%;
+  padding: $default-spacing;
   outline-color: var(--accent-color);
+
+  @media (min-width: $side-column-min-width) {
+    width: 71%;
+    max-width: 50em;
+  }
 }
 
+article {
+  width: 100%;
+
+  footer {
+    display: flex;
+  }
+
+  &.full-article {
+    margin-bottom: 2em;
+
+    figure {
+      margin-top: $default-spacing;
+      padding-bottom: 0;
+    }
+  }
+
+  &.summary {
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+    border-bottom: var(--summary-list-delimiter-color) 2px solid;
+  }
+}
+
+aside {
+  width: 100%;
+  padding: $default-spacing;
+
+  @media (min-width: $side-column-min-width) {
+    width: 29%;
+  }
+}
+
+.summary-with-image {
+  @media (min-width: $medium-size-min-width) {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: $default-spacing;
+
+    figure {
+      display: inline-flex;
+      padding-top: 8px;
+    }
+  }
+}
+
+.entry-meta {
+  margin-bottom: 2em;
+  font-size: 0.8em;
+}
+
+.result-list .entry-meta {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+.published {
+  color: var(--color-published);
+}
+
+.read-more {
+  display: flex;
+  justify-content: flex-end;
+}
 
 ::-webkit-scrollbar {
   width: 4px;

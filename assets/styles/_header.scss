@@ -1,11 +1,23 @@
 @import './_notch-mixin';
 
-header {
-  background: var(--header-bg-color);
+#navbar {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1030;
+}
+
+.navbar-shrink {
+  background: var(--header-bg-color);
   box-shadow: 0 0 10px var(--header-bg-color);
 }
 
@@ -40,6 +52,7 @@ header {
     color: var(--header-color);
     text-decoration: none;
   }
+
   .site-title {
     all: initial;
     grid-column: col 1 / span 1;
@@ -58,6 +71,7 @@ header {
       font-size: 22px;
       font-family: $font-family-masked-hero;
     }
+
     img {
       margin-right: 12px;
       max-height: 42px;
@@ -118,6 +132,7 @@ nav {
     padding: $default-spacing;
     text-shadow: none;
     text-align: center;
+
     .header-content &,
     .header-content &:link,
     .header-content &:visited {

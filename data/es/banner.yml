@@ -1,0 +1,20 @@
+############################### Banner ################################
+banner:
+  enable : true
+  bg_image_webp : "images/backgrounds/hero-area.webp"
+  bg_image : "images/backgrounds/hero-area.jpg"
+  icon : "" # themify icon pack : https://themify.me/themify-icons
+  title : "hola soy Yuniel"
+  content : "\"Si no puedo hacer grandes cosas, <br>puedo hacer pequeñas cosas de una manera excelente.\""
+  button:
+    enable : true
+    label : "Mis servicios"
+    link : "#services"
+  roles_content: "Algunos de los roles que desempeño:"
+  roles:
+    - label: "Desarrollador Fullstack"
+    - label: "Diseñador web"
+    - label: "Diseños creativos"
+    - label: "Diseño gráfico"
+    - label: "Desarrollador front-end"
+    - label: "Desarrollador backend"

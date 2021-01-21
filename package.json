@@ -6,7 +6,8 @@
     "alpinejs": "2.7.3",
     "lazysizes": "5.3.0",
     "lunr": "2.3.9",
-    "shx": "0.3.3"
+    "shx": "0.3.3",
+    "tailwindcss": "^2.0.2"
   },
   "devDependencies": {
     "@testing-library/cypress": "7.0.3",
