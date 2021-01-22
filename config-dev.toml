@@ -27,15 +27,18 @@ languageCode = "en-us"
 contentDir = "content/english"
 weight = 1
 home = "Home"
+[languages.en.params]
+icon = "images/flags/us.svg"
 
-################################ France Language ########################
+################################ Spanish Language ########################
 [Languages.es]
 languageName = "Es"
 languageCode = "es"
 contentDir = "content/spanish"
 weight = 2
 home = "Inicio"
-
+[languages.es.params]
+icon = "images/flags/es.svg"
 ################### English Navigation ########################
 [[Languages.en.menu.main]]
 name = "Home"

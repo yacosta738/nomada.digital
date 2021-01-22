@@ -1,0 +1,22 @@
+#select-language {
+  background-color:  var(--header-bg-color) !important;
+  border-style: solid;
+  border-left-width: 3px;
+  border-left-color: #00DDDD;
+  border-top: none;
+  border-bottom: none;
+  border-right: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 200;
+  margin: 15px;
+  padding: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+
+select::-ms-expand { /* for IE 11 */
+  display: none;
+}

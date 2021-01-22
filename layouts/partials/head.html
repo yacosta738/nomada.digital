@@ -14,8 +14,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="{{ .Title }}" />
     <meta property="og:url" content="{{ .Permalink }}" />
-    <meta property="og:locale" content="en_GB" />
-
+    <meta property="og:locale" content="{{ .Page.Lang }}" />
     {{ if .Description }}
     <meta property="og:description" content="{{ .Description }}" />
     <meta name="description" content="{{ .Description }}">
@@ -28,7 +27,7 @@
     <meta name="twitter:site" content="@yacosta738" />
 
     {{ $sassOptions := (dict "outputStyle" "compressed" "enableSourceMap" true ) }}
-    {{ if eq (relURL .Permalink) ("/" | safeHTML) }}
+    {{ if .IsHome }}
     {{"<!--HOME SWEET HOME-->"| safeHTML}}
     {{ $mainStyles := resources.Get "styles/main-bundle.scss" | toCSS $sassOptions | fingerprint "sha512" }}
     <link rel="stylesheet" type="text/css" href="{{ $mainStyles.RelPermalink }}" integrity="{{ $mainStyles.Data.Integrity }}" media="screen, tv, projection">

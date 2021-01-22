@@ -2,18 +2,20 @@
 
 {{ if $data.banner.banner.enable }}
 {{ with $data.banner.banner }}
-{{"<!-- Welcome Slider-->" | safeHTML}}
-<section id="home" class="main-banner parallax">
+{{"<!-- Main Banner-->" | safeHTML}}
+<section id="home" class="main-banner rellax" data-rellax-speed="7"
+         data-rellax-percentage="0.5">
     <div class="heading-banner">
         <h1>{{ .title | markdownify }}</h1>
         <p>{{ .content | safeHTML }}</p>
-        <h3 class="cd-headline clip is-full-width">
+        <h3 class="cd-headline">
             <span>{{ .roles_content | markdownify }}</span>
-            <span class="cd-words-wrapper">
-				{{ $role :=  index (.roles) 0 }}
-					<b class="is-visible">{{ $role.label}}</b>
-					{{ range .roles }}
-						<b>{{ .label }}</b>
+            <span>
+					<b id="roles-played"></b>
+                    <span class="ityped-cursor">|</span>
+                    <span class="ityped-cursor"></span>
+                	{{ range .roles }}
+						<b class="roles-array">{{ .label }}</b>
 					{{end}}
 				</span>
         </h3>

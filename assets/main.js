@@ -300,7 +300,7 @@ const navbar = document.getElementById("navbar");
 const sticky = navbar.offsetTop;
 
 function scrollNavbar() {
-  if (window.pageYOffset >= 5) {
+  if (window.pageYOffset >= (sticky + 5)) {
     navbar.classList.add("navbar-shrink")
   } else {
     navbar.classList.remove("navbar-shrink");
