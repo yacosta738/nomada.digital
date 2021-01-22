@@ -12,18 +12,29 @@
     "tailwindcss": "^2.0.2"
   },
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^4.0.0",
     "@testing-library/cypress": "7.0.3",
+    "autoprefixer": "^10.2.3",
+    "cross-env": "^7.0.3",
+    "cssnano": "^4.1.10",
     "cypress": "6.2.1",
     "cypress-plugin-tab": "1.0.5",
+    "postcss": "^8.2.4",
+    "postcss-cli": "^8.3.1",
     "prettier": "2.2.1",
-    "start-server-and-test": "1.11.7"
+    "start-server-and-test": "1.11.7",
+    "watch": "^1.0.2"
   },
   "scripts": {
     "install:prod": "npm install --only=prod",
     "clean": "shx rm -f static/*.js",
     "clean:public": "shx rm -rf public",
-    "build": "npm run clean:public && hugo version && hugo --gc --minify && npm run index:prod",
-    "hugo:watch": "hugo server --config config-dev.toml --bind=0.0.0.0",
+    "css:watch": "node_modules/.bin/watch \"npm run css:build:dev\" ./static-src/css",
+    "css:build:dev": "cross-env NODE_ENV=development npm run css:build",
+    "css:build:prod": "cross-env NODE_ENV=production npm run css:build",
+    "css:build": "node_modules/.bin/postcss static-src/css/styles.css -o static/css/styles.css",
+    "build": "npm run clean:public && npm run css:build:prod && hugo version && hugo --gc --minify && npm run index:prod",
+    "hugo:watch": "npm run css:build:dev && hugo server --config config-dev.toml --bind=0.0.0.0",
     "index:prod": "node build/index-search.js public/search-index.json",
     "index": "node build/index-search.js static/search-index.json",
     "start": "hugo && npm run index && npm run hugo:watch",

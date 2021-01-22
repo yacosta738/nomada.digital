@@ -4,6 +4,7 @@
   $light-color: $blue400;
   $white: $gray400;
   $background-color: $gray800;
+  $cloud-background-color: rgb(250, 250, 250);
   $header-text-shadow: transparentize($gray900, 0.5);
   $link-text-shadow-color: transparentize($light-color, 0.2);
   $hamburger-shadow-color: transparentize($white, 0.4);
@@ -20,6 +21,7 @@
   --selection-bg-color: #{$orange400};
   --color-published: #{$gray400};
   --background-color: #{$background-color};
+  --cloud-background-color: #{$cloud-background-color};
   --blockquote-color: var(--accent-color);
   --caption-color: #{$gray400};
   --taxonomy-heading-color: var(--accent-color);

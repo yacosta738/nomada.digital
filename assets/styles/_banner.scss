@@ -44,7 +44,7 @@
   }
 
   p {
-    font-size: 18px;
+    font-size: 22px;
     padding: 20px 0;
   }
 
@@ -90,28 +90,33 @@
     opacity: 0;
   }
 }
+
 .cd-headline {
   span {
     display: inline-block;
     padding: .2em 0;
     color: #ffffff;
     font-size: 30px;
-    b{
+
+    b {
       text-transform: uppercase;
     }
   }
 }
-.roles-array{
+
+.roles-array {
   display: none;
 }
+
 #clouds {
   margin-top: -5%;
   position: relative;
   z-index: 1;
-  path {
-    fill: #ffffff;
-    bottom: -10px;
-    overflow: hidden;
-    stroke: #ffffff;
-  }
+}
+
+#clouds path {
+  fill: var(--cloud-background-color);
+  bottom: -10px;
+  overflow: hidden;
+  stroke: var(--cloud-background-color);;
 }
