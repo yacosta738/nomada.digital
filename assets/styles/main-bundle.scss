@@ -23,7 +23,8 @@
 @import './_theme-switcher';
 @import './_notch-mixin';
 @import './images/images';
-@import "./banner";
+@import "./sections/banner";
+@import "./sections/about";
 
 /* GLOBAL */
 body {
@@ -41,6 +42,11 @@ section {
   overflow: hidden;
   display: flex;
   justify-content: center;
+  a {
+    background: none;
+    text-shadow: none;
+
+  }
 }
 
 #home {

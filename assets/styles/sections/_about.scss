@@ -1,0 +1,42 @@
+.message-box {
+  h4 {
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0 0 5px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-size: 15px;
+    color: #999;
+  }
+  h2 {
+    font-size: 38px;
+    font-weight: 300;
+    padding: 0 0 10px;
+    margin: 0;
+    line-height: 62px;
+    text-transform: none;
+    color: #999;
+  }
+  p {
+    margin-bottom: 20px;
+  }
+  a {
+    font-weight: 900;
+    color: #1f1f1f;
+    text-decoration: none !important;
+    outline: none !important;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+  }
+  .lead {
+    padding-top: 10px;
+    font-size: 16px;
+    font-style: italic;
+    color: #999;
+    padding-bottom: 10px;
+    padding-left: 15px;
+  }
+}

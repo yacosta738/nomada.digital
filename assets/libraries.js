@@ -17,14 +17,14 @@ for(let i =0; i< allRolesElements.length;i++){
 }
 init(rolesPlayed, {showCursor: false, strings: allRoles});
 
-// Parallax the banner images
-import Rellax from "rellax";
-
-const rellax = new Rellax('.rellax', {
-    speed: -2,
-    center: true,
-    wrapper: null,
-    round: true,
-    vertical: true,
-    horizontal: true
-});
+// // Parallax the banner images
+// import Rellax from "rellax";
+//
+// const rellax = new Rellax('.rellax', {
+//     speed: -2,
+//     center: true,
+//     wrapper: null,
+//     round: true,
+//     vertical: true,
+//     horizontal: true
+// });

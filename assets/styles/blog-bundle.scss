@@ -160,7 +160,12 @@ article {
   &.summary {
     padding-bottom: 2em;
     margin-bottom: 2em;
+    margin-top: 3em;
     border-bottom: var(--summary-list-delimiter-color) 2px solid;
+
+    @media (max-width: $medium-size-min-width){
+      margin-top: 7em;
+    }
   }
 }
 
