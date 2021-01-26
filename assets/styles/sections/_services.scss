@@ -1,0 +1,58 @@
+.card-services {
+  background-color: var(--background-color);
+  transition: box-shadow 0.3s ease-in-out;
+  span{
+    position: center;
+    height: 50px;
+    width: 50px;
+  }
+  &:hover {
+    box-shadow: 0 0 11px var(--color);
+  }
+}
+
+h3 {
+  text-align: center;
+  font-size: 26px;
+  padding-top: 10px;
+  color: #576574;
+}
+
+hr {
+  width: 20%;
+  display: block;
+  margin: 0 auto;
+  height: 3px;
+  background: var(--cloud-background-color);
+}
+
+p.text-base {
+  padding-top: 15px;
+  text-align: center;
+  padding-bottom: 15px;
+  color: var(--color);
+}
+
+@media (max-width: 430px) {
+  .card-services {
+    margin: 10px;
+  }
+}
+
+.border-xline {
+  border-top: 2px solid rgba(236, 239, 241, 0.2);
+  height: 1px;
+  margin: 15px auto 0;
+  position: relative;
+  width: 30%;
+  &:before {
+    content: '';
+    height: 6px;
+    left: 50%;
+    margin-left: -20px;
+    position: absolute;
+    top: -4px;
+    width: 50px;
+    background-color: #57cbcc;
+  }
+}
