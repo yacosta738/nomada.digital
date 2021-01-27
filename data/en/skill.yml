@@ -9,7 +9,25 @@ skill:
     - item: I have also full-stack developer experience with frameworks like Spring Boot and Laravel.
     - item: Visit my [Linkedin](https://www.linkedin.com/in/yacosta738) profile for more details or just [contact](#service) me
   skills :
-    # service item loop
-    - name : Web Development
-      icon : layer-group
-      content : Lorem ipsum dolor sit amet, consectetur.. Sed id lorem eget orci dictum facilisis vel id tellus.Nullam iaculis arcu at mauris dapibus consectetur.A
+    # skills item loop
+    - name : Java
+    - name : Kotlin
+    - name : Scala
+    - name : JavaScript
+    - name : TypeScript
+    - name : Angular
+    - name : Vuejs
+    - name : Spring Boot
+    - name : Laravel
+    - name : npm
+    - name : yarn
+    - name : webpack
+    - name : Jhipster
+    - name : Neo4j
+    - name : MongoDB
+    - name : Docker
+    - name : Jhipster
+    - name : NoSQL
+    - name : SQL
+    - name : PostgrSQL
+    - name : MySQL

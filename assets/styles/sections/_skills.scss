@@ -1,0 +1,30 @@
+.tag-cloud-content {
+  .tagcloud {
+    display: inline-block;
+    position: absolute;
+    margin: 1px;
+  }
+}
+
+.tagcloud {
+  font-size: 20px;
+}
+.tagcloud--item {
+  padding: 2px 4px;
+  background-color: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  &:hover {
+    background-color: rgba(0, 0, 0, .1);
+    border: 1px solid #333;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    opacity: 1 !important;
+    z-index: 100 !important;
+  }
+}
+
+.skills-array {
+  display: none;
+}
