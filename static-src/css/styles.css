@@ -1,9 +1,11 @@
 @tailwind base;
 @tailwind components;
 .cv-button {
-    @apply transition duration-500 ease-in-out inline-flex items-center my-10 mx-2 px-4 py-2 border border-black dark:border-gray-400 shadow-sm text-xl text-white hover:bg-gray-900 dark:hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 transform hover:-translate-y-1 hover:scale-110;
+    @apply transition duration-500 ease-in-out inline-flex items-center my-10 mx-2 px-4 py-2 border border-black dark:border-gray-400 shadow-lg text-xl text-black hover:text-white hover:bg-gray-900 dark:hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 transform hover:-translate-y-1 hover:scale-110;
 }
-
+.dark-button{
+    @apply bg-transparent hover:bg-black text-black hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-black hover:border-transparent;
+}
 .to-top-button {
     all:initial;
     @apply items-center cursor-pointer bg-gray-900 rounded-full border border-solid border-indigo-500 hover:bg-indigo-500 hover:text-white font-bold uppercase outline-none fixed bottom-10 right-6;

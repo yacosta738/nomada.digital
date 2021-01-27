@@ -1,0 +1,15 @@
+################################# Skill & Experience #################################
+skill:
+  enable : true
+  title : Habilidades & Experiencias
+  subtitle: "Experiencia"
+  content:
+    - item: The main area of my expertise is front-end development(client side of the web).
+    - item: HTML, CSS, JS(TypeScript), building small and medium web apps with Angular 7, Vuejs, Tailwindcss and Vuetify.
+    - item: I have also full-stack developer experience with frameworks like Spring Boot and Laravel.
+    - item: Visit my [Linkedin](https://www.linkedin.com/in/yacosta738) profile for more details or just [contact](#service) me
+  skills :
+    # service item loop
+    - name : Web Development
+      icon : layer-group
+      content : Lorem ipsum dolor sit amet, consectetur.. Sed id lorem eget orci dictum facilisis vel id tellus.Nullam iaculis arcu at mauris dapibus consectetur.A
