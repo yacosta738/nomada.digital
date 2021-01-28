@@ -305,8 +305,13 @@ const sticky = navbar.offsetTop;
 
 //Get the button(link):
 let toTop = document.getElementById("toTop");
+let clouder = document.getElementById("clouder");
 window.onload = function () {
     toTop = document.getElementById("toTop");
+    clouder = document.getElementById("clouder");
+    if (clouder) {
+        main.init();
+    }
 }
 
 function scrollFunction() {

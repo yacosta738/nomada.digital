@@ -12,18 +12,16 @@
                 <p class="uppercase tracking-loose">Witty Tagline</p>
                 <h1 class="my-2">{{ .subtitle }}</h1>
                 {{ range .content}}
-                    <p class="leading-normal mb-4">{{ .item | markdownify}}</p>
+                <p class="leading-normal mb-4">{{ .item | markdownify}}</p>
                 {{end}}
             </div>
             <!--Right Col-->
             <div class="w-full lg:w-1/2 lg:py-6 text-center">
-                <div class="tag-cloud-content justify-center items-center text-center">
-                    <!-- content -->
-                    {{ range .skills }}
-                    <span class="skills-array">{{ .name }}</span>
-                    {{end}}
-                </div>
-           </div>
+                {{ partial "tags-cloud-sphere" . }}
+                {{ range .skills }}
+                <span class="skills-array">{{ .name }}</span>
+                {{end}}
+            </div>
 
         </div>
 
