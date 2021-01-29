@@ -1,11 +1,13 @@
 .card-services {
   background-color: var(--background-color);
   transition: box-shadow 0.3s ease-in-out;
-  span{
+
+  span {
     position: center;
     height: 50px;
     width: 50px;
   }
+
   &:hover {
     box-shadow: 0 0 11px var(--color);
   }
@@ -40,11 +42,12 @@ p.text-base {
 }
 
 .border-xline {
-  border-top: 2px solid rgba(236, 239, 241, 0.2);
+  border-top: 2px solid var(--color-ligth);
   height: 1px;
   margin: 15px auto 0;
   position: relative;
   width: 30%;
+
   &:before {
     content: '';
     height: 6px;

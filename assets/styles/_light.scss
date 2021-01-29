@@ -17,6 +17,7 @@
   :root {
     --white: #{$white};
     --color: black;
+    --color-ligth: #{transparentize(black, 0.4)};
     --accent-color: #{$orange500};
     --selection-color: var(--color);
     --selection-bg-color: #{$orange400};

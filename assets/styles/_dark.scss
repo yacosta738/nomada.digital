@@ -16,6 +16,7 @@
 
   --white: #{$white};
   --color: #{$white};
+  --color-ligth: #{transparentize($white, 0.4)};
   --accent-color: #{$orange500};
   --selection-color: #{$gray900};
   --selection-bg-color: #{$orange400};

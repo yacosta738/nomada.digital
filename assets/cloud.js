@@ -330,11 +330,15 @@ function Clouder(params) {
 
         if (closest != null) {
             closest.span.style.border = "";
+            closest.span.style.transform = "none";
         } // if
         closest = obj;
 
         if (closest != null) {
+            closest.span.style.padding = "3px";
             closest.span.style.border = "1px solid black";
+            closest.span.style['border-radius'] = "5px";
+            closest.span.style.transform = "scale(2)";
         } // if
 
     } // setClosest
