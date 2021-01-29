@@ -86,29 +86,29 @@ along with JsTagSphere.  If not, see <http://www.gnu.org/licenses/>.
  */
 function Clouder(params) {
 
-    var self = this;
-    var w, h, lastX, lastY;
-    var rho = 0, theta = 0;
-    var timer = null;
-    var closest = null;
-    var containerTop;
-    var containerLeft;
-    var timing = [1];
-    var timingMax = 8;
+    const self = this;
+    let w, h, lastX, lastY;
+    let rho = 0, theta = 0;
+    let timer = null;
+    let closest = null;
+    let containerTop;
+    let containerLeft;
+    const timing = [1];
+    const timingMax = 8;
 
-    var container;
-    var callback;
-    var fontSize, fontShift;
-    var colorMax, colorMin, colorBgr;
-    var xScale = 0.9, yScale = 0.9;
-    var interval = 50;
-    var stepAngle = 0.08722;
-    var idleMotion = 0.2;
-    var nonSense = 0.025;
-    var opaque = 0.4;
+    let container;
+    let callback;
+    let fontSize, fontShift;
+    let colorMax, colorMin, colorBgr;
+    let xScale = 0.9, yScale = 0.9;
+    let interval = 50;
+    let stepAngle = 0.08722;
+    let idleMotion = 0.2;
+    let nonSense = 0.025;
+    let opaque = 0.4;
 
 
-    var objs = [];
+    const objs = [];
 
 
     function init() {
@@ -145,7 +145,7 @@ function Clouder(params) {
         container.onclick = onClick;
         let zX = 1, maxZX = 2, minZX = 0.5;
         window.addEventListener('wheel', function (event) {
-            if (event.target.id !== "clouder") return;
+            if (event.target.id !== "clouder" && event.target.parentElement.id !=="clouder") return;
             let dir;
             dir = (event.deltaY > 0) ? 0.1 : -0.1;
             zX += dir;
@@ -276,7 +276,7 @@ function Clouder(params) {
 
             const size = fontSize + o.z * fontShift;
             o.factor = size / fontSize;
-            if (o.width == 0) {
+            if (o.width === 0) {
                 o.width = asPixels(o.span.clientWidth / o.factor);
                 o.height = asPixels(o.span.clientHeight / o.factor);
             } // if
@@ -304,13 +304,13 @@ function Clouder(params) {
 
     function findClosest(ex, ey) {
 
-        var bestDist = w + h;
-        var best = null;
-        for (var i in objs) {
-            var o = objs[i];
-            var dx = ex - o.screenX;
-            var dy = ey - o.screenY;
-            var dist = Math.sqrt(dx * dx + dy * dy) / o.factor;
+        let bestDist = w + h;
+        let best = null;
+        for (let i in objs) {
+            const o = objs[i];
+            const dx = ex - o.screenX;
+            const dy = ey - o.screenY;
+            const dist = Math.sqrt(dx * dx + dy * dy) / o.factor;
             if (dist < bestDist) {
                 bestDist = dist;
                 best = o;
@@ -323,7 +323,7 @@ function Clouder(params) {
 
     function setClosest(obj) {
 
-        if (closest == obj) {
+        if (closest === obj) {
             return;
         } // if
 
@@ -340,9 +340,9 @@ function Clouder(params) {
 
 
     function onTimer() {
-        var t0 = new Date().getTime();
+        const t0 = new Date().getTime();
 
-        var move = function (o) {
+        const move = function (o) {
             spin(o, -theta);
             step(o, rho * stepAngle);
             spin(o, theta);
@@ -362,16 +362,16 @@ function Clouder(params) {
 
 
     function spin(o, angle) {
-        var x = o.x;
-        var y = o.y;
+        const x = o.x;
+        const y = o.y;
         o.x = x * Math.cos(angle) - y * Math.sin(angle);
         o.y = x * Math.sin(angle) + y * Math.cos(angle);
     } // spin
 
 
     function step(o, angle) {
-        var x = o.x;
-        var z = o.z;
+        const x = o.x;
+        const z = o.z;
         o.x = x * Math.cos(angle) - z * Math.sin(angle);
         o.z = x * Math.sin(angle) + z * Math.cos(angle);
     } // step
@@ -388,14 +388,14 @@ function Clouder(params) {
 
 
     function process(func) {
-        for (var i in objs) {
+        for (let i in objs) {
             func(objs[i]);
         } // for
     } // process
 
 
     function parseColor(text) {
-        var hex = parseInt(text.substr(1), 16);
+        const hex = parseInt(text.substr(1), 16);
         return [Math.floor(hex / 65536), Math.floor((hex / 256) % 256), Math.floor(hex % 256)];
     } // parseColor
 
@@ -436,8 +436,8 @@ function Clouder(params) {
 
 
     self.getRenderingTime = function () {
-        var sum = 0;
-        for (var i in timing) {
+        let sum = 0;
+        for (let i in timing) {
             sum += timing[i];
         } // for
         return sum / timing.length;
