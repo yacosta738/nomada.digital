@@ -10,3 +10,9 @@
 .skills-array {
   display: none;
 }
+
+.tagcloud--item{
+  &:hover {
+  transform: scale(2);
+  }
+}

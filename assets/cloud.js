@@ -145,7 +145,7 @@ function Clouder(params) {
         container.onclick = onClick;
         let zX = 1, maxZX = 2, minZX = 0.5;
         window.addEventListener('wheel', function (event) {
-            if (event.target.id !== "clouder" && event.target.parentElement.id !=="clouder") return;
+            if (event.target.id !== "clouder" && event.target.parentElement.id !== "clouder") return;
             let dir;
             dir = (event.deltaY > 0) ? 0.1 : -0.1;
             zX += dir;
@@ -198,6 +198,7 @@ function Clouder(params) {
             const span = container.children[i];
             span.style.position = "absolute";
             span.style.cursor = "pointer";
+            span.classList.add('tagcloud--item');
             const c = {};
             c.span = span;
             c.width = 0;
@@ -383,7 +384,7 @@ function Clouder(params) {
             return;
         } // if
 
-        callback(closest.id);
+        callback(closest, event);
     } // spanClicked
 
 
@@ -480,7 +481,8 @@ const main = {
 
         let attrs = {
             container: clouder,
-            tags: this.createTags()
+            tags: this.createTags(),
+            callback: this.openTechnology
         };
 
         for (let i in this.params) {
@@ -513,7 +515,10 @@ const main = {
         clouder.style.position = "relative";
         clouder.style.width = asPixels(percent(w));
         clouder.style.height = asPixels(percent(h, 70));
-    } // setupBlocks
+    }, // setupBlocks
+    openTechnology: function (item, event) {
+        window.open(`https://www.google.com/search?q=${item.text}`, '_blank');
+    }
 };
 
 function percent(value, percentToGet = 50) {
