@@ -16,10 +16,10 @@
                 {{end}}
             </div>
             <!--Right Col-->
-            <div class="w-full lg:w-1/2 lg:py-6 text-center">
+            <div id="skill-sphere-container" class="lg:w-1/2 lg:py-6 text-center">
                 {{ partial "tags-cloud-sphere" . }}
                 {{ range .skills }}
-                <span class="skills-array">{{ .name }}</span>
+                <span class="skills-array">{{ .skill | jsonify }}</span>
                 {{end}}
             </div>
 

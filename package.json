@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Yuniel Acosta Pérez's blog and portfolio using static site engine Hugo",
   "dependencies": {
-    "TagCloud": "^2.2.0",
     "alpinejs": "2.7.3",
     "ityped": "^1.0.3",
     "lazysizes": "5.3.0",

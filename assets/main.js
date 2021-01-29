@@ -296,8 +296,8 @@ document.addEventListener('DOMContentLoaded', function () {
     } catch (error) {
     }
 })
-window.onscroll = function () {
-    scrollFunction()
+window.onscroll = function (event) {
+    scrollFunction();
 };
 
 const navbar = document.getElementById("navbar");
@@ -309,6 +309,7 @@ let clouder = document.getElementById("clouder");
 window.onload = function () {
     toTop = document.getElementById("toTop");
     clouder = document.getElementById("clouder");
+    scrollFunction();
     if (clouder) {
         main.init();
     }
@@ -320,12 +321,13 @@ function scrollFunction() {
     } else {
         navbar.classList.remove("navbar-shrink");
     }
-    if (toTop !== null)
+    if (toTop !== null) {
         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
             toTop.style.display = "block";
         } else {
             toTop.style.display = "none";
         }
+    }
 }
 
 // All externals links set target to _blank

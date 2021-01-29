@@ -143,6 +143,17 @@ function Clouder(params) {
         container.onmousemove = onMouseMove;
         container.onmouseleave = onMouseLeave;
         container.onclick = onClick;
+        let zX = 1, maxZX = 2, minZX = 0.5;
+        window.addEventListener('wheel', function (event) {
+            if (event.target.id !== "clouder") return;
+            let dir;
+            dir = (event.deltaY > 0) ? 0.1 : -0.1;
+            zX += dir;
+            if (zX > maxZX) zX = maxZX;
+            if (zX < minZX) zX = minZX;
+            container.style.transform = `scale(${zX})`;
+            event.preventDefault();
+        }, {passive: false});
     } // init
 
 
@@ -170,8 +181,8 @@ function Clouder(params) {
     function setupElems(elems) {
 
         if (elems) {
-            for (var e in elems) {
-                var c = {};
+            for (let e in elems) {
+                const c = {};
                 c.text = elems[e].text;
                 c.id = elems[e].id;
                 c.weight = elems[e].weight;
@@ -183,11 +194,11 @@ function Clouder(params) {
 
 
     function setupSpans() {
-        for (var i = 0; i < container.children.length; i++) {
-            var span = container.children[i];
+        for (let i = 0; i < container.children.length; i++) {
+            const span = container.children[i];
             span.style.position = "absolute";
             span.style.cursor = "pointer";
-            var c = {};
+            const c = {};
             c.span = span;
             c.width = 0;
             c.height = 0;
@@ -198,17 +209,17 @@ function Clouder(params) {
 
     function adjustElems() {
 
-        for (var i in objs) {
-            var dx = 0, dy = 0, dz = 0;
-            var o = objs[i];
-            for (var j in objs) {
-                if (i == j) {
+        for (let i in objs) {
+            let dx = 0, dy = 0, dz = 0;
+            const o = objs[i];
+            for (let j in objs) {
+                if (i === j) {
                     continue;
                 } // if
-                var diffX = o.x - objs[j].x;
-                var diffY = o.y - objs[j].y;
-                var diffZ = o.z - objs[j].z;
-                var r = Math.sqrt(diffX * diffX + diffY * diffY + diffZ * diffZ);
+                const diffX = o.x - objs[j].x;
+                const diffY = o.y - objs[j].y;
+                const diffZ = o.z - objs[j].z;
+                const r = Math.sqrt(diffX * diffX + diffY * diffY + diffZ * diffZ);
                 dx += 0.05 / (r * r) * diffX / r;
                 dy += 0.05 / (r * r) * diffY / r;
                 dz += 0.05 / (r * r) * diffZ / r;
@@ -217,7 +228,7 @@ function Clouder(params) {
             o.x += dx;
             o.y += dy;
             o.z += dz;
-            var dist = Math.sqrt(o.x * o.x + o.y * o.y + o.z * o.z);
+            const dist = Math.sqrt(o.x * o.x + o.y * o.y + o.z * o.z);
             o.x /= dist;
             o.y /= dist;
             o.z /= dist;
@@ -241,7 +252,7 @@ function Clouder(params) {
     } // setPos
 
     function draw() {
-        var filters = (typeof (document.body.filters) == "object");
+        const filters = (typeof (document.body.filters) == "object");
 
         process(function (o) {
 
@@ -249,12 +260,13 @@ function Clouder(params) {
                 o.span = document.createElement("span");
                 o.width = 0;
                 o.height = 0;
+                o.span.classList.add('tagcloud--item');
                 o.span.innerHTML = o.text;
                 o.span.style.fontWeight = "bold";
                 o.span.style.position = "absolute";
                 o.span.style.cursor = "pointer";
-                var c = 1;
-                for (var i in colorMax) {
+                let c = 1;
+                for (let i in colorMax) {
                     c = c * 256 + Math.floor((colorMax[i] - colorMin[i]) * o.weight + colorMin[i]);
                 } // for
                 o.span.style.color = "#" + c.toString(16).substr(1);
@@ -262,7 +274,7 @@ function Clouder(params) {
                 o.span.descriptor = o;
             } // if
 
-            var size = fontSize + o.z * fontShift;
+            const size = fontSize + o.z * fontShift;
             o.factor = size / fontSize;
             if (o.width == 0) {
                 o.width = asPixels(o.span.clientWidth / o.factor);
@@ -274,11 +286,11 @@ function Clouder(params) {
             o.screenY = h * (o.y * yScale + 1) / 2;
             o.span.style.top = asPixels(o.screenY - parseInt(o.height) * o.factor / 2);
             o.span.style.zIndex = o.z >= 0 ? 10 : 5;
-            var opa = (Math.sin(o.z * Math.PI / 2) / 2 + 0.5) * (1 - opaque) + opaque;
+            const opa = (Math.sin(o.z * Math.PI / 2) / 2 + 0.5) * (1 - opaque) + opaque;
             if (!filters) {
                 o.span.style.opacity = opa;
             } else {
-                var f = o.span.filters["DXImageTransform.Microsoft.Alpha"];
+                const f = o.span.filters["DXImageTransform.Microsoft.Alpha"];
                 if (f) {
                     f.opacity = opa * 100;
                 } else {
@@ -448,23 +460,23 @@ function Clouder(params) {
 function asPixels(number) {
     return number + 'px';
 } // asPixels
+
+// Main options setup
 const main = {
 
     params: {
         interval: 50,
         fontSize: 20,
-        fontShift: 4,
-        opaque: 0.3
+        fontShift: 4
     },
 
     init: function () {
-        console.log("load cloud")
         this.setupBlocks();
         this.makeCloud();
     }, // init
 
     makeCloud: function () {
-        var clouder = document.getElementById("clouder");
+        const clouder = document.getElementById("clouder");
 
         let attrs = {
             container: clouder,
@@ -484,49 +496,32 @@ const main = {
     }, // makeCloud
 
     createTags: function () {
-        return [
-            {text: "George<br/>Washington", id: "1789-1797", weight: 0.5},
-            {text: "John<br/>Adams", id: "1797-1801", weight: 0.5},
-            {text: "Thomas<br/>Jefferson", id: "1801-1809", weight: 0.5},
-            {text: "James<br/>Madison", id: "1809-1817", weight: 0.5},
-            {text: "James<br/>Monroe", id: "1817-1825", weight: 0.5},
-            {text: "John<br/>Quincy<br/>Adams", id: "1825-1829", weight: 0.5},
-            {text: "Andrew<br/>Jackson", id: "1829-1837", weight: 0},
-            {text: "Martin<br/>Van Buren", id: "1837-1841", weight: 0},
-            {text: "William<br/>Harrison", id: "1841-1841", weight: 0.5},
-            {text: "John<br/>Tyler", id: "1841-1845", weight: 0.5},
-            {text: "James<br/>Polk", id: "1845-1849", weight: 0},
-            {text: "Zachary<br/>Taylor", id: "1849-1850", weight: 0.5},
-            {text: "Millard<br/>Fillmore", id: "1850-1853", weight: 0.5},
-            {text: "Franklin<br/>Pierce", id: "1853-1857", weight: 0},
-            {text: "James<br/>Buchanan", id: "1857-1861", weight: 0},
-            {text: "Abraham<br/>Lincoln", id: "1861-1865", weight: 1},
-            {text: "Andrew<br/>Johnson", id: "1865-1869", weight: 0},
-            {text: "Ulisses<br/>Grant", id: "1869-1877", weight: 1},
-            {text: "Rutherford<br/>Hayes", id: "1877-1881", weight: 1},
-            {text: "James<br/>Garfield", id: "1881-1881", weight: 1},
-            {text: "Chester<br/>Arthur", id: "1881-1885", weight: 1},
-            {text: "Grover<br/>Cleveland", id: "1885-1889, 1893-1897", weight: 0},
-            {text: "Benjamin<br/>Harrison", id: "1889-1893", weight: 1},
-            {text: "William<br/>McKinley", id: "1897-1901", weight: 1},
-            {text: "Theodore<br/>Roosevelt", id: "1901-1909", weight: 1},
-            {text: "William<br/>Taft", id: "1909-1913", weight: 1},
-            {text: "Woodrow<br/>Wilson", id: "1913-1921", weight: 0},
-            {text: "Warren<br/>Harding", id: "1921-1923", weight: 1},
-            {text: "Calvin<br/>Coolidge", id: "1923-1929", weight: 1},
-            {text: "Herbert<br/>Hoover", id: "1929-1933", weight: 1}
-        ];
+        const allSkillsElements = document.getElementsByClassName("skills-array");
+        const allSkills = [];
+
+        for (let i = 0; i < allSkillsElements.length; i++) {
+            allSkills.push(allSkillsElements[i].innerText);
+        }
+        return allSkills.flatMap(skill => JSON.parse(skill));
     }, // createTags
 
     setupBlocks: function () {
-        const w = 1000,
-            h = 800;
-        var clouder = document.getElementById("clouder");
-
+        const w = document.documentElement.clientWidth, h = document.documentElement.clientHeight;
+        // const w = 1000, h = 700
+        const clouder = document.getElementById("clouder");
         //clouder.style.border = "1px solid black";
         clouder.style.position = "relative";
-        clouder.style.width = asPixels(w * 4 / 6);
-        clouder.style.height = asPixels(h * 4 / 6);
+        clouder.style.width = asPixels(percent(w));
+        clouder.style.height = asPixels(percent(h, 70));
     } // setupBlocks
-
 };
+
+function percent(value, percentToGet = 50) {
+    //Calculate the percent.
+    return (percentToGet / 100) * value;
+}
+
+window.addEventListener("resize", (event) => {
+    // Get width and height of the window excluding scrollbars
+    main.init();
+});

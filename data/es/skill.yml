@@ -10,24 +10,23 @@ skill:
     - item: Visit my [Linkedin](https://www.linkedin.com/in/yacosta738) profile for more details or just [contact](#service) me
   skills :
     # skills item loop
-    - name : Java
-    - name : Kotlin
-    - name : Scala
-    - name : JavaScript
-    - name : TypeScript
-    - name : Angular
-    - name : Vuejs
-    - name : Spring Boot
-    - name : Laravel
-    - name : npm
-    - name : yarn
-    - name : webpack
-    - name : Jhipster
-    - name : Neo4j
-    - name : MongoDB
-    - name : Docker
-    - name : Jhipster
-    - name : NoSQL
-    - name : SQL
-    - name : PostgrSQL
-    - name : MySQL
+    - skill: { text: "Java", id: "Java" }
+    - skill: { text: "Kotlin", id: "Kotlin" }
+    - skill: { text: "Scala", id: "Scala" }
+    - skill: { text: "JavaScript", id: "JavaScript" }
+    - skill: { text: "TypeScript", id: "TypeScript" }
+    - skill: { text: "Angular", id: "Angular" }
+    - skill: { text: "Vuejs", id: "Vuejs" }
+    - skill: { text: "Spring Boot", id: "Spring Boot" }
+    - skill: { text: "Laravel", id: "Laravel" }
+    - skill: { text: "npm", id: "npm" }
+    - skill: { text: "yarn", id: "yarn" }
+    - skill: { text: "webpack", id: "webpack" }
+    - skill: { text: "Neo4j", id: "Neo4j" }
+    - skill: { text: "MongoDB", id: "MongoDB" }
+    - skill: { text: "Docker", id: "Docker" }
+    - skill: { text: "Jhipster", id: "Jhipster" }
+    - skill: { text: "NoSQL", id: "NoSQL" }
+    - skill: { text: "SQL", id: "SQL" }
+    - skill: { text: "PostgrSQL", id: "PostgrSQL" }
+    - skill: { text: "MySQL", id: "MySQL" }
