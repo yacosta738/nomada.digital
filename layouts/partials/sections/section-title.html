@@ -1,6 +1,6 @@
 {{"<!-- section title --> " | safeHTML }}
 <div class="text-center text-xl capitalize">
-    <h2 class="transition duration-500 ease-in-out font-black tracking-widest m-3">{{ with .title }} {{ index (split . " ") 0 | safeHTML }} {{ end }}<span class="text-blue-500">
+    <h2 class="transition duration-500 ease-in-out font-black tracking-widest m-3">{{ with .title }} {{ index (split . " ") 0 | safeHTML }} {{ end }}<span class="text-neon-500">
 						{{ with .title }} {{ after (len (index (split . " ") 0)) . | safeHTML }} {{ end }}</span></h2>
     <div class="border-xline"></div>
 </div>

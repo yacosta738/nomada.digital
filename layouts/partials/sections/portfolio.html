@@ -1,0 +1,111 @@
+{{ $data := index site.Data site.Language.Lang }}
+
+{{ if $data.portfolio.portfolio.enable }}
+{{ with $data.portfolio.portfolio }}
+{{"<!-- Portfolio Section -->" | safeHTML}}
+<section id="portfolio" class="bg-gray-100 dark:bg-gray-700">
+    <div class="container mx-auto items-center justify-center">
+        {{ partial "sections/section-title.html" . }}
+        <div class="m-2 p-2 flex flex-row flex-wrap md:flex-wrap-reverse">
+            <div class="flex flex-col float-left">
+                <div class="filters-group">
+                    {{ $search := (i18n "search") }}
+                    <input class="js-shuffle-search bg-purple-white shadow rounded border-0 p-3"
+                           type="search" placeholder="{{ $search }}"
+                           id="filters-search-input">
+                    <span class="absolute mt-3 -ml-10">
+                                {{ partial "fontawesome.html" "search" }}
+                            </span>
+                </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="filters-group col-span-2">
+                <div class="flex md:flex-row flex-col m-2 filter-options">
+                    <button class="teal-button active-filter" data-group="all">
+                        {{ i18n "all"}}
+                    </button>
+                    {{ $categories := slice }}
+                    {{ range .portfolio_item }}
+                    {{ range .categories }}
+                    {{ $categories = $categories | append . }}
+                    {{ end }}
+                    {{ end }}
+                    {{ range ( $categories | uniq ) }}
+                    <button class="teal-button" data-group="{{ . }}">
+                        {{ . | humanize }}
+                    </button>
+                    {{ end }}
+                </div>
+            </div>
+            <fieldset class="filters-group  flex justify-end ">
+                <div class="radio-group sort-options inline-flex flex-1 flex-row flex-initial justify-center rounded-lg shadow-md">
+                    {{ range .sort }}
+                    <div class="radio">
+                        <input type="radio" id="{{ .id }}" name="sort-value" value="{{ .criteria }}"
+                               {{ if .checked }}
+                               checked
+                               {{end}}
+                        >
+                        <label for="{{ .id }}"
+                               class="block text-center px-4 py-3 bg-white border border-grey border-solid border-2">
+                            <!--                            <span class="text-3xl mb-2"></span><br>-->
+                            <span class="font-semibold uppercase tracking-wide"><strong>{{ .icon }}</strong></span>
+                        </label>
+                    </div>
+                    {{end}}
+                </div>
+            </fieldset>
+        </div>
+
+        <div id="portfolio-grid"
+             class="grid grid-cols-1 md:grid-cols-3 items-center justify-center my-6 md:my-12">
+            {{"<!-- portfolio item --> " | safeHTML}}
+            {{ range .portfolio_item }}
+            <div class="shuffle-item"
+                 data-groups="[{{range $index, $element:= .categories }}{{if ne $index 0}},{{end}}&quot;{{. | urlize}}&quot;{{ end }}]"
+                 data-date-created="{{ .date }}"
+                 data-title="{{ .name }}"
+            >
+                <div class="portfolio-project m-1 p-2">
+                    <div class="portfolio-project-photo">
+                        <img class="rounded" src="{{ .image_webp | absURL }}" alt="{{ .name }}">
+                        {{"<!-- member social profile --> " | safeHTML}}
+                        <div class="mask-caption">
+                            <div class="m-2 card absolute cursor-pointer border border-gray-600 rounded-lg transform hover:-translate-y-1 transition-all duration-200">
+                                <div class="m-2">
+                                    <h2 class="project-title text-2xl md:text-3xl text-gray-600 mb-2">
+                                        {{ .name }}
+                                        {{ if or (eq .link "#") (eq .link "") }}
+                                        <span class="text-md text-gray-800 font-mono inline rounded-full px-2 align-top float-right hover:text-black animate-pulse">
+                                            {{ partial "fontawesome.html" "images-solid" }}
+                                        </span>
+                                        {{ else }}
+                                        <a href=" {{if eq .link (.link | absLangURL) }} {{ .link | absLangURL }} {{else}} {{ .link | safeURL }}{{end}}"
+                                           class="text-md text-gray-800 font-mono inline rounded-full px-2 align-top float-right hover:text-black animate-pulse remove-link-css-background">
+                                            {{if eq .link (.link | absLangURL) }}
+                                            {{ partial "fontawesome.html" "link-solid" }}
+                                            {{else}}
+                                            {{ partial "fontawesome.html" "external-link" }}
+                                            {{end}}
+                                        </a>
+                                        {{ end }}
+                                    </h2>
+                                    <p class="font-light font-mono text-lg text-gray-700 hover:text-gray-900 transition-all duration-200">
+                                        {{ .content | markdownify }}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{end}}
+        </div>
+        <div class="my-sizer-element"></div>
+    </div>
+
+</section>
+{{"<!-- /Portfolio -->" | safeHTML}}
+{{ end }}
+{{ end }}

@@ -23,6 +23,7 @@
 @import "./sections/about";
 @import "./sections/services";
 @import "./sections/skills";
+@import "./sections/portfolio";
 
 /* GLOBAL */
 body {
@@ -43,7 +44,13 @@ section {
   a {
     background: none;
     text-shadow: none;
-
+  }
+}
+.remove-link-css-background{
+  a {
+    color: var(--color);
+    background: none;
+    text-shadow: none;
   }
 }
 

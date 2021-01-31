@@ -28,4 +28,32 @@ init(rolesPlayed, {showCursor: false, strings: allRoles});
 //     vertical: true,
 //     horizontal: true
 // });
-// Tags Cloud
+
+/* ========================================================================= */
+/*	Portfolio Filtering Hook
+/* =========================================================================  */
+// import Shuffle from 'shufflejs';
+//
+// const containerEl = document.querySelector('.shuffle-wrapper');
+// if (containerEl) {
+//     const myShuffle = new Shuffle(document.querySelector('.shuffle-wrapper'), {
+//         itemSelector: '.shuffle-item'
+//     });
+//     const filters = document.getElementsByName("shuffle-filter");
+//     filters.forEach(filter => filter.onchange = (evt) => {
+//         const input = evt.currentTarget;
+//         console.log(input);
+//         console.log(input.checked);
+//         if (input.checked) {
+//             myShuffle.filter(input.value);
+//             console.log("<<<<<Filter>>>>>");
+//             console.log(myShuffle);
+//         }
+//     });
+//     // jQuery('input[name="shuffle-filter"]').on('change', function (evt) {
+//     //     const input = evt.currentTarget;
+//     //     if (input.checked) {
+//     //         myShuffle.filter(input.value);
+//     //     }
+//     // });
+// }

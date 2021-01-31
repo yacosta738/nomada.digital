@@ -33,6 +33,9 @@ other = "Teléfono"
 [submit]
 other = "Enviar"
 
+[search]
+other = "Buscar"
+
 [share]
 other = "Compartir"
 

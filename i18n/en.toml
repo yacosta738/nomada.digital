@@ -33,6 +33,9 @@ other = "Phone"
 [submit]
 other = "Submit"
 
+[search]
+other = "Search"
+
 [share]
 other = "Share"
 
