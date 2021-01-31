@@ -7,16 +7,16 @@ portfolio:
     - id: default
       criteria: dom
       title: Default
-      icon: ⚙
+      icon: 🗒️
       checked: true
     - id: title
       criteria: title
       title: Title
-      icon: 🎫
+      icon: 🏷️
     - id: date-created
       criteria: date-created
       title: Date Created
-      icon: ⏱
+      icon: ⏱️
   portfolio_item :
     # portfolio item loop
     - name : Tag Design

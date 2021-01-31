@@ -1,6 +1,6 @@
 import Shuffle from 'shufflejs';
 
-class Demo {
+class PortfolioShuffle {
     constructor(element) {
         this.element = element;
         this.shuffle = new Shuffle(element, {
@@ -82,16 +82,14 @@ class Demo {
         const buttons = Array.from(evt.currentTarget.children);
         buttons.forEach(button => {
             if (button.querySelector('input').value === evt.target.value) {
-                button.classList.add('active-filter');
+                button.classList.add('active');
             } else {
-                button.classList.remove('active-filter');
+                button.classList.remove('active');
             }
         });
 
         // Create the sort options to give to Shuffle.
         const { value } = evt.target;
-        console.log(evt.target);
-        console.log(evt.target.value);
         let options = {};
 
         function sortByDate(element) {
@@ -112,8 +110,6 @@ class Demo {
                 by: sortByTitle };
 
         }
-        console.log(`value => ${value}`);
-        console.log(options);
         this.shuffle.sort(options);
     }
 
@@ -151,5 +147,5 @@ class Demo {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    window.demo = new Demo(document.getElementById('portfolio-grid'));
+    window.demo = new PortfolioShuffle(document.getElementById('portfolio-grid'));
 });
