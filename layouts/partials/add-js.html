@@ -6,7 +6,8 @@
   {{ $main := resources.Get "main.js" | js.Build $opts }}
   {{ $libs := resources.Get "libraries.js" | js.Build $opts }}
   {{ $portfolio := resources.Get "portfolio-shuffle.js" | js.Build $opts }}
-  {{ $bundle := slice $portfolio $libs $main | resources.Concat "bundle.js" | resources.Fingerprint "sha512" }}
+  {{ $email := resources.Get "email.js" | js.Build $opts }}
+  {{ $bundle := slice $email $portfolio $libs $main | resources.Concat "bundle.js" | resources.Fingerprint "sha512" }}
   <script src="{{ $bundle.RelPermalink }}" integrity="{{ $bundle.Data.Integrity }}"></script>
 {{ else }}
   {{ $libs := resources.Get "libraries.js" | js.Build $optsDev | resources.Fingerprint "sha512" }}
@@ -14,6 +15,9 @@
 
   {{ $portfolio := resources.Get "portfolio-shuffle.js" | js.Build $optsDev | resources.Fingerprint "sha512" }}
   <script src="{{ $portfolio.RelPermalink }}" integrity="{{ $portfolio.Data.Integrity }}"></script>
+
+  {{ $email := resources.Get "email.js" | js.Build $optsDev | resources.Fingerprint "sha512" }}
+  <script src="{{ $email.RelPermalink }}" integrity="{{ $email.Data.Integrity }}"></script>
 
   {{ $mainDev := resources.Get "main.js" | resources.Fingerprint "sha512" }}
   <script src="{{ $mainDev.RelPermalink }}" integrity="{{ $mainDev.Data.Integrity }}"></script>

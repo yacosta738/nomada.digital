@@ -36,6 +36,12 @@ other = "Enviar"
 [search]
 other = "Buscar"
 
+[subscribe]
+other = "Subscríbete"
+
+[typeEmail]
+other = "Escriba su correo electrónico"
+
 [share]
 other = "Compartir"
 

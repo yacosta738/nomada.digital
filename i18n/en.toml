@@ -36,6 +36,12 @@ other = "Submit"
 [search]
 other = "Search"
 
+[subscribe]
+other = "Subscribe"
+
+[typeEmail]
+other = "Type your e-mail"
+
 [share]
 other = "Share"
 

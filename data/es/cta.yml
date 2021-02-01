@@ -1,0 +1,6 @@
+############################# call to action ###################################
+cta:
+  enable: true
+  title: "<span class='text-blue-600'>SUBSCRÍBETE</span> a nuestro blog"
+  content: "No te pierdas cuando se publique un artículo sobre tecnología y programación"
+
