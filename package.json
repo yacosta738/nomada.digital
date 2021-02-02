@@ -6,6 +6,7 @@
     "alpinejs": "2.7.3",
     "emailjs-com": "^2.6.4",
     "firebase": "^8.2.5",
+    "imagesloaded": "^4.1.4",
     "ityped": "^1.0.3",
     "lazysizes": "5.3.0",
     "lunr": "2.3.9",

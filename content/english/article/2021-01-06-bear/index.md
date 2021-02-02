@@ -6,6 +6,7 @@ description: My Favourite Note Taking App for Mac and iPhone is Bear
 summary: After switching from Windows to Mac, I have reconsidered a few of the applications I use. To my own surprise I ended up with a paid one that’s only available on Apple devices – Bear.
 tags: [Bear]
 categories: [Tooling]
+author: Mark Dinn
 ogimage: bear-wallpaper1.png
 draft: false
 ---

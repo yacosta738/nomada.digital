@@ -40,22 +40,3 @@ p.text-base {
     margin: 5px;
   }
 }
-
-.border-xline {
-  border-top: 2px solid var(--color-ligth);
-  height: 1px;
-  margin: 15px auto 0;
-  position: relative;
-  width: 30%;
-
-  &:before {
-    content: '';
-    height: 6px;
-    left: 50%;
-    margin-left: -20px;
-    position: absolute;
-    top: -4px;
-    width: 50px;
-    background-color: #57cbcc;
-  }
-}

@@ -11,6 +11,12 @@
 .teal-button {
     @apply text-base rounded-r-none hover:scale-110 focus:outline-none flex justify-center px-4 py-2 rounded font-bold cursor-pointer hover:bg-gray-700 hover:text-gray-100 bg-gray-100 text-gray-700 border duration-200 ease-in-out border-gray-600 transition;
 }
+.main-button{
+    @apply w-full md:w-auto py-4 px-8 text-xs text-white font-semibold leading-none bg-blue-600 hover:bg-blue-700 rounded;
+}
+.main-button-icon {
+    @apply inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
+}
 .active-filter{
     @apply bg-neon-600;
 }
@@ -21,7 +27,9 @@
 .tooltip:hover .tooltip-text {
     @apply visible;
 }
-
+.bg-opacity-black{
+    background-color: rgba(0, 0, 0, 0.4);
+}
 #toTop {
     all: initial;
     background-color: #57cbcc;

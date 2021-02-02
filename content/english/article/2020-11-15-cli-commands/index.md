@@ -6,6 +6,7 @@ description: How to address naming challenge with a multi-command CLI, example i
 summary: From the past months of iterating on a CLI for managing micro services in our company, I've drawn some conclusions regarding usability. I'll describe the features of OCLIF we've used to address the challenges.
 tags: [oclif]
 categories: [Coding]
+author: Mark Dinn
 ogimage: oclif-cli.png
 draft: false  
 ---

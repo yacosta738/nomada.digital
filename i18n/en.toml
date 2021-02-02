@@ -45,6 +45,9 @@ other = "Type your e-mail"
 [share]
 other = "Share"
 
+[author]
+other = "Author"
+
 [aboutAuthor]
 other = "About Author"
 
@@ -59,6 +62,12 @@ other = "About me"
 
 [services]
 other = "Services"
+
+[minutes]
+other = "Minutes"
+
+[readingTime]
+other = "Reading Time"
 
 [portfolio]
 other = "Portfolio"

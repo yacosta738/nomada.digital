@@ -1,7 +1,7 @@
 {{ define "main" }}
     {{ $aboutStyles := resources.Get "styles/about-bundle.scss" | toCSS | minify | fingerprint "sha512" }}
     <link rel="stylesheet" type="text/css" href="{{ $aboutStyles.RelPermalink }}" integrity="{{ $aboutStyles.Data.Integrity }}" media="screen, tv, projection">
-    <main id="content" x-ref="content">
+    <main id="content" x-ref="content" class="mt-36 md:mt-14">
         {{- .Content -}}
         <script>
             document.querySelector('figure img').addEventListener('click', evt => {

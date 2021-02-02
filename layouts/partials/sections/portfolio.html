@@ -62,7 +62,7 @@
              class="grid grid-cols-1 md:grid-cols-3 items-center justify-center my-6 md:my-12">
             {{"<!-- portfolio item --> " | safeHTML}}
             {{ range .portfolio_item }}
-            <div class="shuffle-item"
+            <figure class="shuffle-item"
                  data-groups="[{{range $index, $element:= .categories }}{{if ne $index 0}},{{end}}&quot;{{. | urlize}}&quot;{{ end }}]"
                  data-date-created="{{ .date }}"
                  data-title="{{ .name }}"
@@ -99,7 +99,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </figure>
             {{end}}
         </div>
         <div class="my-sizer-element"></div>
