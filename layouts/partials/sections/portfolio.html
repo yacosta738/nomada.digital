@@ -3,10 +3,10 @@
 {{ if $data.portfolio.portfolio.enable }}
 {{ with $data.portfolio.portfolio }}
 {{"<!-- Portfolio Section -->" | safeHTML}}
-<section id="portfolio" class="bg-gray-100 dark:bg-gray-700">
+<section id="portfolio" class="bg-gray-200 dark:bg-gray-600">
     <div class="container mx-auto items-center justify-center">
         {{ partial "sections/section-title.html" . }}
-        <div class="mx-2 my-4 py-4 flex flex-row flex-wrap md:flex-wrap-reverse">
+        <div class="mx-auto my-4 py-4 flex flex-row flex-wrap md:flex-wrap-reverse">
             <div class="flex flex-col float-left">
                 <div class="filters-group">
                     {{ $search := (i18n "search") }}

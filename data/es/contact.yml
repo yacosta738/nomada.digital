@@ -1,0 +1,16 @@
+############################## Contact #############################
+contact:
+  enable : true
+  title : Contact Us
+  subtitle : Lets talk about everything!
+  content : "Hate forms? Send us an <span class=`underline`>email</span> instead."
+
+  # Contact form
+  contact_form:
+    enable : true
+    form_action : "#" #contact form works with https://formspree.io
+    name : "Tu nombre y Apellidos"
+    email : "Tu correo electrónico"
+    subject : "Asunto"
+    message : "Mensaje"
+    submit : "Enviar mensaje"
