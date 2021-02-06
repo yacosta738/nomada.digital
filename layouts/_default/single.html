@@ -1,9 +1,9 @@
-{{ partial "doctype.html" }}
+{{ partial "shared/doctype.html" }}
 <html>
-    {{ partial "head.html" . }}
-    {{ partial "body-start-tag.html"}}
+    {{ partial "shared/head.html" . }}
+    {{ partial "shared/body-start-tag.html"}}
         <div id="page-wrapper">
-            {{ partial "header.html" . }}
+            {{ partial "shared/header.html" . }}
             <div class="body">
                 <div class="body-max-width">
                     <main id="content" x-ref="content">
@@ -11,17 +11,17 @@
                             <h1>{{ .Title }}</h1>
                             {{ .Content }}
                         </article>
-                        {{ partial "article-tags.html" . }}
-                        {{ partial "article-categories.html" . }}
+                        {{ partial "shared/article-tags.html" . }}
+                        {{ partial "shared/article-categories.html" . }}
                     </main>
                     <aside id="sidebar">
-                        {{ partial "recent-articles-widget.html" . }}
-                        {{ partial "tag-cloud.html" . }}
-                        {{ partial "categories-widget.html" . }}
+                        {{ partial "shared/recent-articles-widget.html" . }}
+                        {{ partial "shared/tag-cloud.html" . }}
+                        {{ partial "shared/categories-widget.html" . }}
                     </aside>
                 </div>
             </div>            
-            {{ partial "footer.html" . }}
+            {{ partial "shared/footer.html" . }}
         </div>
         {{ partial "lightbox.html" . }}
         {{ partial "searchbox.html" . }}

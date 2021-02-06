@@ -5,7 +5,7 @@
 {{"<!-- Portfolio Section -->" | safeHTML}}
 <section id="portfolio" class="bg-gray-200 dark:bg-gray-600">
     <div class="container mx-auto items-center justify-center">
-        {{ partial "sections/section-title.html" . }}
+        {{ partial "shared/section-title.html" . }}
         <div class="mx-auto my-4 py-4 flex flex-row flex-wrap md:flex-wrap-reverse">
             <div class="flex flex-col float-left">
                 <div class="filters-group">
@@ -14,7 +14,7 @@
                            type="search" placeholder="{{ $search }}"
                            id="filters-search-input">
                     <span class="absolute mt-3 -ml-10">
-                                {{ partial "fontawesome.html" "search" }}
+                                {{ partial "shared/fontawesome.html" "search" }}
                             </span>
                 </div>
             </div>
@@ -78,15 +78,15 @@
                                         {{ .name }}
                                         {{ if or (eq .link "#") (eq .link "") }}
                                         <span class="text-md text-gray-800 font-mono inline rounded-full px-2 align-top float-right hover:text-black animate-pulse">
-                                            {{ partial "fontawesome.html" "images-solid" }}
+                                            {{ partial "shared/fontawesome.html" "images-solid" }}
                                         </span>
                                         {{ else }}
                                         <a href=" {{if eq .link (.link | absLangURL) }} {{ .link | absLangURL }} {{else}} {{ .link | safeURL }}{{end}}"
                                            class="text-md text-gray-800 font-mono inline rounded-full px-2 align-top float-right hover:text-black animate-pulse remove-link-css-background">
                                             {{if eq .link (.link | absLangURL) }}
-                                            {{ partial "fontawesome.html" "link-solid" }}
+                                            {{ partial "shared/fontawesome.html" "link-solid" }}
                                             {{else}}
-                                            {{ partial "fontawesome.html" "external-link" }}
+                                            {{ partial "shared/fontawesome.html" "external-link" }}
                                             {{end}}
                                         </a>
                                         {{ end }}

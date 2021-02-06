@@ -13,6 +13,7 @@
 @import './_searchbox';
 @import './_hamburger-icon';
 @import './_animations';
+@import './_sidebar';
 @import './_blockquote';
 @import './_links';
 @import './_theme';
@@ -42,8 +43,8 @@ section {
   display: flex;
   justify-content: center;
   a {
-    background: none;
-    text-shadow: none;
+    //background: none;
+    //text-shadow: none;
   }
 }
 .remove-link-css-background{

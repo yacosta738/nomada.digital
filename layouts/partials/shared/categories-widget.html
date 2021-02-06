@@ -1,0 +1,15 @@
+<div class="widget">
+    {{ if .IsHome }}
+    <div class="text-xs uppercase text-gray-400 font-medium mb-6">
+        {{ i18n "categories" }}
+    </div>
+    {{else}}
+    <div class="widget-title">{{ i18n "categories" }}</div>
+    {{end}}
+    <ol class="all-categories widget-content">
+        {{ range $name, $taxonomy := .Site.Taxonomies.categories -}}
+        <li><a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}">{{ $name }}</a> <span class="text-white">({{len $taxonomy.Pages}})</span>
+        </li>
+        {{ end }}
+    </ol>
+</div>

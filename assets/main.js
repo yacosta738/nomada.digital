@@ -338,3 +338,7 @@ for (let i = 0, linksLength = links.length; i < linksLength; i++) {
         links[i].target = '_blank';
     }
 }
+
+function clearFormContact() {
+    setTimeout(() => document.getElementById("contact-form").reset(), 2000);
+}

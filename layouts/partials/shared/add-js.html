@@ -1,0 +1,29 @@
+
+{{ $opts := (dict "minify" true "target" "es2017" "format" "cjs") }}
+{{ $optsDev := (dict "target" "es2017" "format" "cjs") }}
+
+{{ if .Site.Params.MinifyBundles }}
+  {{ $main := resources.Get "main.js" | js.Build $opts }}
+  {{ $libs := resources.Get "libraries.js" | js.Build $opts }}
+{{ if .IsHome }}
+  {{ $portfolio := resources.Get "portfolio-shuffle.js" | js.Build $opts }}
+  {{ $email := resources.Get "email.js" | js.Build $opts }}
+  {{ $bundle := slice $email $portfolio $libs $main | resources.Concat "bundle.js" | resources.Fingerprint "sha512" }}
+  <script src="{{ $bundle.RelPermalink }}" integrity="{{ $bundle.Data.Integrity }}"></script>
+{{else}}
+  {{ $bundle := slice $libs $main | resources.Concat "bundle.js" | resources.Fingerprint "sha512" }}
+  <script src="{{ $bundle.RelPermalink }}" integrity="{{ $bundle.Data.Integrity }}"></script>
+{{end}}
+{{ else }}
+  {{ $libs := resources.Get "libraries.js" | js.Build $optsDev | resources.Fingerprint "sha512" }}
+  <script src="{{ $libs.RelPermalink }}" integrity="{{ $libs.Data.Integrity }}"></script>
+{{ if .IsHome }}
+  {{ $portfolio := resources.Get "portfolio-shuffle.js" | js.Build $optsDev | resources.Fingerprint "sha512" }}
+  <script src="{{ $portfolio.RelPermalink }}" integrity="{{ $portfolio.Data.Integrity }}"></script>
+
+  {{ $email := resources.Get "email.js" | js.Build $optsDev | resources.Fingerprint "sha512" }}
+  <script src="{{ $email.RelPermalink }}" integrity="{{ $email.Data.Integrity }}"></script>
+{{end}}
+  {{ $mainDev := resources.Get "main.js" | resources.Fingerprint "sha512" }}
+  <script src="{{ $mainDev.RelPermalink }}" integrity="{{ $mainDev.Data.Integrity }}"></script>
+{{ end }}

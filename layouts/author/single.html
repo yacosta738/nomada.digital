@@ -1,7 +1,7 @@
 {{define "main"}}
 <main id="content" x-ref="content" class="mt-36 md:mt-14 container mx-auto">
     {{ $options := (dict "title" (i18n "aboutAuthor")) }}
-    {{ partial "sections/section-title.html" $options }}
+    {{ partial "shared/section-title.html" $options }}
     <section class="mt-10">
         <div class="max-w-6xl flex items-center h-auto lg:h-3/5 flex-wrap mx-auto my-12 lg:my-0">
             <!--Main Col-->
@@ -36,7 +36,7 @@
                     <div class="mt-6 pb-16 lg:pb-0 w-4/5 lg:w-full mx-auto flex flex-wrap items-center justify-between">
                         {{ range .Params.Social }}
                         <a class="link" href="{{ .link | safeURL}}">
-                        {{ partial "fontawesome.html" .icon }}
+                        {{ partial "shared/fontawesome.html" .icon }}
                         </a>
                         {{end}}
                     </div>
@@ -57,7 +57,7 @@
     <section>
         <div class="container mx-auto">
             {{ $options := (dict "title" (i18n "authorsPosts")) }}
-            {{ partial "sections/section-title.html" $options }}
+            {{ partial "shared/section-title.html" $options }}
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-5">
                 {{ range first 3 (where site.RegularPages "Params.author" .Title) }}
                 {{ .Render "article" }}

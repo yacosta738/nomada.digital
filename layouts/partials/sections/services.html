@@ -5,7 +5,7 @@
 {{"<!-- service -->" | safeHTML }}
 <section id="services" class="bg-gray-200 dark:bg-gray-600">
     <div class="container mx-auto">
-        {{ partial "sections/section-title.html" . }}
+        {{ partial "shared/section-title.html" . }}
         <div class="shuffle-wrapper grid grid-cols-1 md:grid-cols-3 items-center justify-center my-6 md:my-12">
             {{"<!-- portfolio item --> " | safeHTML}}
             {{ range .service_item}}
@@ -13,7 +13,7 @@
                 <div class="card-services rounded transform -translate-x-3 -translate-y-3">
                     <div class="px-3">
                         <div class="text-center pt-6">
-                            {{ partial "fontawesome.html" .icon }}
+                            {{ partial "shared/fontawesome.html" .icon }}
                         </div>
                         <h3 class="font-bold mb-2">{{ .name | markdownify }}</h3>
                         <hr>

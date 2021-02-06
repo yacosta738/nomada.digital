@@ -5,8 +5,8 @@
 {{"<!-- Start Contact Us -->" | safeHTML}}
 <section id="contact-me" class="bg-white dark:bg-gray-800">
     <div class="container mx-auto my-5">
-        {{ partial "sections/section-title.html" . }}
-        <div class="mt-24 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto bg-gray-200 dark:bg-gray-600 text-gray-100 dark:text-gray-900 rounded-lg shadow-lg">
+        {{ partial "shared/section-title.html" . }}
+        <div class="mt-24 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto bg-gray-50 dark:bg-gray-700 text-gray-100 dark:text-gray-900 rounded-lg shadow-lg">
             <div class="flex flex-col justify-between">
                 <div>
                     <h2 class="text-4xl lg:text-5xl font-bold leading-tight">{{ .subtitle }}</h2>
@@ -519,34 +519,41 @@
                     </svg>
                 </div>
             </div>
+            {{"<!-- Contact Form --> " | safeHTML}}
             {{ if .contact_form.enable }}
-            <div class="">
+            {{ with .contact_form }}
+            <form id="contact-form" class="" method="POST" action="{{ .form_action }}">
                 <div>
-                    <span class="uppercase text-sm text-gray-600 dark:text-gray-100 font-bold">{{ .contact_form.name }}</span>
-                    <input class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                           type="text" placeholder="">
+                    <span class="uppercase text-sm text-gray-600 dark:text-gray-100 font-bold">{{ .name }}</span>
+                    <input id="form-name"
+                           class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                           name="name" required type="text" placeholder="{{ .name }}">
                 </div>
                 <div class="mt-8">
-                    <span class="uppercase text-sm text-gray-600 dark:text-gray-100 font-bold">{{ .contact_form.email }}</span>
-                    <input class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                           type="email">
+                    <span class="uppercase text-sm text-gray-600 dark:text-gray-100 font-bold">{{ .email }}</span>
+                    <input id="form-email"
+                           class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                           placeholder="{{ .email }}" name="email" required type="email">
                 </div>
                 <div class="mt-8">
-                    <span class="uppercase text-sm text-gray-600 dark:text-gray-100 font-bold">{{ .contact_form.subject }}</span>
-                    <input class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                           type="text">
+                    <span class="uppercase text-sm text-gray-600 dark:text-gray-100 font-bold">{{ .subject }}</span>
+                    <input id="form-subject"
+                           class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                           placeholder="{{ .subject }}" name="subject" required type="text">
                 </div>
                 <div class="mt-8">
-                    <span class="uppercase text-sm text-gray-600 dark:text-gray-100 font-bold">{{ .contact_form.message }}</span>
-                    <textarea
-                            class="w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
+                    <span class="uppercase text-sm text-gray-600 dark:text-gray-100 font-bold">{{ .message }}</span>
+                    <textarea id="form-message" placeholder="{{ .message }}" name="message" required
+                              class="w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
                 </div>
                 <div class="mt-8">
-                    <button class="uppercase text-sm font-bold tracking-wide bg-indigo-500 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
-                        {{ .contact_form.submit }}
+                    <button class="uppercase text-sm font-bold tracking-wide bg-indigo-500 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline"
+                            type="submit" value="{{ .submit }}" onclick="clearFormContact();">
+                        {{ .submit }}
                     </button>
                 </div>
-            </div>
+            </form>
+            {{end}}
             {{end}}
         </div>
     </div>

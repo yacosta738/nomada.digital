@@ -49,3 +49,18 @@
     margin-right: 0;
   }
 }
+.brand{
+  font-weight: normal;
+  padding: $default-spacing;
+  margin: 5px;
+
+  a {
+    padding-left: 5px;
+    padding-top: 8px;
+    background: none;
+    letter-spacing: .45rem;
+    font-weight: bold;
+    font-size: 26px;
+    font-family: $font-family-masked-hero;
+  }
+}

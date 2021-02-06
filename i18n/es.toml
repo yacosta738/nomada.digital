@@ -1,4 +1,7 @@
 # More documentation here: https://github.com/nicksnyder/go-i18n
+[copyright]
+other="Todo los derechos reservados"
+
 [home]
 other = "Inicio"
 
@@ -83,3 +86,15 @@ other = "Blog"
 
 [contact]
 other = "Contacto"
+
+[categories]
+other = "Categorías"
+
+[recentPosts]
+other = "Artículos recientes"
+
+[tags]
+other = "Etiquetas"
+
+[siteLinks]
+other = "Enlaces del sitio"

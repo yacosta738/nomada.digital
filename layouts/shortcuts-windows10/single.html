@@ -1,6 +1,6 @@
-{{ partial "doctype.html" }}
+{{ partial "shared/doctype.html" }}
 <html lang="en">
-{{ partial "head.html" . }}
+{{ partial "shared/head.html" . }}
 {{ $guideStyles := resources.Get "styles/guide-bundle.scss" | toCSS | minify | fingerprint "sha512" }}
 <link rel="stylesheet" type="text/css" href="{{ $guideStyles.RelPermalink }}" integrity="{{ $guideStyles.Data.Integrity }}" media="screen, tv, projection">
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Average+Sans" media="all">

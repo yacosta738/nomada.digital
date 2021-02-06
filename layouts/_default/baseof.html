@@ -1,18 +1,18 @@
-{{ partial "doctype.html" }}
+{{ partial "shared/doctype.html" }}
 <html lang="{{ with site.LanguageCode }}{{ . }}{{ else }}en-us{{ end }}">
-    {{ partial "head.html" . }}
-    {{ partial "body-start-tag.html"}}
-    {{ partial "header.html" . }}
+    {{ partial "shared/head.html" . }}
+    {{ partial "shared/body-start-tag.html"}}
+    {{ partial "shared/header.html" . }}
         <div id="page-wrapper">
             <div class="body">
                 <div class="body-max-width">
                     {{- block "main" . }}{{- end }}
                 </div>
             </div>
-            {{ partial "footer.html" . }}
+            {{ partial "shared/footer.html" . }}
         </div>
         {{ partial "searchbox.html" . }}
-        {{- partial "add-js.html" . -}}
+        {{- partial "shared/add-js.html" . -}}
     <a id="toTop" href="#" class="items-center justify-center text-center">
         <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 11l7-7 7 7M5 19l7-7 7 7" />

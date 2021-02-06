@@ -3,7 +3,7 @@
 <section id="blog" class="bg-gray-200 dark:bg-gray-600">
     <div class="container mx-auto  my-6 md:my-12">
         {{ $options := (dict "title" (i18n "blogTitle")) }}
-        {{ partial "sections/section-title.html" $options }}
+        {{ partial "shared/section-title.html" $options }}
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-5">
             {{ range first 3 (where site.RegularPages "Type" "article")}}
             {{ .Render "article"}}

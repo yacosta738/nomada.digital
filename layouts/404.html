@@ -1,9 +1,9 @@
-{{ partial "doctype.html" }}
+{{ partial "shared/doctype.html" }}
 <html lang="en">
-    {{ partial "head.html" . }}
-    {{ partial "body-start-tag.html"}}
+    {{ partial "shared/head.html" . }}
+    {{ partial "shared/body-start-tag.html"}}
         <div id="page-wrapper">
-            {{ partial "header.html" . }}
+            {{ partial "shared/header.html" . }}
             <div class="body">
                 <div class="body-max-width">
                     <main id="content" x-ref="content">
@@ -13,15 +13,15 @@
                         exists, but it's a <em>page not found</em> page...you get the point.</p>
                     </main>
                     <aside id="sidebar">
-                        {{ partial "recent-articles-widget.html" . }}
-                        {{ partial "tag-cloud.html" . }}
-                        {{ partial "categories-widget.html" . }}
+                        {{ partial "shared/recent-articles-widget.html" . }}
+                        {{ partial "shared/tag-cloud.html" . }}
+                        {{ partial "shared/categories-widget.html" . }}
                     </aside>
                 </div>
             </div>            
-            {{ partial "footer.html" . }}
+            {{ partial "shared/footer.html" . }}
         </div>
         {{ partial "searchbox.html" . }}
-        {{- partial "add-js.html" . -}}
+        {{- partial "shared/add-js.html" . -}}
     </body>
 </html>

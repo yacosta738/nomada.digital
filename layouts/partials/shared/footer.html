@@ -1,0 +1,78 @@
+{{ $pageOptions := . }}
+
+{{ $data := index site.Data site.Language.Lang }}
+{{ if $data.footer.footer.enable}}
+{{ with $data.footer.footer}}
+
+{{ $options := (dict "display" "footer" "icons" false "page" $pageOptions ) }}
+{{"<!-- service -->" | safeHTML }}
+<footer class="bg-gray-600 dark:bg-gray-800">
+    {{ if $pageOptions.IsHome }}
+    <div class="max-w-6xl m-auto text-gray-800 flex flex-wrap justify-left">
+        <!-- Col-1 -->
+        <div class="p-5 w-1/2 sm:w-4/12 md:w-3/12">
+            {{ partial "shared/navigation-menus.html" $options }}
+        </div>
+
+        <!-- Col-2 -->
+        <div class="p-5 w-1/2 sm:w-4/12 md:w-3/12">
+            {{ partial "shared/categories-widget.html" $pageOptions }}
+        </div>
+
+        <!-- Col-3 -->
+        <div class="p-5 w-1/2 sm:w-4/12 md:w-3/12">
+            {{ partial "shared/recent-articles-widget.html" $pageOptions }}
+        </div>
+
+        <!-- Col-3 -->
+        <div class="p-5 w-1/2 sm:w-4/12 md:w-3/12">
+            <div class="flex justify-center">
+
+                <img class="object-cover" src="{{ .image | absURL }}" alt="">
+            </div>
+            <div class="p-5 text-center text-white">
+                <p>{{ .content | safeHTML }}</p>
+            </div>
+        </div>
+    </div>
+    {{else}}
+    <div class="pt-2">
+        <div class="flex px-3 m-auto text-gray-400 text-sm flex-col md:flex-row max-w-6xl">
+            <div class="mt-20 uppercase text-center flex space-x-1.5">
+                {{ partial "shared/navigation-menus.html" $options}}
+            </div>
+
+            <div class="mt-20 md:flex-auto md:flex-row-reverse flex-row flex">
+                <a href="{{ .Site.BaseURL | relLangURL }}" class="text-gray-50 dark:text-white">
+                    {{ site.Title }}
+                </a>
+            </div>
+        </div>
+    </div>
+    {{end}}
+
+    <!-- Copyright Bar -->
+    <div class="pt-2">
+        <div class="flex pb-5 px-3 m-auto pt-5
+            border-t border-gray-500 text-gray-400 text-sm
+            flex-col md:flex-row max-w-6xl">
+            <div class="mt-2">
+                © Copyright {{ now.Format "2006" }}. {{ i18n "copyright" }}.
+            </div>
+
+            {{ if $data.social.social.enable}}
+            {{ with $data.social.social}}
+            <div class="md:flex-auto md:flex-row-reverse mt-2 flex-row flex">
+                {{ range .social_links }}
+                <a href="{{.url}}" class="w-6 mx-1 text-center">
+                    {{ partial "shared/fontawesome.html" .icon }}
+                </a>
+                {{end}}
+            </div>
+            {{end}}
+            {{end}}
+        </div>
+    </div>
+</footer>
+{{end}}
+{{end}}

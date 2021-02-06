@@ -8,3 +8,21 @@ figure img {
     filter: grayscale(1);
   }
 }
+#about-me {
+  .div-img-bg {
+    padding-bottom: 10px;
+    border: 20px solid #57cbcc;
+    .about-img {
+      img {
+        width: 100%;
+        box-shadow: 0 0 85px 0 rgba(0, 0, 0, 0.14);
+        margin-top: -50px;
+        margin-left: 30px;
+        height: 400px;
+        -o-object-fit: cover;
+        object-fit: cover;
+      }
+    }
+  }
+}
+

@@ -1,9 +1,9 @@
-{{ partial "doctype.html" }}
+{{ partial "shared/doctype.html" }}
 <html lang="en">
-   {{ partial "head.html" . }}
-   {{ partial "body-start-tag.html" (dict "cssClassNames" "articles-with-tag")}}
+   {{ partial "shared/head.html" . }}
+   {{ partial "shared/body-start-tag.html" (dict "cssClassNames" "articles-with-tag")}}
         <div id="page-wrapper">
-            {{ partial "header.html" . }}
+            {{ partial "shared/header.html" . }}
             <div class="body">
                 <div class="body-max-width">                    
                     <main id="content" x-ref="content">
@@ -11,22 +11,22 @@
                             {{- range .Paginator.Pages }}
                                 <article class="summary">
                                     <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-                                    {{ partial "article-date.html" . }}
+                                    {{ partial "shared/article-date.html" . }}
                                     {{ partial "summary-read-more.html" . }}
                                 </article>
                             {{- end }}
                             {{ partial "paging-navigation.html" . }}
                     </main>
                     <aside id="sidebar">
-                        {{ partial "recent-articles-widget.html" . }}
-                        {{ partial "tag-cloud.html" . }}
-                        {{ partial "categories-widget.html" . }}
+                        {{ partial "shared/recent-articles-widget.html" . }}
+                        {{ partial "shared/tag-cloud.html" . }}
+                        {{ partial "shared/categories-widget.html" . }}
                     </aside>
                 </div>
             </div>            
-            {{ partial "footer.html" . }}
+            {{ partial "shared/footer.html" . }}
         </div>
         {{ partial "searchbox.html" . }}
-        {{- partial "add-js.html" . -}}
+        {{- partial "shared/add-js.html" . -}}
     </body>
 </html>

@@ -1,4 +1,7 @@
 # More documentation here: https://github.com/nicksnyder/go-i18n
+[copyright]
+other="All Rights Reserved"
+
 [home]
 other = "Home"
 
@@ -83,3 +86,15 @@ other = "Blog"
 
 [contact]
 other = "Contact"
+
+[categories]
+other = "Categories"
+
+[recentPosts]
+other = "Recent posts"
+
+[tags]
+other = "Tags"
+
+[siteLinks]
+other = "Site Links"

@@ -1,0 +1,48 @@
+{{ $withIcons := .icons }}
+{{ $display := .display }}
+{{ $page := .page}}
+{{ $isHome := $page.IsHome }}
+{{ if and (eq $display "footer") ($isHome) }}
+<!-- Col Title -->
+<div class="text-xs uppercase text-gray-400 font-medium mb-6">
+    {{ i18n "siteLinks" }}
+</div>
+{{end}}
+{{ range site.Menus.main }}
+{{ if eq $display "footer" }}
+<!-- Links -->
+<a href="{{.URL}}"
+   {{with .Params.rel}}
+   rel="{{ . }}"
+   {{end}}
+   {{with .Params.xref}}
+   x-ref="{{ . }}"
+   {{end}}
+   {{with .Params.event}}
+   @click.prevent="{{ . }}"
+   {{end}}
+   class="my-3 w-2/5 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
+    {{ if $withIcons }}
+    {{ .Post }}
+    {{ .Name | humanize }}
+    {{else}}
+    {{ .Name | humanize }}
+    {{end}}
+</a>
+{{else}}
+<a href="{{.URL}}" class=".Params.class"
+   {{with .Params.rel}}
+   rel="{{ . }}"
+   {{end}}
+   {{with .Params.xref}}
+   x-ref="{{ . }}"
+   {{end}}
+   {{with .Params.event}}
+   @click.prevent="{{ . }}"
+   {{end}}
+>
+    {{ .Post }}
+    {{ .Name | humanize }}
+</a>
+{{end}}
+{{end}}

@@ -1,0 +1,5 @@
+############################# footer ###################################
+footer:
+  enable: true
+  content: "Preguntarse si las computadoras pueden pensar... es como preguntarse si los submarinos pueden nadar. <br> --<strong>Edsger W. Dijkstra</strong>"
+  image: "images/backgrounds/gamer.png"

@@ -1,0 +1,5 @@
+############################# footer ###################################
+footer:
+  enable: true
+  content: "The question of whether Machines Can Think... is about as relevant as the question of whether Submarines Can Swim. <br> --<strong>Edsger W. Dijkstra</strong>"
+  image: "images/backgrounds/gamer.png"
