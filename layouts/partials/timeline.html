@@ -1,0 +1,34 @@
+<div class="w-full">
+    <h3 class="ml-12 font-bold">{{ .title }}</h3>
+    <div class="relative m-8">
+        <div class="border-r-2 border-gray-500 absolute h-full top-0" style="left: 15px"></div>
+        <ul class="list-none m-0 p-0 w-full">
+            {{ range .items }}
+            <li class="mb-2">
+                <div>
+                    <div class="flex items-center mb-1">
+                        <div class="bg-gray-500 rounded-full h-8 w-8"></div>
+                        <h4 class="flex-1 ml-4 font-medium">{{ .name }}</h4>
+                    </div>
+                    <h5 class="ml-12 my-2 p-1 rounded inline-block bg-neon-200 text-gray-600">
+                        {{ dateFormat "January 2006" .start_date }} - {{with .end_date}} {{ dateFormat "January 2006" . }} {{else}} {{ i18n "present" }} {{end}}
+                    </h5>
+                    <div class="ml-12">
+                        <p class="italic font-thin">{{ .location }}</p>
+                        {{ with .content }}
+                        <p class="my-2">{{ .text }}</p>
+                        {{with .options}}
+                        <ul class="list-disc ml-6 w-full">
+                            {{ range . }}
+                            <li class="text-justify">{{ .li }}</li>
+                            {{end}}
+                        </ul>
+                        {{end}}
+                        {{end}}
+                    </div>
+                </div>
+            </li>
+            {{end}}
+        </ul>
+    </div>
+</div>

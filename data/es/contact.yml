@@ -16,6 +16,7 @@ contact:
     subject : "Asunto"
     message : "Mensaje"
     submit : "Enviar mensaje"
+
   contact_items:
     - icon: "globe"
       name: "Website"

@@ -12,3 +12,40 @@ about:
       target: "_blank"
     - button_title: "More about me"
       button_link: "about"
+  resume:
+    - experience:
+        title: "Professional Experience"
+        items:
+          - name: "First Release"
+            start_date: "2015-01-21"
+            location: "Experion, New York, NY"
+            content:
+              text: "First release of Tailwind CSS"
+              options:
+                - li: "Lead in the design, development, and implementation of the graphic, layout, and production communication materials"
+                - li: "Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project."
+                - li: "Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design"
+                - li: "Oversee the efficient use of production project budgets ranging from $2,000 - $25,000"
+          - name: "Second Release"
+            start_date: "2018-01-29"
+            end_date: "2019-08-09"
+            content:
+              text: "Second release of Tailwind CSS"
+    - experience:
+        title: "Educational Experience"
+        items:
+          - name: "First Release -2"
+            start_date: "2015-01-21"
+            location: "Experion, New York, NY"
+            content:
+              text: "First release of Tailwind CSS....."
+              options:
+                - li: "Lead in the design, development, and implementation of the graphic, layout, and production communication materials"
+                - li: "Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project."
+                - li: "Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design"
+                - li: "Oversee the efficient use of production project budgets ranging from $2,000 - $25,000"
+          - name: "Second Release-1 😉"
+            start_date: "2018-01-29"
+            end_date: "2019-08-09"
+            content:
+              text: "Second release of Tailwind CSS ..."
