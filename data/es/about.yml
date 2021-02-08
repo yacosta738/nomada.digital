@@ -17,6 +17,7 @@ about:
         title: "Professional Experience"
         items:
           - name: "First Release"
+            icon: "github"
             start_date: "2015-01-21"
             location: "Experion, New York, NY"
             content:
@@ -35,6 +36,7 @@ about:
         title: "Educational Experience"
         items:
           - name: "First Release -2"
+            icon: "github"
             start_date: "2015-01-21"
             location: "Experion, New York, NY"
             content:
@@ -45,6 +47,7 @@ about:
                 - li: "Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design"
                 - li: "Oversee the efficient use of production project budgets ranging from $2,000 - $25,000"
           - name: "Second Release-1 😉"
+            icon: "github"
             start_date: "2018-01-29"
             end_date: "2019-08-09"
             content:

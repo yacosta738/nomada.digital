@@ -11,7 +11,7 @@ $search-min-wide: 150em;
   justify-content: flex-start;
   align-items: center;
   position: fixed;
-  top: 0;
+  top: 4em;
   left: 0;
   right: 0;
   bottom: 0;
@@ -25,7 +25,9 @@ $search-min-wide: 150em;
   @media (min-height: $searchbox-breakpoint) {
     padding-bottom: 0rem;
   }
-
+@media (max-width: $small-size-min-width){
+  top: 8em;
+}
   @media (min-width: $medium-size-min-width) {
     padding-left: $default-spacing;
     padding-right: $default-spacing;

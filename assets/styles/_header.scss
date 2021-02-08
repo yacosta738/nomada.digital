@@ -57,7 +57,17 @@
     color: var(--header-color);
     text-decoration: none;
   }
-
+.masked-hero{
+  background: none;
+  text-decoration: none;
+  letter-spacing: .45rem;
+  font-weight: bold;
+  font-size: 22px;
+  font-family: $font-family-masked-hero;
+  @media only screen and (max-device-width: $small-size-max-width) {
+    font-size: 16px;
+  }
+}
   .site-title {
     all: initial;
     grid-column: col 1 / span 1;
