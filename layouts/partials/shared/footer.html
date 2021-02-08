@@ -59,18 +59,9 @@
             <div class="mt-2">
                 © Copyright {{ now.Format "2006" }}. {{ i18n "copyright" }}.
             </div>
-
-            {{ if $data.social.social.enable}}
-            {{ with $data.social.social}}
             <div class="md:flex-auto md:flex-row-reverse mt-2 flex-row flex">
-                {{ range .social_links }}
-                <a href="{{.url}}" class="w-6 mx-1 text-center">
-                    {{ partial "shared/fontawesome.html" .icon }}
-                </a>
-                {{end}}
+                {{ partial "shared/social-links.html" }}
             </div>
-            {{end}}
-            {{end}}
         </div>
     </div>
 </footer>

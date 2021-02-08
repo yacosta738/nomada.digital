@@ -1,0 +1,14 @@
+{{ $data := index site.Data site.Language.Lang }}
+{{ if $data.social.social.enable}}
+{{ with $data.social.social}}
+<div class="flex justify-center my-2 remove-link-css-background">
+    {{ range .social_links }}
+    <a href="{{.url}}" class="">
+        <i class="flex items-center justify-center h-9 w-9 mx-1 rounded-full bg-gray-800 fill-current text-white text-xl hover:bg-neon-500 hover:text-gray-800">
+            {{ partial "shared/fontawesome.html" .icon }}
+        </i>
+    </a>
+    {{end}}
+</div>
+{{end}}
+{{end}}

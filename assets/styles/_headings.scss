@@ -2,12 +2,12 @@ h1 {
   margin: 0 0 20px 0;
   font-family: $font-family-headings;
   font-weight: 200;
-  color: var(--heading-color);
+  color: var(--title-color);
   .taxonomy-heading {
     color: var(--taxonomy-heading-color);
     &::selection {
       background: var(--taxonomy-heading-color);
-      color: var(--heading-color);
+      color: var(--title-color);
     }
   }
 }
@@ -15,12 +15,12 @@ h2 {
   margin: 0 0 15px 0;
   font-weight: 200;
   font-family: $font-family-headings;
-  color: var(--heading-color);
+  color: var(--title-color);
 }
 
 h3 {
   margin: 0 0 15px 0;
   font-weight: 200;
   font-family: $font-family-headings;
-  color: var(--heading-color);
+  color: var(--title-color);
 }

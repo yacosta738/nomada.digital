@@ -18,6 +18,7 @@
   --color: #{$white};
   --color-ligth: #{transparentize($white, 0.4)};
   --accent-color: #{$orange500};
+  --title-color: #{$neon500};
   --selection-color: #{$gray900};
   --selection-bg-color: #{$orange400};
   --color-published: #{$gray400};
@@ -55,8 +56,8 @@
   --paging-currnt-bg-color: #{$blue800};
   --paging-current-color: var(--color);
 
-  --link-color: #{$light-color};
-  --link-focus-color: #{$blue500};
+  --link-color: #{$blue600};
+  --link-focus-color: #{$neon500};
   --link-text-shadow-color: #{$link-text-shadow-color};
   --link-underline: var(--accent-color);
 

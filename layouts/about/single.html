@@ -3,27 +3,41 @@
 {{ $data := index site.Data site.Language.Lang }}
 {{ if $data.about.about.enable }}
 {{ with $data.about.about }}
-    {{ $aboutStyles := resources.Get "styles/about-bundle.scss" | toCSS | minify | fingerprint "sha512" }}
-    <link rel="stylesheet" type="text/css" href="{{ $aboutStyles.RelPermalink }}" integrity="{{ $aboutStyles.Data.Integrity }}" media="screen, tv, projection">
-    <main id="content-about" class="body-max-width">
-        <section id="about-me" class="mt-36 md:mt-14 content mx-auto">
-            {{ partial "shared/section-title.html" (dict "title" $pageOptions.Title)  }}
-            {{ range .about_me}}
-            <p class="text-gray-500 dark:text-gray-400 mt-4 text-left">
-                {{ .text | markdownify }}
-            </p>
-            {{ end }}
-            {{- $pageOptions.Content -}}
-        </section>
+{{ $aboutStyles := resources.Get "styles/about-bundle.scss" | toCSS | minify | fingerprint "sha512" }}
+<link rel="stylesheet" type="text/css" href="{{ $aboutStyles.RelPermalink }}"
+      integrity="{{ $aboutStyles.Data.Integrity }}" media="screen, tv, projection">
+<main id="content-about" class="body-max-width">
+    <section id="about-me" class="mt-36 md:mt-14 container mx-auto">
+        {{ partial "shared/section-title.html" (dict "title" $pageOptions.Title) }}
+        {{ range .about_me}}
+        <p class="my-4 text-left">
+            {{ .text | markdownify }}
+        </p>
+        {{ end }}
+        {{- $pageOptions.Content -}}
+        <div class="lg:flex flex-wrap my-12">
+            <div class="w-3/12">
+                <div class="div-img-bg">
+                    <div class="about-img">
+                        <img src="{{ .picture | absURL }}" class="object-cover" alt="{{ .title }}">
+                    </div>
+                    {{- partial "shared/social-links.html" -}}
+                </div>
+            </div>
+            <div class="w-3/4" data-aos="fade-left">
+                {{- partial "contact-info.html" -}}
+            </div>
+        </div>
+    </section>
 
-        <script>
-            document.querySelector('figure img').addEventListener('click', evt => {
-                if (evt.detail === 3)
-                    evt.target.classList.toggle('effect');
-            });
-        </script>
-        {{- partial "contact-info.html" -}}
-    </main>
+    <script>
+        document.querySelector('figure img').addEventListener('click', evt => {
+            if (evt.detail === 3)
+                evt.target.classList.toggle('effect');
+        });
+    </script>
+
+</main>
 {{end}}
 {{end}}
 {{end}}

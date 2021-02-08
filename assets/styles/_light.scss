@@ -19,6 +19,7 @@
     --color: black;
     --color-ligth: #{transparentize(black, 0.4)};
     --accent-color: #{$orange500};
+    --title-color: #{$neon700};
     --selection-color: var(--color);
     --selection-bg-color: #{$orange400};
     --color-published: #{$gray700};
@@ -61,7 +62,7 @@
     --paging-current-color: var(--white);
 
     --link-color: #{$blue600};
-    --link-focus-color: #{$blue700};
+    --link-focus-color: #{$neon700};
     --link-text-shadow-color: #{$link-text-shadow-color};
     --link-underline: var(--accent-color);
 

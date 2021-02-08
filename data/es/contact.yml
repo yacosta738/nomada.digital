@@ -4,6 +4,8 @@ contact:
   title : Contáctactame
   subtitle : Lets talk about everything!
   content : "I am interested in new opportunities especially ambitious or large projects. However, if you have other request or question, don't hesitate <span class='underline'>to contact me</span> using below form either."
+  contact_info: "Información de contacto"
+  description: "Desarrollador de aplicaciones de escritorio, webs y móviles. Entusiasta de la tecnología y la ciencia. Más de [-YEAR-] años de experiencia en la industria del software."
 
   # Contact form
   contact_form:
@@ -14,3 +16,25 @@ contact:
     subject : "Asunto"
     message : "Mensaje"
     submit : "Enviar mensaje"
+  contact_items:
+    - icon: "globe"
+      name: "Website"
+      link: "https://yacosta738.github.io"
+      text: "yacosta738.github.io"
+      target: "_blank"
+    - icon: "at"
+      name: "Email"
+      link: "mailto:yunielacosta738@gmail.com"
+      text: "yunielacosta738@gmail.com"
+    - icon: "graduation-cap"
+      name: "Degree"
+      text: "Bachelor's Degree in Computer Science"
+    - icon: "phone"
+      name: "Phone"
+      text: "+53 54739922"
+      target: "_blank"
+    - icon: "map-marker"
+      name: "City"
+      link: "https://goo.gl/maps/HoNArb98EDX9GbFGA"
+      text: "Ciego de Ávila, Cuba"
+      target: "_blank"
