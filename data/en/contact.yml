@@ -3,7 +3,7 @@ contact:
   enable : true
   title : Contact Me
   subtitle : Lets talk about everything!
-  content : "I am interested in new opportunities especially ambitious or large projects. However, if you have other request or question, don't hesitate <span class='underline'>to contact me</span> using below form either."
+  content : "I am interested in new opportunities especially ambitious or large projects. However, if you have other request or question, don't hesitate [to contact me](/#contact-me) using below form either."
   contact_info: "Contact Information"
   description: "Web, mobile and desktop application developer. Science and technology enthusiast. More than [-YEAR-] years of experience in the software industry."
 
