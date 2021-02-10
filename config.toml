@@ -1,4 +1,4 @@
-baseURL = "https://www.henriksommerfeld.se/"
+baseURL = "/"
 languageCode = "en-gb"
 title = "Nomatech"
 canonifyURLs = false

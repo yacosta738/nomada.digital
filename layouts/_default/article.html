@@ -49,11 +49,11 @@
                 </a>
             </div>
             <div class="author flex items-center -ml-3 my-3">
-                {{ $user := .Site.GetPage (print ("author/" | relLangURL ) (.Params.Author | urlize)) }}
+                {{ $user := .Site.GetPage (print ("author/" | relURL ) (.Params.Author | urlize)) }}
                 <div class="user-logo">
                     {{ if $user.Params.Image }}
                     <img class="w-12 h-12 object-cover rounded-full mx-4 shadow"
-                         src="{{if hasPrefix $user.Params.Image `http` }}{{ $user.Params.Image }}{{else}}{{ $user.Params.Image | absLangURL }}{{end}}"
+                         src="{{if hasPrefix $user.Params.Image `http` }}{{ $user.Params.Image }}{{else}}{{ $user.Params.Image | absURL }}{{end}}"
                          alt="{{.Params.Author}}">
                     {{else}}
                     <img class="w-12 h-12 object-cover rounded-full mx-4 shadow"

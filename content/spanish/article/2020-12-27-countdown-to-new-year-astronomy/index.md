@@ -4,6 +4,7 @@ url: /cuenta-regresiva-para-el-nuevo-año
 date: 2020-12-27T21:34:00+02:00
 description: Cuenta regresiva para el nuevo Año (Sistema planetario)
 summary: After switching from Windows to Mac, I have reconsidered a few of the applications I use. To my own surprise I ended up with a paid one that’s only available on Apple devices – Bear.
+author: Yuniel Acosta
 tags: [Javascript]
 categories: [Programming]
 ogimage: portada.jpg

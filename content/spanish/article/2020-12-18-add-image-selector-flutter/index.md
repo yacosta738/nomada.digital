@@ -4,6 +4,7 @@ url: /agregar-selector-imagen-flutter
 date: 2020-12-18T21:34:00+02:00
 description: Agregar selector de imagen usando flutter
 summary: After switching from Windows to Mac, I have reconsidered a few of the applications I use. To my own surprise I ended up with a paid one that’s only available on Apple devices – Bear.
+author: Yuniel Acosta
 tags: [Flutter]
 categories: [Programming]
 ogimage: portada.png
