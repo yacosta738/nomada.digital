@@ -13,7 +13,7 @@
 }
 
 .main-button {
-    @apply w-full md:w-auto py-4 px-8 text-white font-semibold leading-none bg-blue-600 hover:bg-blue-700 rounded;
+    @apply w-full md:w-auto py-4 px-8 text-xs text-white font-semibold leading-none bg-blue-600 hover:bg-blue-700 rounded;
 }
 
 .main-button-icon {
