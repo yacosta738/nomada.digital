@@ -4,10 +4,10 @@ skill:
   title : Habilidades & Experiencias
   subtitle: "Experiencia"
   content:
-    - item: The main area of my expertise is front-end development(client side of the web).
-    - item: HTML, CSS, JS(TypeScript), building small and medium web apps with Angular 7, Vuejs, Tailwindcss and Vuetify.
-    - item: I have also full-stack developer experience with frameworks like Spring Boot and Laravel.
-    - item: Visit my [Linkedin](https://www.linkedin.com/in/yacosta738) profile for more details or just [contact](#contact-me) me
+    - item: El área principal de mi experiencia es el desarrollo front-end (lado del cliente de la web).
+    - item: HTML, CSS, JS (TypeScript), creación de aplicaciones web pequeñas y medianas con Angular 7, Vuejs, Tailwindcss y Vuetify.
+    - item: También tengo experiencia como desarrollador full-stack con frameworks como Spring Boot y Laravel.
+    - item: Visite mi perfil de [Linkedin](https://www.linkedin.com/in/yacosta738) para obtener más detalles o simplemente [contácteme](#contact-me)
   skills :
     # skills item loop
     - skill: { text: "Java", id: "Java" }

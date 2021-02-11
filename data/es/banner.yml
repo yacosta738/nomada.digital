@@ -8,13 +8,10 @@ banner:
   content : "\"Si no puedo hacer grandes cosas, <br>puedo hacer pequeñas cosas de una manera excelente.\""
   button:
     enable : true
-    label : "Mis servicios"
-    link : "#services"
+    label : "Mis proyectos"
+    link : "#portfolio"
   roles_content: "Algunos de los roles que desempeño:"
-  roles:
-    - label: "Desarrollador Fullstack"
-    - label: "Diseñador web"
-    - label: "Diseños creativos"
-    - label: "Diseño gráfico"
-    - label: "Desarrollador front-end"
-    - label: "Desarrollador backend"
+  roles :
+    - label: "Arquitecto de software"
+    - label: "Desarrollador Web Fullstack"
+    - label: "Desarrollador Web"

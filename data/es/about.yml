@@ -4,8 +4,8 @@ about:
   title: "Sobre Yuniel."
   picture: "images/about/yuniel-acosta.jpg"
   about_me:
-    - text: "I'm a software engineer based in Ciego de Ávila, Cuba specializing in building (and occasionally designing) exceptional websites, applications, and everything in between."
-    - text: "Shortly after graduating from [Central University “Marta Abreu” of Las Villas](https://www.uclv.edu.cu/en/institution/), I joined the development team at [Desoft](https://www.desoft.cu) where I work on a wide variety of interesting and meaningful projects on a daily basis."
+    - text: "Soy un ingeniero de software con sede en Ciego de Ávila, Cuba y me especializo en la creación (y ocasionalmente en el diseño) de sitios web excepcionales, aplicaciones y todo lo demás."
+    - text: "Poco después de graduarme de la [Universidad Central “Marta Abreu” de Las Villas](https://www.uclv.edu.cu/en/institution/), me incorporé al equipo de desarrollo de [Desoft](https://www.desoft.cu) donde trabajo a diario en una amplia variedad de proyectos interesantes y significativos."
   buttons:
     - button_title: "Descargar CV"
       button_link: "https://www.dropbox.com/s/krhxr27h4mev5jv/Yuniel%27s%20Curriculum.pdf?dl=0"

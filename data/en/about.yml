@@ -5,7 +5,7 @@ about:
   picture: "images/about/yuniel-acosta.jpg"
   about_me:
     - text: "I'm a software engineer based in Ciego de Ávila, Cuba specializing in building (and occasionally designing) exceptional websites, applications, and everything in between."
-    - text: "Shortly after graduating from [Central University “Marta Abreu” of Las Villas](https://www.uclv.edu.cu/en/institution/), I joined the development team at [Desoft](https://www.desoft.cu) where I work on a wide variety of interesting and meaningful projects on a daily basis."
+    - text: "Shortly after graduating from [Central University “Marta Abreu” of Las Villas](https://www.uclv.edu.cu/institucion/), I joined the development team at [Desoft](https://www.desoft.cu/en) where I work on a wide variety of interesting and meaningful projects on a daily basis."
   buttons:
     - button_title: "Download CV"
       button_link: "https://www.dropbox.com/s/krhxr27h4mev5jv/Yuniel%27s%20Curriculum.pdf?dl=0"

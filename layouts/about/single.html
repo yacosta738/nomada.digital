@@ -28,7 +28,7 @@
                 {{- partial "contact-info.html" -}}
             </div>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2">
+        <div id="resume" class="grid grid-cols-1 md:grid-cols-2">
             {{ range .resume }}
             {{ partial "timeline.html" .experience }}
             {{end}}

@@ -1,6 +1,6 @@
 baseURL = "/"
 languageCode = "en-gb"
-title = "Nomatech"
+title = "ASMTech"
 canonifyURLs = false
 relativeURLs = false
 buildDrafts = true
@@ -8,7 +8,7 @@ paginate = 5
 pygmentsuseclasses = true
 pygmentsstyle = "monokai"
 preserveTaxonomyNames = true
-disqusShortname = "henrik-sommerfeld"
+disqusShortname = "nomada-digital"
 
 [params]
 minifyBundles = false

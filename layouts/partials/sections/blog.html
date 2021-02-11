@@ -1,6 +1,6 @@
 {{ if gt site.RegularPages 0}}
 {{"<!-- Start Blog Section -->" | safeHTML}}
-<section id="blog" class="bg-gray-200 dark:bg-gray-600">
+<section id="blog" class="bg-gray-50 dark:bg-gray-800">
     <div class="container mx-auto  my-6 md:my-12">
         {{ $options := (dict "title" (i18n "blogTitle")) }}
         {{ partial "shared/section-title.html" $options }}

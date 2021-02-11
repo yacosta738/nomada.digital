@@ -6,7 +6,7 @@
             {{ partial "shared/header.html" . }}
             <div class="body">
                 <div class="body-max-width">
-                    <main id="content" x-ref="content">
+                    <main id="content" x-ref="content" class="mt-36 md:mt-14">
                             <h1><span class="taxonomy-heading">Category:</span> {{ .Title }}</h1>
                             {{- range .Paginator.Pages }}
                                 <article class="summary">
@@ -17,7 +17,7 @@
                             {{- end }}
                             {{ partial "paging-navigation.html" . }}
                     </main>
-                    <aside id="sidebar">
+                    <aside id="sidebar" class="md:mt-14">
                         {{ partial "shared/recent-articles-widget.html" . }}
                         {{ partial "shared/tag-cloud.html" . }}
                         {{ partial "shared/categories-widget.html" . }}

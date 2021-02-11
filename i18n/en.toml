@@ -101,3 +101,9 @@ other = "Site Links"
 
 [present]
 other = "Present"
+
+[bio]
+other = "Biography"
+
+[goBack]
+other = "Go Back"

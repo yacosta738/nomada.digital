@@ -7,10 +7,10 @@
              style="background-image: url('{{ $image.RelPermalink }}');">
             <div class="absolute top-0 right-0 left-0 flex justify-between items-center px-4 bg-opacity-black rounded-lg rounded-b-none">
                         {{ if .Params.categories  }}
-                        <div>
+                        <div class="remove-link-css-background">
                             {{ range .Params.categories }}
                             {{$c := (print "categories/" (lower .) )}}
-                            <a href="{{ $c | absLangURL }}" class="text-xs bg-indigo-200 dark:bg-indigo-600 text-white mr-1 px-5 py-2 uppercase hover:bg-white hover:text-indigo-600 transition ease-in-out duration-500">
+                            <a href="{{ $c | absLangURL }}" class="bg-indigo-200 dark:bg-indigo-600 text-white text-xs font-bold mr-1 px-5 py-2 uppercase hover:bg-white hover:text-indigo-600 transition ease-in-out duration-500">
                                 {{ . }}
                             </a>
                             {{end}}

@@ -3,10 +3,10 @@
 {{ if $data.contact.contact.enable }}
 {{ with $data.contact.contact }}
 {{"<!-- Start Contact Us -->" | safeHTML}}
-<section id="contact-me" class="bg-white dark:bg-gray-800">
+<section id="contact-me" class="bg-gray-200 dark:bg-gray-700">
     <div class="container mx-auto my-5">
         {{ partial "shared/section-title.html" . }}
-        <div class="mt-24 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto bg-gray-50 dark:bg-gray-700 text-gray-100 dark:text-gray-900 rounded-lg shadow-lg">
+        <div class="mt-24 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto bg-gray-50 dark:bg-blueGray-800 text-gray-100 dark:text-gray-900 rounded-lg shadow-lg">
             <div class="flex flex-col justify-between">
                 <div>
                     <h2 class="text-4xl lg:text-5xl font-bold leading-tight">{{ .subtitle }}</h2>

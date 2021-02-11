@@ -3,7 +3,7 @@
 {{ if $data.portfolio.portfolio.enable }}
 {{ with $data.portfolio.portfolio }}
 {{"<!-- Portfolio Section -->" | safeHTML}}
-<section id="portfolio" class="bg-gray-200 dark:bg-gray-600">
+<section id="portfolio" class="bg-gray-50 dark:bg-gray-800">
     <div class="container mx-auto items-center justify-center">
         {{ partial "shared/section-title.html" . }}
         <div class="mx-auto my-4 py-4 flex flex-row flex-wrap md:flex-wrap-reverse">
@@ -19,7 +19,7 @@
                 </div>
             </div>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 container mx-auto">
             <div class="filters-group col-span-2">
                 <div class="flex md:flex-row flex-col m-2 filter-options">
                     <button class="teal-button active-filter" data-group="all">
