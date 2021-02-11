@@ -68,6 +68,7 @@ function Clouder(params) {
             container.style.transform = `scale(${zX})`;
             event.preventDefault();
         }, {passive: false});
+        setPos(w, h);
     } // init
 
 
