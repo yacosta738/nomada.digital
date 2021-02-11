@@ -11,7 +11,7 @@
 {{ range site.Menus.main }}
 {{ if eq $display "footer" }}
 <!-- Links -->
-<a href="{{.URL}}"
+<a href="{{.URL | absLangURL}}"
    {{with .Params.rel}}
    rel="{{ . }}"
    {{end}}

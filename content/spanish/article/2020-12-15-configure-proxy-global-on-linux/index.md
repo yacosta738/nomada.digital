@@ -1,14 +1,14 @@
 ---
 title: Configurar proxy global en linux
 url: /configurar-proxy-global-en-linux
-date: 2020-12-06T21:34:00+02:00
+date: 2020-12-15T21:34:00+02:00
 description: Configurar proxy global en linux
 summary: En este artículo comparto algunos tips para configurar un proxy global en sistemas operativos GNU/Linux
 author: Yuniel Acosta
 tags: [Proxy, Linux]
 categories: [Tooling]
 ogimage: portada-proxy.jpg
-draft: false
+draft: true
 ---
 
 {{<post-image image="portada-proxy.jpg" width="500" alt="Proxy portada" />}}

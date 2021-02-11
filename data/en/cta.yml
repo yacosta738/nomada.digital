@@ -1,5 +1,5 @@
 ############################# call to action ###################################
 cta:
   enable: true
-  title: "<span class='text-blue-600'>SUBSCRIBE</span> to our blog"
+  title: "<span class='text-gray-800 dark:text-gray-50'>SUBSCRIBE</span> to our blog"
   content: "Don't get lost when an article about technology and programming is published"

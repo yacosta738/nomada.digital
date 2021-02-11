@@ -1,6 +1,6 @@
 baseURL = "/"
 languageCode = "en-gb"
-title = "ASMTech"
+title = "BlastKode"
 canonifyURLs = false
 relativeURLs = false
 buildDrafts = true
@@ -8,7 +8,7 @@ paginate = 5
 pygmentsuseclasses = true
 pygmentsstyle = "monokai"
 preserveTaxonomyNames = true
-disqusShortname = "nomada-digital"
+disqusShortname = "blastkode"
 
 [params]
 minifyBundles = false
