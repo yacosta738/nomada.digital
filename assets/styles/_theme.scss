@@ -12,3 +12,11 @@
 body.dark {
   @include dark-mode();
 }
+
+.row-polygon-color {
+  background-color: var(--polygon-color);
+  -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 85%);
+  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 85%);
+  margin: 5em -20% 5em -20%;
+  padding: 5em 20% 5em 20%;
+}

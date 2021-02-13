@@ -34,7 +34,7 @@
             <h2 class="font-bold text-2xl text-gray-800 tracking-normal">
                 <a href="{{ .RelPermalink }}">{{ .Title }} </a>
             </h2>
-            <p class="text-sm text-black dark:text-white px-2 mr-1">
+            <p class="text-sm text-black dark:text-white px-2 mr-1 line-clamp-4 md:line-clamp-3 hover:line-clamp-none">
                 {{ if .Params.summary }}{{ .Params.summary | safeHTML }}{{ else }}{{ .Summary | safeHTML }}{{ end }}
             </p>
             <div class="flex items-center justify-between mt-2 mx-6">

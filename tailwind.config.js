@@ -30,7 +30,8 @@ module.exports = {
     }
   },
   variants: {
-    transitionProperty: ['responsive', 'motion-safe', 'motion-reduce']
+    transitionProperty: ['responsive', 'motion-safe', 'motion-reduce'],
+    lineClamp: ['responsive', 'hover']
   },
-  plugins: []
+  plugins: ["@tailwindcss/line-clamp"]
 };

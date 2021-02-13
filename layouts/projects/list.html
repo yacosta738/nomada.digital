@@ -1,0 +1,15 @@
+{{ define "main" }}
+<main id="content" x-ref="content" class="container mx-auto mt-36 md:mt-14">
+    {{ range  $index, $element := (.Paginate ( where .Site.RegularPages "Type" "projects" )).Pages }}
+    <div class="{{ if ne (mod $index 2) 0 }}row-polygon-color {{end}} px-12 py-8">
+        {{ if eq (mod $index 2) 0 }}
+        {{partial "project-right.html" $element}}
+        {{else}}
+        {{partial "project-left.html" $element}}
+        {{end}}
+    </div>
+    {{ end }}
+
+    {{ partial "paging-navigation.html" . }}
+</main>
+{{end}}

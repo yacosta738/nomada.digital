@@ -1,8 +1,9 @@
 {
   "name": "nomada.digital",
   "version": "1.0.0",
-  "description": "Yuniel Acosta Pérez's blog and portfolio using static site engine Hugo",
+  "description": "Yuniel Acosta Pérez 's blog and portfolio using static site engine Hugo",
   "dependencies": {
+    "@tailwindcss/line-clamp": "^0.2.0",
     "alpinejs": "2.7.3",
     "emailjs-com": "^2.6.4",
     "firebase": "^8.2.5",

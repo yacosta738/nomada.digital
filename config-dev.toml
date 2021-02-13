@@ -1,6 +1,6 @@
 baseURL = "/"
 languageCode = "en-gb"
-title = "BlastKode"
+title = "Blastkode"
 canonifyURLs = false
 relativeURLs = false
 buildDrafts = true
