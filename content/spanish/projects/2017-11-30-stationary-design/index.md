@@ -8,10 +8,14 @@ image : images/portfolio/portfolio-7.jpg
 image_webp : images/portfolio/portfolio-7.webp
 categories: ["development"]
 link: "https://github.com/nomada.digital"
+promote: false
 technologies:
-    - images/tech/angular.png
-    - images/tech/vuejs.png
-    - images/tech/nodejs.png
+        - wordmark: images/tech/angular.png
+          icon: images/tech/angular-icon.png
+        - wordmark: images/tech/vuejs.png
+          icon: images/tech/vuejs-icon.png
+        - wordmark: images/tech/vuejs.png
+          icon: images/tech/vuejs-icon.png
 draft: false
 ---
 

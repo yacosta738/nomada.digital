@@ -24,13 +24,16 @@
                 <button class="main-button mr-2 uppercase" onclick="window.location.href='{{ .Permalink }}'">
                     {{ i18n "moreDetails" }}
                 </button>
-                <button class="main-button mr-2 uppercase" onclick="window.location.href='{{ .Params.Link }}'">
-                    {{if (hasPrefix .Params.Link "https://github.com" ) }}
-                    <span>{{ i18n "seeGithub" }}<i class="ml-2">{{ partial "shared/fontawesome.html" "github" }}</i></span>
-                    {{else}}
+                {{ with .Params.Link }}
+                <button class="main-button mr-2 uppercase" onclick="window.location.href='{{ . }}'">
                     <span>{{ i18n "seeItOnline" }}<i class="ml-2">{{ partial "shared/fontawesome.html" "external-link" }}</i></span>
-                    {{end}}
                 </button>
+                {{end}}
+                {{ with .Params.Source_code }}
+                <button class="main-button mr-2 uppercase" onclick="window.location.href='{{ . }}'">
+                    <span>{{ i18n "seeGithub" }}<i class="ml-2">{{ partial "shared/fontawesome.html" "github" }}</i></span>
+                </button>
+                {{end}}
             </div>
         </div>
     </div>

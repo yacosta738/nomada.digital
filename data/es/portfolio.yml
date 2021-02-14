@@ -2,7 +2,7 @@
 portfolio:
   enable : true
   title : Portafolio
-  content : Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus.
+  title2 : Other Noteworthy Projects
   sort:
     - id: default
       criteria: dom

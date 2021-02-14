@@ -1,8 +1,8 @@
 #################################### portfolio ###############################
 portfolio:
   enable : true
-  title : Portfolio
-  content : Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus.
+  title : Some Things I’ve Built
+  title2 : Other Noteworthy Projects
   sort:
     - id: default
       criteria: dom

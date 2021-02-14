@@ -1,11 +1,22 @@
 {{ $data := index site.Data site.Language.Lang }}
-
+{{ $page := . }}
 {{ if $data.portfolio.portfolio.enable }}
 {{ with $data.portfolio.portfolio }}
 {{"<!-- Portfolio Section -->" | safeHTML}}
 <section id="portfolio" class="bg-gray-50 dark:bg-gray-800">
     <div class="container mx-auto items-center justify-center">
         {{ partial "shared/section-title.html" . }}
+        <br>
+        {{ range  $index, $element := ( where (where $page.Site.RegularPages "Type" "projects" ) "Params.promote" true) }}
+        <div class="{{ if ne (mod $index 2) 0 }}row-polygon-color {{end}} px-2 md:px-12 py-2 md:py-8">
+            {{ if eq (mod $index 2) 0 }}
+            {{partial "project-right.html" $element}}
+            {{else}}
+            {{partial "project-left.html" $element}}
+            {{end}}
+        </div>
+        {{ end }}
+        {{ partial "shared/section-title.html" (dict "title" .title2) }}
         <div class="container mx-auto max-w-7xl">
             <div class="my-4 py-4 flex flex-row flex-wrap justify-between md:flex-wrap-reverse">
                 <div class="flex flex-col float-left">
@@ -26,8 +37,8 @@
                             {{ i18n "all"}}
                         </button>
                         {{ $categories := slice }}
-                        {{ range .portfolio_item }}
-                        {{ range .categories }}
+                        {{ range ( where (where $page.Site.RegularPages "Type" "projects" ) "Params.promote" false) }}
+                        {{ range .Params.Categories }}
                         {{ $categories = $categories | append . }}
                         {{ end }}
                         {{ end }}
@@ -57,52 +68,62 @@
                     </div>
                 </fieldset>
             </div>
-
         </div>
 
         <div id="portfolio-grid"
              class="grid grid-cols-1 md:grid-cols-3 items-center justify-center my-6 md:my-12">
             {{"<!-- portfolio item --> " | safeHTML}}
-            {{ range .portfolio_item }}
+            {{ range first 9 ( where (where $page.Site.RegularPages "Type" "projects" ) "Params.promote" false)  }}
             <figure class="shuffle-item"
-                    data-groups="[{{range $index, $element:= .categories }}{{if ne $index 0}},{{end}}&quot;{{. | urlize}}&quot;{{ end }}]"
-                    data-date-created="{{ .date }}"
-                    data-title="{{ .name }}"
+                    data-groups="[{{range $index, $element:= .Params.Categories }}{{if ne $index 0}},{{end}}&quot;{{. | urlize}}&quot;{{ end }}]"
+                    data-date-created="{{ .Date }}"
+                    data-title="{{ .Title }}"
             >
                 <div class="portfolio-project m-1 p-2">
                     <div class="portfolio-project-photo">
-                        <img class="rounded" src="{{ .image_webp | absURL }}" alt="{{ .name }}">
+                        <img class="rounded" src="{{ .Params.Image_webp | absURL }}" alt="{{ .Title }}">
                         {{"<!-- member social profile --> " | safeHTML}}
-                        <div class="mask-caption">
-                            <div class="m-2 card absolute cursor-pointer border border-gray-600 rounded-lg transform hover:-translate-y-1 transition-all duration-200">
-                                <div class="m-2">
+                        <div class="mask-caption card absolute cursor-pointer border border-gray-600 rounded-lg transform hover:-translate-y-1 transition-all duration-200">
+                            <div class="m-2 h-5/6 card cursor-pointer border border-gray-600 rounded-lg transform hover:-translate-y-1 transition-all duration-200">
+                                <div class="m-2 remove-link-css-background">
+                                    <a href=" {{if eq .Params.Link (.Params.Link | absLangURL) }} {{ .Params.Link | absLangURL }} {{else}} {{ .Params.Link | safeURL }}{{end}}"
+                                       class="text-md text-gray-800 font-mono inline rounded-full px-2 align-top float-right hover:text-black animate-pulse">
+                                        {{with .Params.Link }}
+                                        <i class="ml-2">{{ partial "shared/fontawesome.html" "github" }}</i>
+                                        {{end}}
+                                    </a>
+                                    <a href="{{.Params.Source_code}}"
+                                       class="text-md text-gray-800 font-mono inline rounded-full px-2 align-top float-right hover:text-black animate-pulse">
+                                        {{with .Params.Source_code }}
+                                        <i class="ml-2">{{ partial "shared/fontawesome.html" "external-link" }}</i>
+                                        {{end}}
+                                    </a>
+                                </div>
+                                <div class="">
                                     <h2 class="project-title text-2xl md:text-3xl text-gray-600 mb-2">
-                                        {{ .name }}
-                                        {{ if or (eq .link "#") (eq .link "") }}
-                                        <span class="text-md text-gray-800 font-mono inline rounded-full px-2 align-top float-right hover:text-black animate-pulse">
-                                            {{ partial "shared/fontawesome.html" "images-solid" }}
-                                        </span>
-                                        {{ else }}
-                                        <a href=" {{if eq .link (.link | absLangURL) }} {{ .link | absLangURL }} {{else}} {{ .link | safeURL }}{{end}}"
-                                           class="text-md text-gray-800 font-mono inline rounded-full px-2 align-top float-right hover:text-black animate-pulse remove-link-css-background">
-                                            {{if eq .link (.link | absLangURL) }}
-                                            {{ partial "shared/fontawesome.html" "link-solid" }}
-                                            {{else}}
-                                            {{ partial "shared/fontawesome.html" "external-link" }}
-                                            {{end}}
-                                        </a>
-                                        {{ end }}
+                                        {{ .Title }}
                                     </h2>
                                     <p class="font-light font-mono text-lg text-gray-700 hover:text-gray-900 transition-all duration-200">
-                                        {{ .content | markdownify }}
+                                        {{ .Summary | markdownify }}
                                     </p>
                                 </div>
+                            </div>
+                            <div class="flex flex-row flex-wrap justify-center">
+                                    {{range .Params.Technologies}}
+                                    <img src="{{ .icon | absURL }}" alt="" class="mx-2 object-center h-8">
+                                    {{end}}
                             </div>
                         </div>
                     </div>
                 </div>
             </figure>
             {{end}}
+        </div>
+        <div class="flex justify-center mb-4">
+            {{ $link := "/projects" | absURL}}
+            <button class="main-button" onclick="window.location.href='{{ $link }}'">
+                {{ i18n "viewAllWork" }}
+            </button>
         </div>
         <div class="my-sizer-element"></div>
     </div>

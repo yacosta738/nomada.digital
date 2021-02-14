@@ -8,9 +8,13 @@ image : images/portfolio/portfolio-8.jpg
 image_webp : images/portfolio/portfolio-8.webp
 categories: ["design", "development"]
 link: https://www.facebook.com
+source_code: https://github.com/nomada.digital
+promote: false
 technologies:
-    - images/tech/angular.png
-    - images/tech/vuejs.png
+        - wordmark: images/tech/angular.png
+          icon: images/tech/angular-icon.png
+        - wordmark: images/tech/vuejs.png
+          icon: images/tech/vuejs-icon.png
 draft: false
 ---
 

@@ -8,9 +8,10 @@ image : images/portfolio/portfolio-6.jpg
 image_webp : images/portfolio/portfolio-6.webp
 categories: ["photography"]
 link: "#"
+promote: false
 technologies:
-technologies:
-    - images/tech/angular.png
+        - wordmark: images/tech/angular.png
+          icon: images/tech/angular-icon.png
 draft: false
 ---
 

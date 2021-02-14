@@ -26,6 +26,9 @@ other = "See source code"
 [viewAllPost]
 other = "View All Posts"
 
+[viewAllWork]
+other = "View All Projects"
+
 [resume]
 other = "My resume"
 

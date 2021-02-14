@@ -8,9 +8,13 @@ image : images/portfolio/portfolio-2.jpg
 image_webp : images/portfolio/portfolio-2.webp
 categories: [development]
 link: /sound-system
+source_code: https://github.com/nomada.digital
+promote: true
 technologies:
-    - images/tech/angular.png
-    - images/tech/vuejs.png
+    - wordmark: images/tech/angular.png
+      icon: images/tech/angular-icon.png
+    - wordmark: images/tech/vuejs.png
+      icon: images/tech/vuejs-icon.png
 draft: false
 ---
 
