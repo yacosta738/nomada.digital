@@ -8,6 +8,9 @@ image : images/portfolio/portfolio-4.jpg
 image_webp: images/portfolio/portfolio-4.webp
 categories:  [photography, development]
 link: "#"
+technologies:
+    - images/tech/angular.png
+    - images/tech/vuejs.png
 draft: false
 ---
 

@@ -10,7 +10,7 @@
             {{ end }}
         </div>
         <div class="flex flex-row justify-center">
-            <a class="main-button-icon" href="{{ `blog` | absLangURL }}">{{ i18n "viewAllPost" }}</a>
+            <button class="main-button-icon" onclick="window.location.href='{{ `blog` | absLangURL }}'">{{ i18n "viewAllPost" }}</button>
         </div>
     </div>
 </section>

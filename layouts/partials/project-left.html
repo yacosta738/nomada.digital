@@ -1,9 +1,9 @@
 {{ $element := .}}
 {{with $element}}
-<div class="lg:flex items-center">
+<div class="lg:flex flex-col md:flex-row items-center">
     <div class="lg:w-1/2 text-center md:text-right">
         <div class="p-2 m-2">
-            <div class="text-right text-xl capitalize">
+            <div class="text-center md:text-right text-xl capitalize">
                 <h2 class="transition duration-500 ease-in-out font-black tracking-widest my-3 text-gray-800 dark:text-white">
                     {{ with .Title }} {{ index (split . " ") 0 | safeHTML }} {{ end }}
                     <span class="text-neon-500">
@@ -11,7 +11,7 @@
                             </span>
                 </h2>
             </div>
-            <p class="text-gray-500 dark:text-gray-400 mt-4 text-right">
+            <p class="text-gray-500 dark:text-gray-400 mt-4 text-center md:text-right">
                 {{ .Summary }}
             </p>
             <div class="flex flex-row justify-end my-4">
@@ -19,8 +19,8 @@
                     {{ i18n "moreDetails" }}
                 </button>
                 <button class="main-button mr-2 uppercase" onclick="window.location.href='{{ .Params.Link }}'">
-                    {{if eq .Params.Link (.Params.Link | absLangURL) }}
-                    <span>{{ i18n "moreDetails" }}<i class="ml-2">{{ partial "shared/fontawesome.html" "link-solid" }}</i></span>
+                    {{if (hasPrefix .Params.Link "https://github.com" ) }}
+                    <span>{{ i18n "seeGithub" }}<i class="ml-2">{{ partial "shared/fontawesome.html" "github" }}</i></span>
                     {{else}}
                     <span>{{ i18n "seeItOnline" }}<i class="ml-2">{{ partial "shared/fontawesome.html" "external-link" }}</i></span>
                     {{end}}
@@ -35,4 +35,5 @@
         </div>
     </div>
 </div>
+{{ partial "tech-icons.html" .Params.Technologies }}
 {{end}}

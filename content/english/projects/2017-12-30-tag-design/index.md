@@ -8,6 +8,9 @@ image : images/portfolio/portfolio-8.jpg
 image_webp : images/portfolio/portfolio-8.webp
 categories: ["design", "development"]
 link: https://www.facebook.com
+technologies:
+    - images/tech/angular.png
+    - images/tech/vuejs.png
 draft: false
 ---
 

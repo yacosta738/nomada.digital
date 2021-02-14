@@ -20,6 +20,9 @@ other = "Más detalles"
 [seeItOnline]
 other = "verlo online"
 
+[seeGithub]
+other = "Ver código"
+
 [viewAllPost]
 other = "Ver todos los Posts"
 

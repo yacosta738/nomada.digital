@@ -10,9 +10,10 @@
                         <div class="remove-link-css-background">
                             {{ range .Params.categories }}
                             {{$c := (print "categories/" (lower .) )}}
-                            <a href="{{ $c | absLangURL }}" class="bg-indigo-200 dark:bg-indigo-600 text-white text-xs font-bold mr-1 px-5 py-2 uppercase hover:bg-white hover:text-indigo-600 transition ease-in-out duration-500">
+                            <button class="bg-blue-200 dark:bg-blue-600 text-white text-xs font-bold mr-1 px-5 py-2 uppercase hover:bg-blue-100 hover:text-gray-100 transition ease-in-out duration-500"
+                                    onclick="window.location.href='{{ $c | absLangURL }}'">
                                 {{ . }}
-                            </a>
+                            </button>
                             {{end}}
                         </div>
                         {{end}}

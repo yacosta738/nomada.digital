@@ -7,7 +7,11 @@ summary: En este artículo comparto algunos tips para configurar un proxy global
 image : images/portfolio/portfolio-7.jpg
 image_webp : images/portfolio/portfolio-7.webp
 categories: ["development"]
-link: "#"
+link: "https://github.com/nomada.digital"
+technologies:
+    - images/tech/angular.png
+    - images/tech/vuejs.png
+    - images/tech/nodejs.png
 draft: false
 ---
 

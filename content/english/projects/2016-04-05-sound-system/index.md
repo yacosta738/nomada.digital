@@ -8,6 +8,9 @@ image : images/portfolio/portfolio-2.jpg
 image_webp : images/portfolio/portfolio-2.webp
 categories: [development]
 link: /sound-system
+technologies:
+    - images/tech/angular.png
+    - images/tech/vuejs.png
 draft: false
 ---
 
