@@ -2,7 +2,10 @@
 <main id="content" x-ref="content" class="mt-36 md:mt-14 container mx-auto">
              <article class="full-article">
                  <h1>{{ .Title }}</h1>
-                 {{ .Content }}
+                 <div class="my-2">
+                     {{ .Content }}
+                 </div>
+              <div class="m-5">{{ partial "tech-icons.html" .Params.Technologies }}</div>
              </article>
          </main>
 {{end}}

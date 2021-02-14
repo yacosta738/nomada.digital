@@ -8,6 +8,9 @@ image : images/portfolio/portfolio-3.jpg
 image_webp : images/portfolio/portfolio-3.webp
 categories : ["design", "development"]
 link: "#"
+technologies:
+    - images/tech/angular.png
+    - images/tech/vuejs.png
 draft: false
 ---
 

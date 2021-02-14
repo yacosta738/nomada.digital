@@ -6,8 +6,11 @@ description: Configure global proxy on linux
 summary: En este artículo comparto algunos tips para configurar un proxy global en sistemas operativos GNU/Linux
 image : images/portfolio/portfolio-4.jpg
 image_webp: images/portfolio/portfolio-4.webp
-categories:  ["photography", "development"]
+categories:  [photography, development]
 link: "#"
+technologies:
+    - images/tech/angular.png
+    - images/tech/vuejs.png
 draft: false
 ---
 

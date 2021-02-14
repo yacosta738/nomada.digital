@@ -1,6 +1,6 @@
 ---
 title: Bottol Label
-url: /sound-system
+url: /bottol-label
 date: 2017-04-12
 description: Configure global proxy on linux
 summary: En este artículo comparto algunos tips para configurar un proxy global en sistemas operativos GNU/Linux

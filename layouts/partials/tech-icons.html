@@ -1,15 +1,11 @@
 {{ $tech := . }}
-<div class="flex flex-row justify-center my-10 relative">
-    {{$el := len $tech}}
-
-    <div class="absolute top-0 bg-neon-200 dark:bg-neon-700 {{ if gt $el 2 }} h-24 {{else}} h-18 {{end}}  md:h-16 " style="filter:blur(8px);">
-        {{range $tech}}
-        . . . .  . . . .  . . . .  . . . .
-        {{end}}
-    </div>
-    <div class="grid grid-cols-2 gap-4 md:flex md:flex-row md:justify-between md:rounded-full p-2 absolute top-0 bg-transparent">
-        {{range $tech}}
-        <img src="{{ . | absURL }}" alt="" class="mx-1 md:mx-4 max-h-10 md:max-h-14 object-center">
-        {{end}}
+<div class="">
+    <h2 class="text-center">{{ i18n "tech" }}</h2>
+    <div class="flex flex-row justify-center my-10 ">
+        <div class="grid grid-cols-2 gap-4 md:flex md:flex-row md:justify-between">
+            {{range $tech}}
+            <img src="{{ . | absURL }}" alt="" class="mx-1 md:mx-4 object-center h-10">
+            {{end}}
+        </div>
     </div>
 </div>
