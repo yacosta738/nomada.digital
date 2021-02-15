@@ -14,7 +14,7 @@ rssLimit = 10
 
 [params]
 minifyBundles = true
-plausibleDomain = "henriksommerfeld.se"
+plausibleDomain = "blastkode.com"
 logo = "images/logo.png"
 description = "Yuniel Acosta Pérez's blog and portfilio. Mostly about computer related stuff."
 
