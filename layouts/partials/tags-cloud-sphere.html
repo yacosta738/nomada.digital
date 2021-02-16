@@ -1,0 +1,6 @@
+{{ $cloud := resources.Get "cloud.js" | resources.Fingerprint "sha512" }}
+<script src="{{ $cloud.RelPermalink }}" integrity="{{ $cloud.Data.Integrity }}"></script>
+<div class="justify-center items-center text-center">
+    <!-- content -->
+    <div id="clouder"></div>
+</div>

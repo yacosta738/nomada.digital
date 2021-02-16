@@ -1,31 +1,41 @@
 ############################## Contact #############################
 contact:
   enable : true
-  title : Contact Us
-  subtitle : Contact Details
-  content : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, vero, provident, eum eligendi blanditiis ex explicabo vitae nostrum facilis asperiores dolorem illo officiis ratione vel fugiat dicta laboriosam labore adipisci.
-
-  # Contact details
-  contact_list:
-    - icon : ti-location-pin # themify icon pack : https://themify.me/themify-icons
-      info : "Khaja Road, Bayzid, Chittagong, Bangladesh"
-      
-    - icon : ti-mobile # themify icon pack : https://themify.me/themify-icons
-      info : "Phone: +880-31-000-000"
-      
-    - icon : ti-printer # themify icon pack : https://themify.me/themify-icons
-      info : "Fax: +880-31-000-000"
-      
-    - icon : ti-email # themify icon pack : https://themify.me/themify-icons
-      info : "Email: hello@meghna.com"
-
+  title : Contáctactame
+  subtitle : Lets talk about everything!
+  content : "I am interested in new opportunities especially ambitious or large projects. However, if you have other request or question, don't hesitate [to contact me](/#contact-me) using below form either."
+  contact_info: "Información de contacto"
+  description: "Desarrollador de aplicaciones de escritorio, webs y móviles. Entusiasta de la tecnología y la ciencia. Más de [-YEAR-] años de experiencia en la industria del software."
 
   # Contact form
   contact_form:
     enable : true
-    form_action : "#" #contact form works with https://formspree.io
-    name : "Tu nombre"
+    form_action : "https://formspree.io/f/xknperzd" #contact form works with https://formspree.io
+    name : "Tu nombre y Apellidos"
     email : "Tu correo electrónico"
     subject : "Asunto"
     message : "Mensaje"
-    submit : "Enviar"
+    submit : "Enviar mensaje"
+
+  contact_items:
+    - icon: "globe"
+      name: "Website"
+      link: "https://yacosta738.github.io"
+      text: "yacosta738.github.io"
+      target: "_blank"
+    - icon: "at"
+      name: "Email"
+      link: "mailto:yunielacosta738@gmail.com"
+      text: "yunielacosta738@gmail.com"
+    - icon: "graduation-cap"
+      name: "Degree"
+      text: "Bachelor's Degree in Computer Science"
+    - icon: "phone"
+      name: "Phone"
+      text: "+53 54739922"
+      target: "_blank"
+    - icon: "map-marker"
+      name: "City"
+      link: "https://goo.gl/maps/HoNArb98EDX9GbFGA"
+      text: "Ciego de Ávila, Cuba"
+      target: "_blank"

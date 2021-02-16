@@ -1,30 +1,12 @@
 {{ define "main" }}
+    <main id="content" x-ref="content">
+        {{ partial "sections/banner.html" . }}
+        {{ partial "sections/about.html" . }}
+        {{ partial "sections/skills.html" . }}
+        {{ partial "sections/portfolio.html" . }}
+        {{ partial "sections/cta.html" . }}
+        {{ partial "sections/blog.html" . }}
+        {{ partial "sections/contact.html" . }}
+    </main>
+{{end}}
 
-{{ partial "navigation.html" . }}
-
-{{ partial "banner.html" . }}
-
-{{ partial "about.html" . }}
-
-{{ partial "service.html" . }}
-
-{{ partial "skill.html" . }}
-
-{{ partial "portfolio.html" . }}
-
-{{ partial "funfacts.html" . }}
-
-{{ partial "team.html" . }}
-
-{{ partial "pricing.html" . }}
-
-{{ partial "testimonial.html" . }}
-
-{{ partial "blog.html" . }}
-
-{{ partial "contact.html" . }}
-
-{{ partial "map.html" . }}
-
-
-{{ end }}

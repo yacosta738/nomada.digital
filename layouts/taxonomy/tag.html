@@ -1,0 +1,32 @@
+{{ partial "shared/doctype.html" }}
+<html lang="en">
+   {{ partial "shared/head.html" . }}
+   {{ partial "shared/body-start-tag.html" (dict "cssClassNames" "articles-with-tag")}}
+        <div id="page-wrapper">
+            {{ partial "shared/header.html" . }}
+            <div class="body">
+                <div class="body-max-width">
+                    <main id="content" x-ref="content" class="mt-36 md:mt-14">
+                            <h1><span class="taxonomy-heading">Tag:</span> {{ .Title }}</h1>
+                            {{- range .Paginator.Pages }}
+                                <article class="summary">
+                                    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+                                    {{ partial "shared/article-date.html" . }}
+                                    {{ partial "summary-read-more.html" . }}
+                                </article>
+                            {{- end }}
+                            {{ partial "paging-navigation.html" . }}
+                    </main>
+                    <aside id="sidebar" class="md:mt-14">
+                        {{ partial "shared/recent-articles-widget.html" . }}
+                        {{ partial "shared/tag-cloud.html" . }}
+                        {{ partial "shared/categories-widget.html" . }}
+                    </aside>
+                </div>
+            </div>            
+            {{ partial "shared/footer.html" . }}
+        </div>
+        {{ partial "searchbox.html" . }}
+        {{- partial "shared/add-js.html" . -}}
+    </body>
+</html>

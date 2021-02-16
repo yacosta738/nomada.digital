@@ -1,14 +1,20 @@
-<!DOCTYPE html>
+{{ partial "shared/doctype.html" }}
 <html lang="{{ with site.LanguageCode }}{{ . }}{{ else }}en-us{{ end }}">
-{{ partial "head.html" . }}
-
-<body id="page-top" data-spy="scroll" class="politics_version" data-target=".navbar">
-  <div id="content">
-    {{ partial "preloader.html" . }}
-    {{- block "main" . }}{{- end }}
-  </div>
-  {{- partial "footer.html" . -}}
-  <a href="#" id="toTop"  class="global-radius"><i class="fa fa-angle-up"></i></a>
-</body>
-
+    {{ partial "shared/head.html" . }}
+    {{ partial "shared/body-start-tag.html"}}
+    {{ partial "shared/header.html" . }}
+        <div id="page-wrapper">
+            <div class="body">
+                <div class="body-max-width">
+                    {{- block "main" . }}{{- end }}
+                </div>
+            </div>
+            {{ partial "shared/footer.html" . }}
+        </div>
+        {{ partial "searchbox.html" . }}
+        {{- partial "shared/add-js.html" . -}}
+    <a id="toTop" href="#" class="flex justify-center">
+        <i>{{ partial "shared/fontawesome.html" "angle-up" }}</i>
+    </a>
+    </body>
 </html>

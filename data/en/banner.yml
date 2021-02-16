@@ -3,18 +3,15 @@ banner:
   enable : true
   bg_image_webp : "images/backgrounds/hero-area.webp"
   bg_image : "images/backgrounds/hero-area.jpg"
-  icon : "" # themify icon pack : https://themify.me/themify-icons
+  icon : ""
   title : "hello i'm Yuniel"
   content : "\"If I cannot do great things, <br>I can do small things in a great way.\""
   button:
     enable : true
-    label : "Explore Us"
-    link : "#services"
+    label : "My Projects"
+    link : "#portfolio"
   roles_content : "Some of the roles I play:"
   roles :
+    - label: "Software Architect"
     - label: "Fullstack Developer"
-    - label: "Web Design"
-    - label: "Creative Design"
-    - label: "Graphic Design"
-    - label: "Front-end Developer"
-    - label: "Back-end Developer"
+    - label: "Web Developer"

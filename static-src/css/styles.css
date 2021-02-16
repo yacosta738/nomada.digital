@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+.cv-button {
+    @apply transition duration-500 ease-in-out inline-flex items-center my-1 md:my-10 mx-2 px-4 py-2 border border-black dark:border-gray-400 shadow-lg text-xl text-black hover:text-white hover:bg-gray-900 dark:hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 transform hover:-translate-y-1 hover:scale-110;
+}
+
+.dark-button {
+    @apply bg-transparent hover:bg-black text-black hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-black hover:border-transparent;
+}
+
+.teal-button {
+    @apply text-base rounded-r-none hover:scale-110 focus:outline-none flex justify-center px-4 py-2 rounded font-bold cursor-pointer hover:bg-gray-700 hover:text-gray-100 bg-gray-100 text-gray-700 border duration-200 ease-in-out border-gray-600 transition;
+}
+
+.main-button {
+    @apply w-full md:w-auto py-4 px-8 text-xs text-white font-semibold leading-none bg-blue-600 hover:bg-blue-700 rounded;
+}
+
+.main-button-icon {
+    @apply inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
+}
+
+.active-filter {
+    @apply bg-neon-600;
+}
+
+.tooltip .tooltip-text {
+    @apply invisible p-4 absolute z-50 inline-block ml-4 text-sm w-1/2 rounded-lg bg-gray-700 text-white;
+}
+
+.tooltip:hover .tooltip-text {
+    @apply visible;
+}
+
+.bg-opacity-black {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#toTop {
+    all: initial;
+    background-color: #57cbcc;
+    z-index: 100;
+    width: 50px;
+    height: 50px;
+    line-height: 47px;
+    position: fixed;
+    bottom: 60px;
+    border-radius: 3px;
+    right: 50px;
+    text-align: center;
+    font-size: 28px;
+    color: #ffffff !important;
+    cursor: pointer;
+    -webkit-transition: all .7s ease-in-out;
+    -moz-transition: all .7s ease-in-out;
+    -o-transition: all .7s ease-in-out;
+    -ms-transition: all .7s ease-in-out;
+}
+
+#toTop:hover {
+    background-color: #89a2a2
+}
+
+.remove-link-css-background a {
+    color: var(--color);
+    background: none;
+    text-shadow: none;
+}
+.inline-svg {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    position: relative;
+}
+
+@tailwind utilities;

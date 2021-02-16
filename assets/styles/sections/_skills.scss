@@ -1,0 +1,18 @@
+#skills {
+  position: relative;
+}
+
+#clouder {
+  overflow: inherit;
+  overscroll-behavior: contain;
+}
+
+.skills-array {
+  display: none;
+}
+
+.tagcloud--item{
+  &:hover {
+  transform: scale(2);
+  }
+}

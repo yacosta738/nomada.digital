@@ -1,0 +1,119 @@
+{{ $data := index site.Data site.Language.Lang }}
+{{ $page := . }}
+{{ if $data.portfolio.portfolio.enable }}
+{{ with $data.portfolio.portfolio }}
+{{"<!-- Portfolio Section -->" | safeHTML}}
+<section id="portfolio" class="bg-gray-50 dark:bg-gray-800">
+    <div class="container mx-auto items-center justify-center">
+        <div class="my-10">{{ partial "shared/section-title.html" . }}</div>
+        <br>
+        {{ range  $index, $element := ( where (where $page.Site.RegularPages "Type" "projects" ) "Params.promote" true) }}
+        <div class="{{ if ne (mod $index 2) 0 }}row-polygon-color {{end}} px-2 md:px-12 py-2 md:py-8">
+            {{ if eq (mod $index 2) 0 }}
+            {{partial "project-right.html" $element}}
+            {{else}}
+            {{partial "project-left.html" $element}}
+            {{end}}
+        </div>
+        {{ end }}
+        <div class="my-10">{{ partial "shared/section-title.html" (dict "title" .title2) }}</div>
+        <div class="container mx-auto max-w-7xl">
+            <div class="my-4 py-4 flex flex-row flex-wrap justify-between md:flex-wrap-reverse">
+                <div class="flex flex-col float-left">
+                    <div class="filters-group">
+                        {{ $search := (i18n "search") }}
+                        <input class="js-shuffle-search bg-purple-white shadow rounded border-0 p-3"
+                               type="search" placeholder="{{ $search }}"
+                               id="filters-search-input">
+                        <span class="absolute mt-3 -ml-10">
+                                {{ partial "shared/fontawesome.html" "search" }}
+                            </span>
+                    </div>
+                </div>
+
+                <div class="filters-group col-span-2">
+                    <div class="flex md:flex-row flex-col m-2 filter-options">
+                        <button class="teal-button active-filter" data-group="all">
+                            {{ i18n "all"}}
+                        </button>
+                        {{ $categories := slice }}
+                        {{ range ( where (where $page.Site.RegularPages "Type" "projects" ) "Params.promote" false) }}
+                        {{ range .Params.Project_categories }}
+                        {{ $categories = $categories | append . }}
+                        {{ end }}
+                        {{ end }}
+                        {{ range ( $categories | uniq ) }}
+                        <button class="teal-button" data-group="{{ . }}">
+                            {{ . | humanize }}
+                        </button>
+                        {{ end }}
+                    </div>
+                </div>
+                <fieldset class="filters-group  flex justify-end ">
+                    <div class="radio-group sort-options inline-flex flex-1 flex-row flex-initial justify-center rounded-lg shadow-md">
+                        {{ range .sort }}
+                        <div class="radio">
+                            <input type="radio" id="{{ .id }}" name="sort-value" value="{{ .criteria }}"
+                                   {{ if .checked }}
+                                   checked
+                                   {{end}}
+                            >
+                            <label for="{{ .id }}"
+                                   class="block text-center px-4 py-3 bg-white border border-grey border-solid border-2">
+                                <!--                            <span class="text-3xl mb-2"></span><br>-->
+                                <span class="font-semibold uppercase tracking-wide"><strong>{{ .icon }}</strong></span>
+                            </label>
+                        </div>
+                        {{end}}
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+
+        <div id="portfolio-grid"
+             class="grid grid-cols-1 md:grid-cols-3 items-center justify-center my-6 md:my-12">
+            {{"<!-- portfolio item --> " | safeHTML}}
+            {{ range first 9 ( where (where $page.Site.RegularPages "Type" "projects" ) "Params.promote" false)  }}
+            <figure class="shuffle-item"
+                    data-groups="[{{range $index, $element:= .Params.Project_categories }}{{if ne $index 0}},{{end}}&quot;{{. | urlize}}&quot;{{ end }}]"
+                    data-date-created="{{ .Date }}"
+                    data-title="{{ .Title }}"
+            >
+                <div class="portfolio-project m-1 p-2">
+                    <div class="portfolio-project-photo">
+                        <img class="rounded" src="{{ .Params.Image_webp | absURL }}" alt="{{ .Title }}">
+                        {{"<!-- member social profile --> " | safeHTML}}
+                        <div class="mask-caption card absolute cursor-pointer border border-gray-600 rounded-lg transform hover:-translate-y-1 transition-all duration-200">
+                            <div class="m-2 h-5/6 card cursor-pointer border border-gray-600 rounded-lg transform hover:-translate-y-1 transition-all duration-200">
+                               <div class="mx-2"> {{ partial "shared/project-links" (dict "opt" . "cssClassNames" "justify-end" ) }}</div>
+                                <div class="">
+                                    <h2 class="project-title text-2xl md:text-3xl text-gray-600 mb-2">
+                                        {{ .Title }}
+                                    </h2>
+                                    <p class="font-light font-mono text-lg text-gray-700 hover:text-gray-900 transition-all duration-200">
+                                        {{ .Summary | markdownify }}
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex flex-row flex-wrap justify-center">
+                                {{ partial "tech-icons.html" .Params.Technologies }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </figure>
+            {{end}}
+        </div>
+        <div class="flex justify-center mb-4">
+            {{ $link := "/projects" | absURL}}
+            <button class="main-button" onclick="window.location.href='{{ $link }}'">
+                {{ i18n "viewAllWork" }}
+            </button>
+        </div>
+        <div class="my-sizer-element"></div>
+    </div>
+
+</section>
+{{"<!-- /Portfolio -->" | safeHTML}}
+{{ end }}
+{{ end }}

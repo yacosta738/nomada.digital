@@ -1,0 +1,124 @@
+# More documentation here: https://github.com/nicksnyder/go-i18n
+[copyright]
+other="All Rights Reserved"
+
+[home]
+other = "Home"
+
+[posts]
+other = "Posts"
+
+[blogTitle]
+other = "Last Articles"
+
+[readMore]
+other = "Read more"
+
+[moreDetails]
+other = "More details"
+
+[seeItOnline]
+other = "See it online"
+
+[seeGithub]
+other = "See source code"
+
+[viewAllPost]
+other = "View All Posts"
+
+[viewAllWork]
+other = "View All Projects"
+
+[resume]
+other = "My resume"
+
+[navigation]
+other = "Navigation"
+
+[contact_me]
+other = "Contact me:"
+
+[email]
+other = "Email"
+
+[phone]
+other = "Phone"
+
+
+[submit]
+other = "Submit"
+
+[search]
+other = "Search"
+
+[subscribe]
+other = "Subscribe"
+
+[typeEmail]
+other = "Type your e-mail"
+
+[share]
+other = "Share"
+
+[author]
+other = "Author"
+
+[aboutAuthor]
+other = "About Author"
+
+[authorsPosts]
+other = "Author's posts"
+
+[all]
+other = "All"
+
+[about]
+other = "About me"
+
+[services]
+other = "Services"
+
+[minutes]
+other = "Minutes"
+
+[readingTime]
+other = "Reading Time"
+
+[portfolio]
+other = "Portfolio"
+
+[team]
+other = "Team"
+
+[pricing]
+other = "Prices"
+
+[blog]
+other = "Blog"
+
+[contact]
+other = "Contact"
+
+[categories]
+other = "Categories"
+
+[recentPosts]
+other = "Recent posts"
+
+[tags]
+other = "Tags"
+
+[siteLinks]
+other = "Site Links"
+
+[present]
+other = "Present"
+
+[bio]
+other = "Biography"
+
+[goBack]
+other = "Go Back"
+
+[tech]
+other = "Technologies"

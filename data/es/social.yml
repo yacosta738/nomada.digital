@@ -1,0 +1,16 @@
+############################# social ###################################
+social:
+  enable: true
+  social_links:
+    - icon: facebook
+      name: Facebook
+      url: "https://www.facebook.com/yacosta738"
+    - icon: github
+      name: Github
+      url: "https://www.github.com/yacosta738"
+    - icon: linkedin
+      name: LinkedIn
+      url: "https://www.linkedin.com/in/yacosta738"
+    - icon: twitter
+      name: Twitter
+      url: "https://www.twitter.com/yacosta738"

@@ -1,0 +1,27 @@
+@import './_light';
+@import './_dark';
+
+@include light-mode();
+
+@media (prefers-color-scheme: dark) {
+  body:not(.light) {
+    @include dark-mode();
+  }
+}
+
+body.dark {
+  @include dark-mode();
+}
+
+.row-polygon-color {
+  background-color: var(--polygon-color);
+  -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
+  clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
+  margin: 5em -20% 5em -20%;
+  padding: 5em 20% 5em 20%;
+
+  @media (max-width: $medium-size-min-width){
+    -webkit-clip-path: none;
+    clip-path: none;
+  }
+}

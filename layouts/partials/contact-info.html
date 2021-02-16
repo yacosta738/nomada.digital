@@ -1,0 +1,49 @@
+{{ $data := index site.Data site.Language.Lang }}
+
+{{ if $data.contact.contact.enable }}
+{{ with $data.contact.contact }}
+{{"<!-- Start About Section -->" | safeHTML}}
+<div class="contact-info mx-6">
+    <h3 class="font-bold">{{ .contact_info }}</h3>
+    <p class="font-thin">
+        {{ replace .description "[-YEAR-]" (sub (int (now.Format "2006" ) ) 2017) }}
+    </p>
+    <p>{{$elementsLen := len .contact_items}}</p>
+    <div class="grid grid-cols-2">
+        <div class="m-2">
+            <ul>
+                {{ range first (sub $elementsLen (div $elementsLen 2) ) .contact_items }}
+                <li>
+                    <span>
+                    <i class="mx-1">{{ partial "shared/fontawesome.html" .icon }}</i>
+                    <strong>{{ .name }}:</strong>
+                    <a href="{{ .link | safeURL}}" target="{{ .target }}">
+                        {{ .text }}
+                    </a>
+                    </span>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+        <div class="m-2">
+            <ul>
+                {{ range last (div $elementsLen 2) .contact_items }}
+                <li>
+                    <span>
+                    <i class="mx-1">{{ partial "shared/fontawesome.html" .icon }}</i>
+                    <strong>{{ .name }}:</strong>
+                    <a href="{{ .link | safeURL}}" target="{{ .target }}">
+                        {{ .text }}
+                    </a>
+                    </span>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+    <p class="font-thin">
+        {{ .content | markdownify }}
+    </p>
+</div>
+{{end}}
+{{end}}

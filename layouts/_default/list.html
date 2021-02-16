@@ -1,30 +1,28 @@
-{{ define "main" }}
+{{ partial "shared/doctype.html" }}
+<html>
+    {{ partial "shared/head.html" . }}
+    {{ partial "shared/body-start-tag.html"}}
+        <div id="page-wrapper">
+            {{ partial "shared/header.html" . }}
+            <div class="body">
+                <div class="body-max-width">
+                    <main id="content" x-ref="content" class="mt-36 md:mt-14">
+                        {{- range .Paginator.Pages }}
+                            <h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
+                        {{- end }}
 
-{{ partial "navigation.html" . }}
-
-{{"<!-- Start Blog Section -->" | safeHTML}}
-<section id="blog" class="section">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        {{"<!-- section title -->" | safeHTML}}
-        <div class="title text-center wow fadeInDown">
-          <h2>{{ with i18n "blogTitle" }} {{ index (split . " ") 0 | safeHTML }} {{ end }}<span class="color">
-              {{ with i18n "blogTitle" }} {{ index (split . " ") 1 | safeHTML }} {{ end }}</span></h2>
-          <div class="border-xline"></div>
+                        {{ partial "paging-navigation.html" . }}
+                    </main>
+                    <aside id="sidebar" class="mt-36 md:mt-14">
+                        {{ partial "shared/recent-articles-widget.html" . }}
+                        {{ partial "shared/tag-cloud.html" . }}
+                        {{ partial "shared/categories-widget.html" . }}
+                    </aside>
+                </div>
+            </div>            
+            {{ partial "shared/footer.html" . }}
         </div>
-      </div>
-      {{"<!-- /section title -->" | safeHTML}}
-      {{ $paginator := .Paginate .Data.Pages }}
-      {{ range $paginator.Pages }}
-      {{ .Render "article" }}
-      {{ end }}
-      <div class="col-12">
-        {{ template "_internal/pagination.html" . }}
-      </div>
-    </div>
-  </div>
-</section>
-{{"<!-- /blog -->" | safeHTML}}
-
-{{ end }}
+        {{ partial "lightbox.html" . }}
+        {{ partial "searchbox.html" . }}
+    </body>
+</html>

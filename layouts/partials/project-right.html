@@ -1,0 +1,32 @@
+{{ $element := .}}
+{{with $element}}
+<div class="lg:flex flex-col md:flex-row items-center">
+    <div class="lg:w-1/2 text-center md:text-left">
+        <div class="flex items-center justify-center lg:justify-end">
+            <img src="{{ .Params.Image_webp | absURL }}" data-src="{{ .Params.Image | absURL}}" alt=""
+                 class="object-cover">
+        </div>
+    </div>
+    <div class="mt-8 lg:mt-0 lg:w-1/2">
+        <div class="p-2 m-2">
+            <div class="text-center md:text-right text-xl capitalize transform -translate-x-20">
+                <h2 class="transition duration-500 ease-in-out font-black tracking-widest my-3 text-gray-800 dark:text-white">
+                    {{ with .Title }} {{ index (split . " ") 0 | safeHTML }} {{ end }}
+                    <span class="text-neon-500">
+                                {{ with .Title }} {{ after (len (index (split . " ") 0)) . | safeHTML }} {{ end }}
+                            </span>
+                </h2>
+                <p class="p-8 text-gray-500 dark:text-gray-300 my-4 text-center md:text-right bg-gray-900">
+                    {{ .Summary }}
+                    <br>
+                    <a href="{{ .Permalink }}" aria-label="To project '{{.Params.Title}}'">{{ i18n "moreDetails" }}</a>
+                </p>
+                <div class="flex flex-row justify-end my-4">
+                    {{ partial "tech-icons.html" .Params.Technologies }}
+                </div>
+                {{ partial "shared/project-links" (dict "opt" . "cssClassNames" "justify-end" ) }}
+            </div>
+        </div>
+    </div>
+</div>
+{{end}}

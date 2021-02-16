@@ -1,26 +1,32 @@
-################################# Skill ##################################
+################################# Skill & Experience #################################
 skill:
   enable : true
-  title : Our Skills
-  subtitle : We’ve skilled in wide range of web and Other digital market tools.
-  content : Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis magni explicabo cum aperiam recusandae sunt accusamus totam. Quidem quos fugiat sapiente numquam accusamus quas hic, itaque in libero reiciendis tempora!
-  image : images/about/company-growth.webp
-  skill_item :
-    # skill item loop
-    - name :  Business Development
-      percent : 90%
-      
-    # skill item loop
-    - name :  Analysis
-      percent : 70%
-      
-    # skill item loop
-    - name :  Design
-      percent : 80%
-      
-    - name :  IOS Development
-      percent : 95%
-      
-    # skill item loop
-    - name :  Android Development
-      percent : 75%
+  title : Skills & Experience
+  subtitle: "Experience"
+  content :
+    - item: The main area of my expertise is front-end development(client side of the web).
+    - item: HTML, CSS, JS(TypeScript), building small and medium web apps with Angular 7, Vuejs, Tailwindcss and Vuetify.
+    - item: I have also full-stack developer experience with frameworks like Spring Boot and Laravel.
+    - item: Visit my [Linkedin](https://www.linkedin.com/in/yacosta738) profile for more details or just [contact me](#contact-me)
+  skills :
+    # skills item loop
+    - skill :  {text: "Java", id: "Java"}
+    - skill : {text: "Kotlin", id: "Kotlin"}
+    - skill : {text: "Scala", id: "Scala"}
+    - skill : {text: "JavaScript", id: "JavaScript"}
+    - skill : {text: "TypeScript", id: "TypeScript"}
+    - skill : {text: "Angular", id: "Angular"}
+    - skill : {text: "Vuejs", id: "Vuejs"}
+    - skill : {text: "Spring Boot", id: "Spring Boot"}
+    - skill : {text: "Laravel", id: "Laravel"}
+    - skill : {text: "npm", id: "npm"}
+    - skill : {text: "yarn", id: "yarn"}
+    - skill : {text: "webpack", id: "webpack"}
+    - skill : {text: "Neo4j", id: "Neo4j"}
+    - skill : {text: "MongoDB", id: "MongoDB"}
+    - skill : {text: "Docker", id: "Docker"}
+    - skill : {text: "Jhipster", id: "Jhipster"}
+    - skill : {text: "NoSQL", id: "NoSQL"}
+    - skill : {text: "SQL", id: "SQL"}
+    - skill : {text: "PostgrSQL", id: "PostgrSQL"}
+    - skill : {text: "MySQL", id: "MySQL"}

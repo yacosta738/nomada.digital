@@ -1,0 +1,17 @@
+{{ define "main" }}
+    <main id="content" x-ref="content" class="mt-36 md:mt-14">
+        {{ range (.Paginate ( where .Site.RegularPages "Type" "article" )).Pages }}
+        <article class="summary">
+            <h1><a href="{{ .RelPermalink }}">{{ .Title }} </a></h1>
+            {{ partial "shared/article-date.html" . }}
+            {{ partial "summary-read-more.html" . }}
+        </article>
+        {{ end }}
+
+        {{ partial "paging-navigation.html" . }}
+    </main>
+    <aside id="sidebar" class="mt-36 md:mt-14">
+        {{ partial "shared/tag-cloud.html" . }}
+        {{ partial "shared/categories-widget.html" . }}
+    </aside>
+{{end}}

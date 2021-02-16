@@ -1,0 +1,37 @@
+{{ $data := index site.Data site.Language.Lang }}
+
+{{ if $data.about.about.enable }}
+{{ with $data.about.about }}
+{{"<!-- Start About Section -->" | safeHTML}}
+<section id="about" class="bg-white dark:bg-gray-800">
+    <div class="container mx-auto px-12 py-8">
+        <div class="lg:flex items-center">
+            <div class="lg:w-1/2">
+                <h2 class="text-gray-800 dark:text-gray-100 text-3xl font-bold">{{ .title }}</h2>
+                {{ range .about_me}}
+                <p class="text-gray-500 dark:text-gray-400 mt-4 text-left">
+                    {{ .text | markdownify }}
+                </p>
+                {{ end }}
+                {{ range .buttons }}
+                <a href="{{ if .target }}{{ .button_link }}{{else}}{{ .button_link | absURL }}{{end}}"
+                   target="{{ .target }}"
+                   class="cv-button" data-text="{{ .button_title }}">
+                    <span>{{ .button_title }}</span>
+                </a>
+                {{end}}
+            </div>
+            <div class="mt-8 lg:mt-0 lg:w-1/2">
+                <div class="flex items-center justify-center lg:justify-end">
+                    <div class="max-w-lg rounded-md bg-gray-900">
+                        <img class="w-full object-cover object-center rounded-md shadow transform translate-y-6  -translate-x-6"
+                             src="{{ .picture | absURL }}" alt="{{ .title }}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{"<!-- /about -->" | safeHTML}}
+{{ end }}
+{{ end }}

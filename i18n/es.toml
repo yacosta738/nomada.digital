@@ -1,0 +1,124 @@
+# More documentation here: https://github.com/nicksnyder/go-i18n
+[copyright]
+other="Todo los derechos reservados"
+
+[home]
+other = "Inicio"
+
+[posts]
+other = "Posts"
+
+[blogTitle]
+other = "Últimos Artículos"
+
+[readMore]
+other = "Leer más"
+
+[moreDetails]
+other = "Más detalles"
+
+[seeItOnline]
+other = "verlo online"
+
+[seeGithub]
+other = "Ver código"
+
+[viewAllPost]
+other = "Ver todos los Posts"
+
+[viewAllWork]
+other = "Ver todos los Proyectos"
+
+[resume]
+other = "Mi resume"
+
+[navigation]
+other = "Navegación"
+
+[contact_me]
+other = "Contactame:"
+
+[email]
+other = "Correo Electrónico"
+
+[phone]
+other = "Teléfono"
+
+
+[submit]
+other = "Enviar"
+
+[search]
+other = "Buscar"
+
+[subscribe]
+other = "Subscríbete"
+
+[typeEmail]
+other = "Escriba su correo electrónico"
+
+[share]
+other = "Compartir"
+
+[author]
+other = "Autor"
+
+[aboutAuthor]
+other = "Sobre el autor"
+
+[authorsPosts]
+other = "Los Artículos del autor"
+
+[all]
+other = "Todos"
+
+[about]
+other = "Sobre mí"
+
+[services]
+other = "Servicios"
+
+[minutes]
+other = "Minutos"
+
+[readingTime]
+other = "Tiempo de lectura"
+
+[portfolio]
+other = "Portafolio"
+
+[team]
+other = "Equipo"
+
+[pricing]
+other = "Precios"
+
+[blog]
+other = "Blog"
+
+[contact]
+other = "Contacto"
+
+[categories]
+other = "Categorías"
+
+[recentPosts]
+other = "Artículos recientes"
+
+[tags]
+other = "Etiquetas"
+
+[siteLinks]
+other = "Enlaces del sitio"
+
+[present]
+other = "Presente"
+
+[bio]
+other = "Biografía"
+
+[goBack]
+other = "Regresar"
+
+[tech]
+other = "Tecnologías"

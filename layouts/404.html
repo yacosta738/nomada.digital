@@ -1,17 +1,27 @@
-{{ define "main" }}
-
-{{ partial "navigation.html" . }}
-
-<section class="section">
-  <div class="container">
-    <div class="row">
-      <div class="col-12 text-center">
-        <h1>404</h1>
-        <h2>Page Not Found</h2>
-				<a class="btn btn-main" href="{{ site.BaseURL | relLangURL }}">Back to home</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-{{ end }}
+{{ partial "shared/doctype.html" }}
+<html lang="en">
+    {{ partial "shared/head.html" . }}
+    {{ partial "shared/body-start-tag.html"}}
+        <div id="page-wrapper">
+            {{ partial "shared/header.html" . }}
+            <div class="body">
+                <div class="body-max-width">
+                    <main id="content" x-ref="content">
+                        <h1>Page Not Found (404)</h1>
+                        <img class="bitmoji" src="/images/oops.png" alt="oops">
+                        <p>Don't know how you ended up here, but the page doesn't exist. Or well, <em>this</em> page 
+                        exists, but it's a <em>page not found</em> page...you get the point.</p>
+                    </main>
+                    <aside id="sidebar">
+                        {{ partial "shared/recent-articles-widget.html" . }}
+                        {{ partial "shared/tag-cloud.html" . }}
+                        {{ partial "shared/categories-widget.html" . }}
+                    </aside>
+                </div>
+            </div>            
+            {{ partial "shared/footer.html" . }}
+        </div>
+        {{ partial "searchbox.html" . }}
+        {{- partial "shared/add-js.html" . -}}
+    </body>
+</html>

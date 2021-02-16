@@ -1,32 +1,29 @@
-{{ define "main" }}
-
-{{ partial "navigation.html" . }}
-
-<section class="section">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 offset-lg-2 text-center">
-        <h1>{{ .Title }}</h1>
-        <ul class="list-inline mb-50">
-          <li class="list-inline-item"><a href="{{ `author/` | relLangURL }}{{ .Params.Author | urlize }}/">{{ .Params.Author }}</a></li>
-          <li class="list-inline-item">{{ dateFormat "Monday, Jan 2, 2006" .Date }}</li>
-        </ul>
-        <img class="img-fluid mb-50 lozad" data-src="{{ .Params.Image | absURL }}" alt="blog-image">
-      </div>
-      <div class="col-lg-8 offset-lg-2">
-        <div class="post-single-content">
-          {{ .Content }}
+{{ partial "shared/doctype.html" }}
+<html>
+    {{ partial "shared/head.html" . }}
+    {{ partial "shared/body-start-tag.html"}}
+        <div id="page-wrapper">
+            {{ partial "shared/header.html" . }}
+            <div class="body">
+                <div class="body-max-width">
+                    <main id="content" x-ref="content">
+                        <article>
+                            <h1>{{ .Title }}</h1>
+                            {{ .Content }}
+                        </article>
+                        {{ partial "shared/article-tags.html" . }}
+                        {{ partial "shared/article-categories.html" . }}
+                    </main>
+                    <aside id="sidebar">
+                        {{ partial "shared/recent-articles-widget.html" . }}
+                        {{ partial "shared/tag-cloud.html" . }}
+                        {{ partial "shared/categories-widget.html" . }}
+                    </aside>
+                </div>
+            </div>            
+            {{ partial "shared/footer.html" . }}
         </div>
-        {{ if site.Params.post_share }}
-        {{ partial "post-share.html" . }}
-        {{ end }}
-        <!-- comments -->
-        <div class="mt-5">
-          {{ template "_internal/disqus.html" . }}
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-{{ end }}
+        {{ partial "lightbox.html" . }}
+        {{ partial "searchbox.html" . }}
+    </body>
+</html>

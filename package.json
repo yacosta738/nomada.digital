@@ -1,23 +1,61 @@
 {
   "name": "nomada.digital",
   "version": "1.0.0",
-  "description": "Yuniel's blog using static site engine Hugo",
+  "description": "Yuniel Acosta Pérez 's blog and portfolio using static site engine Hugo",
+  "dependencies": {
+    "@tailwindcss/line-clamp": "^0.2.0",
+    "alpinejs": "2.7.3",
+    "emailjs-com": "^2.6.4",
+    "firebase": "^8.2.5",
+    "gsap": "^3.6.0",
+    "imagesloaded": "^4.1.4",
+    "ityped": "^1.0.3",
+    "lazysizes": "5.3.0",
+    "lunr": "2.3.9",
+    "rellax": "^1.12.1",
+    "shufflejs": "^5.2.3"
+  },
   "devDependencies": {
-    "prettier": "^2.2.1",
-    "start-server-and-test": "^1.11.7"
+    "@fullhuman/postcss-purgecss": "^4.0.0",
+    "@testing-library/cypress": "7.0.3",
+    "autoprefixer": "^10.2.3",
+    "cross-env": "^7.0.3",
+    "cssnano": "^4.1.10",
+    "cypress": "6.2.1",
+    "cypress-plugin-tab": "1.0.5",
+    "postcss": "^8.2.4",
+    "postcss-cli": "^8.3.1",
+    "prettier": "2.2.1",
+    "start-server-and-test": "1.11.7",
+    "watch": "^1.0.2",
+    "shx": "0.3.3",
+    "tailwindcss": "^2.0.2"
   },
   "scripts": {
     "install:prod": "npm install --only=prod",
-    "clean:public": "rm -rf public",
-    "build": "npm run clean:public && hugo version && hugo --gc --minify",
-    "hugo:watch": "hugo server --config config-dev.toml --bind=0.0.0.0",
-    "start": "hugo && npm run hugo:watch",
-    "dev": "hugo serve --disableFastRender --gc --forceSyncStatic --verbose",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "shx rm -f static/*.js",
+    "clean:public": "shx rm -rf public",
+    "css:watch": "node_modules/.bin/watch \"npm run css:build:dev\" ./static-src/css",
+    "css:build:dev": "cross-env NODE_ENV=development npm run css:build",
+    "css:build:prod": "cross-env NODE_ENV=production npm run css:build",
+    "css:build": "node_modules/.bin/postcss static-src/css/styles.css -o static/css/styles.css",
+    "build": "npm run clean:public && npm run css:build:prod && hugo version && hugo --gc --minify && npm run index:prod",
+    "hugo:watch": "npm run css:build:dev && hugo server --config config-dev.toml --bind=0.0.0.0",
+    "index:prod": "node build/index-search.js public/search-index.json",
+    "index": "node build/index-search.js static/search-index.json",
+    "start": "hugo && npm run index && npm run hugo:watch",
+    "cypress:cli": "cypress run",
+    "cypress:open": "cypress open",
+    "test": "start-server-and-test http://localhost:1313 cypress:cli",
+    "test:open": "start-server-and-test http://localhost:1313 cypress:open",
+    "docker:start": "docker-compose up dev",
+    "docker:test": "docker-compose up test",
+    "docker:build": "docker-compose up build",
+    "docker:image:rebuild": "docker-compose build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yacosta738/nomada.digital.git"
+    "url": "https://github.com/yacosta738/nomada.digital.git"
   },
   "keywords": [
     "blog",
@@ -25,9 +63,5 @@
     "hugo"
   ],
   "author": "Yuniel Acosta Pérez",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/yacosta738/nomada.digital/issues"
-  },
-  "homepage": "https://github.com/yacosta738/nomada.digital#readme"
+  "license": "MIT"
 }

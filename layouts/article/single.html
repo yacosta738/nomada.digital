@@ -1,0 +1,20 @@
+{{define "main"}}
+  {{ $postStyles := resources.Get "styles/post-bundle.scss" | toCSS | minify | fingerprint "sha512" }}
+  <link rel="stylesheet" type="text/css" href="{{ $postStyles.RelPermalink }}" integrity="{{ $postStyles.Data.Integrity }}" media="screen, tv, projection">
+      <main id="content" x-ref="content" class="mt-36 md:mt-14">
+             <article class="full-article">
+                 <h1>{{ .Title }}</h1>
+                 {{ partial "shared/article-date.html" . }}
+                 {{ .Content }}
+                 {{ partial "shared/article-categories-tags.html" . }}
+                 {{ partial "disqus.html" . }}
+             </article>
+         </main>
+         <aside id="sidebar" class="mt-36 md:mt-14">
+             {{ partial "shared/recent-articles-widget.html" . }}
+             {{ partial "shared/tag-cloud.html" . }}
+             {{ partial "shared/categories-widget.html" . }}
+         </aside>
+ {{ partial "lightbox.html" . }}
+ {{ partial "code-expanded.html" . }}
+{{end}}
