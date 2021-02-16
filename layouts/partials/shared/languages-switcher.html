@@ -10,11 +10,11 @@
     {{ $selected := false }}
     {{ if eq $pageLang .Lang}}
     <option id="{{ $translation.Language }}" value="{{ $translation.Permalink }}" selected>
-        {{ $.Param "icon" }} {{ .LanguageName }}
+        {{ .Params.Icon }} {{ .LanguageName }}
     </option>
     {{ else }}
     <option id="{{ $translation.Language }}" value="{{ $translation.Permalink }}">
-        {{ .LanguageName }}
+        {{ .Params.Icon }} {{ .LanguageName }}
     </option>
     {{ end }}
     {{ end }}

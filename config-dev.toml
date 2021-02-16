@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://www.blastkode.com/"
 languageCode = "en-gb"
 title = "Blastkode"
 canonifyURLs = false
@@ -28,8 +28,7 @@ languageCode = "en-us"
 contentDir = "content/english"
 weight = 1
 home = "Home"
-[languages.en.params]
-icon = "images/flags/us.svg"
+icon = "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
 
 ################################ Spanish Language ########################
 [Languages.es]
@@ -38,8 +37,7 @@ languageCode = "es"
 contentDir = "content/spanish"
 weight = 2
 home = "Inicio"
-[languages.es.params]
-icon = "images/flags/es.svg"
+icon = "🇪🇦"
 ################### English Navigation ########################
 [[Languages.en.menu.main]]
 name = "Home"
@@ -52,7 +50,7 @@ class = "home"
 
 [[Languages.en.menu.main]]
 name = "Blog"
-post = "<svg class='icon icon-user'><use xlink:href='#icon-user'></use></svg>"
+post = "<svg class='icon icon-user'><use xlink:href='#icon-blog'></use></svg>"
 url = "/blog"
 weight = 2
 [Languages.en.menu.main.params]
@@ -91,7 +89,7 @@ class = "home"
 
 [[Languages.es.menu.main]]
 name = "Blog"
-post = "<svg class='icon icon-user'><use xlink:href='#icon-user'></use></svg>"
+post = "<svg class='icon icon-user'><use xlink:href='#icon-blog'></use></svg>"
 url = "/blog"
 weight = 2
 [Languages.es.menu.main.params]

@@ -6,15 +6,15 @@ description: Configure global proxy on linux
 summary: En este artículo comparto algunos tips para configurar un proxy global en sistemas operativos GNU/Linux. Mula mierdadkjf rfkrg kg gh iwge kwj kgwegje hgqh g gog rjgjkregrekghe rgk gkr gkh rgkqkrh glrlelgkrgqiurgi3rhgrh gr g urg3g fu a yjagf uafue uyeg uf ueghehgkewhg wg ew gweg wehe egeh  mg bgwg iwgwbgj wgw gjwgh  gw
 image : images/portfolio/portfolio-5.jpg
 image_webp : images/portfolio/portfolio-5.webp
-categories: ["design"]
+project_categories: ["design"]
 link: /sound-system
 source_code: https://github.com/nomada.digital
 promote: true
 technologies:
-        - wordmark: images/tech/nodejs.png
-          icon: images/tech/nodejs-icon.png
-        - wordmark: images/tech/vuejs.png
-          icon: images/tech/vuejs-icon.png
+        - name: Node.js
+          icon: nodejs
+        - name: VueJS
+          icon: vuejs
 draft: false
 ---
 

@@ -1,42 +1,43 @@
 {{ $element := .}}
 {{with $element}}
 <div class="lg:flex flex-col md:flex-row items-center">
-    <div class="lg:w-1/2 text-center md:text-right">
+    <div class="lg:w-1/2 text-center md:text-left">
         <div class="p-2 m-2">
-            <div class="text-center md:text-right text-xl capitalize">
+            <div class="text-center md:text-left text-xl capitalize  transform translate-x-20">
                 <h2 class="transition duration-500 ease-in-out font-black tracking-widest my-3 text-gray-800 dark:text-white">
                     {{ with .Title }} {{ index (split . " ") 0 | safeHTML }} {{ end }}
                     <span class="text-neon-500">
                                 {{ with .Title }} {{ after (len (index (split . " ") 0)) . | safeHTML }} {{ end }}
                             </span>
                 </h2>
-            </div>
-            <p class="text-gray-500 dark:text-gray-400 mt-4 text-center md:text-right">
-                {{ .Summary }}
-            </p>
-            <div class="flex flex-row justify-end my-4">
-                <button class="main-button mr-2 uppercase" onclick="window.location.href='{{ .Permalink }}'">
-                    {{ i18n "moreDetails" }}
-                </button>
-                {{ with .Params.Link }}
-                <button class="main-button mr-2 uppercase" onclick="window.location.href='{{ . }}'">
-                    <span>{{ i18n "seeItOnline" }}<i class="ml-2">{{ partial "shared/fontawesome.html" "external-link" }}</i></span>
-                </button>
-                {{end}}
-                {{ with .Params.Source_code }}
-                <button class="main-button mr-2 uppercase" onclick="window.location.href='{{ . }}'">
-                    <span>{{ i18n "seeGithub" }}<i class="ml-2">{{ partial "shared/fontawesome.html" "github" }}</i></span>
-                </button>
-                {{end}}
+                <p class="p-8 text-gray-500 dark:text-gray-300 my-4 text-center md:text-left bg-gray-900">
+                    {{ .Summary }}
+                    <br>
+                    <a href="{{ .Permalink }}" aria-label="To project '{{.Params.Title}}'">{{ i18n "moreDetails" }}</a>
+                </p>
+                <div class="flex flex-row justify-start my-4">
+                    {{ partial "tech-icons.html" .Params.Technologies }}
+                </div>
+                <div class="flex flex-row justify-start my-4">
+                    {{ with .Params.Link }}
+                    <a class="uppercase" href="{{ . }}">
+                        <i class="ml-2">{{ partial "shared/fontawesome.html" "external-link" }}</i>
+                    </a>
+                    {{end}}
+                    {{ with .Params.Source_code }}
+                    <a class="uppercase" href="{{ . }}">
+                        <i class="ml-2">{{ partial "shared/fontawesome.html" "github" }}</i>
+                    </a>
+                    {{end}}
+                </div>
             </div>
         </div>
     </div>
     <div class="mt-8 lg:mt-0 lg:w-1/2">
-        <div class="flex items-center justify-center lg:justify-end">
+        <div class="flex items-center justify-center lg:justify-start">
             <img src="{{ .Params.Image_webp | absURL }}" data-src="{{ .Params.Image | absURL}}" alt=""
                  class="object-cover max-h-96">
         </div>
     </div>
 </div>
-{{ partial "tech-icons.html" .Params.Technologies }}
 {{end}}

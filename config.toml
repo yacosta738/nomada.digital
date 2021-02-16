@@ -1,6 +1,6 @@
-baseURL = "/"
+baseURL = "https://www.blastkode.com/"
 languageCode = "en-gb"
-title = "Nomatech"
+title = "Blastkode"
 canonifyURLs = false
 relativeURLs = false
 buildDrafts = false
@@ -8,7 +8,7 @@ paginate = 5
 pygmentsuseclasses = true
 pygmentsstyle = "monokai"
 preserveTaxonomyNames = true
-disqusShortname = "henrik-sommerfeld"
+disqusShortname = "blastkode"
 timeout = 60000
 rssLimit = 10
 
@@ -17,6 +17,7 @@ minifyBundles = true
 plausibleDomain = "blastkode.com"
 logo = "images/logo.png"
 description = "Yuniel Acosta Pérez's blog and portfilio. Mostly about computer related stuff."
+readingWordsPerMinute = 220
 
 [permalinks]
 article = "/:title/"
@@ -28,15 +29,16 @@ languageCode = "en-us"
 contentDir = "content/english"
 weight = 1
 home = "Home"
+icon = "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
 
-################################ France Language ########################
+################################ Spanish Language ########################
 [Languages.es]
 languageName = "Es"
 languageCode = "es"
 contentDir = "content/spanish"
 weight = 2
 home = "Inicio"
-
+icon = "🇪🇦"
 ################### English Navigation ########################
 [[Languages.en.menu.main]]
 name = "Home"
@@ -49,7 +51,7 @@ class = "home"
 
 [[Languages.en.menu.main]]
 name = "Blog"
-post = "<svg class='icon icon-user'><use xlink:href='#icon-user'></use></svg>"
+post = "<svg class='icon icon-user'><use xlink:href='#icon-blog'></use></svg>"
 url = "/blog"
 weight = 2
 [Languages.en.menu.main.params]
@@ -88,7 +90,7 @@ class = "home"
 
 [[Languages.es.menu.main]]
 name = "Blog"
-post = "<svg class='icon icon-user'><use xlink:href='#icon-user'></use></svg>"
+post = "<svg class='icon icon-user'><use xlink:href='#icon-blog'></use></svg>"
 url = "/blog"
 weight = 2
 [Languages.es.menu.main.params]

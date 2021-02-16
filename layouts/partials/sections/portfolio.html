@@ -5,7 +5,7 @@
 {{"<!-- Portfolio Section -->" | safeHTML}}
 <section id="portfolio" class="bg-gray-50 dark:bg-gray-800">
     <div class="container mx-auto items-center justify-center">
-        {{ partial "shared/section-title.html" . }}
+        <div class="my-10">{{ partial "shared/section-title.html" . }}</div>
         <br>
         {{ range  $index, $element := ( where (where $page.Site.RegularPages "Type" "projects" ) "Params.promote" true) }}
         <div class="{{ if ne (mod $index 2) 0 }}row-polygon-color {{end}} px-2 md:px-12 py-2 md:py-8">
@@ -16,7 +16,7 @@
             {{end}}
         </div>
         {{ end }}
-        {{ partial "shared/section-title.html" (dict "title" .title2) }}
+        <div class="my-10">{{ partial "shared/section-title.html" (dict "title" .title2) }}</div>
         <div class="container mx-auto max-w-7xl">
             <div class="my-4 py-4 flex flex-row flex-wrap justify-between md:flex-wrap-reverse">
                 <div class="flex flex-col float-left">
@@ -38,7 +38,7 @@
                         </button>
                         {{ $categories := slice }}
                         {{ range ( where (where $page.Site.RegularPages "Type" "projects" ) "Params.promote" false) }}
-                        {{ range .Params.Categories }}
+                        {{ range .Params.Project_categories }}
                         {{ $categories = $categories | append . }}
                         {{ end }}
                         {{ end }}
@@ -75,7 +75,7 @@
             {{"<!-- portfolio item --> " | safeHTML}}
             {{ range first 9 ( where (where $page.Site.RegularPages "Type" "projects" ) "Params.promote" false)  }}
             <figure class="shuffle-item"
-                    data-groups="[{{range $index, $element:= .Params.Categories }}{{if ne $index 0}},{{end}}&quot;{{. | urlize}}&quot;{{ end }}]"
+                    data-groups="[{{range $index, $element:= .Params.Project_categories }}{{if ne $index 0}},{{end}}&quot;{{. | urlize}}&quot;{{ end }}]"
                     data-date-created="{{ .Date }}"
                     data-title="{{ .Title }}"
             >
@@ -109,9 +109,7 @@
                                 </div>
                             </div>
                             <div class="flex flex-row flex-wrap justify-center">
-                                    {{range .Params.Technologies}}
-                                    <img src="{{ .icon | absURL }}" alt="" class="mx-2 object-center h-8">
-                                    {{end}}
+                                {{ partial "tech-icons.html" .Params.Technologies }}
                             </div>
                         </div>
                     </div>

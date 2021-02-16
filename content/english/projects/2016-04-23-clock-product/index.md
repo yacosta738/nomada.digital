@@ -6,16 +6,16 @@ description: Configure global proxy on linux
 summary: En este artículo comparto algunos tips para configurar un proxy global en sistemas operativos GNU/Linux
 image : images/portfolio/portfolio-3.jpg
 image_webp : images/portfolio/portfolio-3.webp
-categories : ["design", "development"]
+project_categories : ["design", "development"]
 link: "#"
 promote: false
 technologies:
-        - wordmark: images/tech/angular.png
-          icon: images/tech/angular-icon.png
-        - wordmark: images/tech/vuejs.png
-          icon: images/tech/vuejs-icon.png        
-        - wordmark: images/tech/nodejs.png
-          icon: images/tech/nodejs-icon.png
+        - name: Angular
+          icon: angular
+        - name: VueJS
+          icon: vuejs       
+        - name: Node.js
+          icon: nodejs
 draft: false
 ---
 
