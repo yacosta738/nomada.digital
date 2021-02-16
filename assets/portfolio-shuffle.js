@@ -15,6 +15,7 @@ class PortfolioShuffle {
         this.addFilterButtons();
         this.addSorting();
         this.addSearchFilter();
+        console.log("----------------------------------------------------");
     }
 
     /**
