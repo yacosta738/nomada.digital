@@ -1,0 +1,12 @@
+<div class="flex flex-row {{ .cssClassNames }} my-4">
+    {{ with .opt.Params.Link }}
+    <a class="uppercase m-1" href="{{ . }}">
+        <i class="">{{ partial "shared/fontawesome.html" "external-link" }}</i>
+    </a>
+    {{end}}
+    {{ with .opt.Params.Source_code }}
+    <a class="uppercase m-1" href="{{ . }}">
+        <i class="">{{ partial "shared/fontawesome.html" "github" }}</i>
+    </a>
+    {{end}}
+</div>

@@ -4,7 +4,7 @@
     <div class="lg:w-1/2 text-center md:text-left">
         <div class="flex items-center justify-center lg:justify-end">
             <img src="{{ .Params.Image_webp | absURL }}" data-src="{{ .Params.Image | absURL}}" alt=""
-                 class="object-cover max-h-96">
+                 class="object-cover">
         </div>
     </div>
     <div class="mt-8 lg:mt-0 lg:w-1/2">
@@ -24,18 +24,7 @@
                 <div class="flex flex-row justify-end my-4">
                     {{ partial "tech-icons.html" .Params.Technologies }}
                 </div>
-                <div class="flex flex-row justify-end my-4">
-                    {{ with .Params.Link }}
-                    <a class="uppercase" href="{{ . }}">
-                        <i class="ml-2">{{ partial "shared/fontawesome.html" "external-link" }}</i>
-                    </a>
-                    {{end}}
-                    {{ with .Params.Source_code }}
-                    <a class="uppercase" href="{{ . }}">
-                        <i class="ml-2">{{ partial "shared/fontawesome.html" "github" }}</i>
-                    </a>
-                    {{end}}
-                </div>
+                {{ partial "shared/project-links" (dict "opt" . "cssClassNames" "justify-end" ) }}
             </div>
         </div>
     </div>
