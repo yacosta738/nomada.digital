@@ -1,6 +1,6 @@
-# Henrik Sommerfeld's Blog
+# Yuniel Acosta's Blog and portfolio
 
-[![Actions Status](https://github.com/henriksommerfeld/isabel-blog/workflows/Blog%20tests/badge.svg)](https://github.com/henriksommerfeld/blog-hugo/actions) [![Netlify Status](https://api.netlify.com/api/v1/badges/beaa24ab-5442-45fd-a3bd-5050a70f22e5/deploy-status)](https://app.netlify.com/sites/henriksommerfeld/deploys) 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/349b8978-6ef0-4260-ac99-841444977aca/deploy-status)](https://app.netlify.com/sites/blastkode/deploys)
 
 This is my personal blog based on [Hugo][1] available at <https://www.blastkode.com>
 
