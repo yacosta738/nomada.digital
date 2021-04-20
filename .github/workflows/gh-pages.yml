@@ -28,7 +28,7 @@ jobs:
             # Don't forget to set the secret value in the project settings.
             branch: master # Or anything else
             # Use if your site is not hosted on the gh-pages branch.
-            repo: you/you.github.io
+            repo: yacosta738/nomada.digital
             # Use if you're pushing to a different repo.
             # Dont add ".git" to the end of the URL (youl'll get 404s).
             hugoVersion: extended_0.80.0
