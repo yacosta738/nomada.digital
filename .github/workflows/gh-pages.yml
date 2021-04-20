@@ -23,8 +23,8 @@ jobs:
       - name: Publish Site
         uses: chabad360/hugo-gh-pages@master
         with:
-            githubToken: ${{ secrets.PERSONAL_TOKEN }}
-            # Remember to set this as a secret (i.e. secrets.PERSONAL_TOKEN).
+            githubToken: ${{ secrets.GITHUB_TOKEN }}
+            # Remember to set this as a secret (i.e. secrets.GITHUB_TOKEN).
             # Don't forget to set the secret value in the project settings.
             branch: master # Or anything else
             # Use if your site is not hosted on the gh-pages branch.
