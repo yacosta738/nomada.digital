@@ -1,9 +1,5 @@
 # Yuniel Acosta's Blog and portfolio
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/349b8978-6ef0-4260-ac99-841444977aca/deploy-status)](https://app.netlify.com/sites/blastkode/deploys)
-
-This is my personal blog based on [Hugo][1] available at <https://www.blastkode.com>
-
 ## Pre-requisites:
 1. Install Node https://nodejs.org/en/download/ (working version specified in [.nvmrc](./.nvmrc))
 2. Install Hugo https://github.com/gohugoio/hugo/releases See expected version in [netlify.toml](./netlify.toml)). Extended version required.
