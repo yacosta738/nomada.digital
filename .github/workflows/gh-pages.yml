@@ -19,15 +19,15 @@ jobs:
         with:
           node-version: '14'
       - run: npm install
-      
-      - name: Publish Site
-        uses: chabad360/hugo-gh-pages@master
-        with:
-            githubToken: ${{ secrets.GITHUB_TOKEN }}
-            # Remember to set this as a secret (i.e. secrets.GITHUB_TOKEN).
-            # Don't forget to set the secret value in the project settings.
-            hugoVersion: extended_0.80.0
-            # Use if your site requires a specific version of Hugo.
-            # Append "extended_" to the begining to use Hugo Extended.
-            args: --gc --minify --cleanDestinationDir
-            # Use if you want to pass some custom arguments to Hugo.
+      - run: npm run build
+      # - name: Publish Site
+      #   uses: chabad360/hugo-gh-pages@master
+      #   with:
+      #       githubToken: ${{ secrets.GITHUB_TOKEN }}
+      #       # Remember to set this as a secret (i.e. secrets.GITHUB_TOKEN).
+      #       # Don't forget to set the secret value in the project settings.
+      #       hugoVersion: extended_0.80.0
+      #       # Use if your site requires a specific version of Hugo.
+      #       # Append "extended_" to the begining to use Hugo Extended.
+      #       args: --gc --minify --cleanDestinationDir
+      #       # Use if you want to pass some custom arguments to Hugo.
