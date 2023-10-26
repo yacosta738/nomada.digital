@@ -5,7 +5,7 @@ emailjs.init("user_6ai0gP0XM5VVs7nB7MYey");
 
 
 const app = firebase.initializeApp({
-    apiKey: "AIzaSyBflhmzusoiInmM_jhHJ3M3_XsA9tZTST8",
+    apiKey: "YOUR_API_KEY",
     authDomain: "zinger-d9313.firebaseapp.com",
     databaseURL: "https://zinger-d9313.firebaseio.com",
     projectId: "zinger-d9313",
